@@ -21,6 +21,7 @@
 <meta name="twitter:description" content="Once a Hornet, Always a Hornet. Connecting Lyndon alumni since 1911.">
 <meta name="twitter:image" content="https://vermontstate.edu/wp-content/uploads/2023/09/Lyndon_Campus.jpg">
 
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231b5e35'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' fill='%23c49a0f' font-family='Georgia,serif' font-size='20' font-weight='bold'%3EL%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -494,6 +495,18 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
 .reveal-d1{transition-delay:.1s}
 .reveal-d2{transition-delay:.2s}
 
+/* PRINT */
+@media print{
+  .nav,.ann,.btt,.hero-bg,.hero-overlay,.hero-photo-credit,.gallery-strip,.soc-sec,.nl-form,.give-card .amounts,.give-card .give-cta{display:none}
+  .hero{min-height:auto;background:var(--green-dk);padding:2rem 0}
+  .hero-c{animation:none}
+  .reveal{opacity:1!important;transform:none!important}
+  body{font-size:11pt}
+  .sec{padding:1.5rem 0}
+  .give-sec::before{display:none}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:.7em;color:var(--g400);word-break:break-all}
+}
+
 /* REDUCED MOTION */
 @media(prefers-reduced-motion:reduce){
   .reveal{opacity:1;transform:none;transition:none}
@@ -816,17 +829,22 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
         </div>
       </div>
 
-      <!-- Placeholder -->
-      <div class="sp-card" style="border:2px dashed var(--g200)">
-        <div class="sp-hdr ph">
-          <span class="sp-icon" style="font-size:2rem;opacity:.5">⭐</span>
-          <div style="font-size:.75rem;color:rgba(255,255,255,.5);font-style:italic">Your Story Here</div>
+      <!-- André Bernier -->
+      <div class="sp-card">
+        <div class="sp-hdr">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/ad/AndrePR3.jpg"
+            alt="André Bernier, retired Fox 8 Cleveland meteorologist"
+            loading="lazy"
+            onerror="this.style.display='none';this.parentElement.classList.add('ph')"
+          >
+          <span class="class-bdg">Class of '81</span>
         </div>
         <div class="sp-body">
-          <h3 style="color:var(--g400)">Next Spotlight &mdash; Coming Soon</h3>
-          <div class="sp-role" style="color:var(--g300)">Class of XXXX &bull; Your Field</div>
-          <p style="font-style:italic;color:var(--g400)">Know a Hornet doing great things? Nominate them for our Alumni Spotlight.</p>
-          <a href="https://vermontstate.edu/nominate" target="_blank" rel="noopener" class="sp-link">Nominate Someone &rarr;</a>
+          <h3>André Bernier</h3>
+          <div class="sp-role">Meteorologist &bull; WJW Fox 8, Cleveland (Ret.)</div>
+          <p>A two-time Emmy winner, André was among the first on-camera meteorologists when The Weather Channel launched in 1982. He spent 36 years at Fox 8 Cleveland before retiring in 2024 — plus he's an ordained minister and documentary filmmaker.</p>
+          <a href="https://en.wikipedia.org/wiki/Andr%C3%A9_Bernier_(meteorologist)" target="_blank" rel="noopener" class="sp-link">Read More &rarr;</a>
         </div>
       </div>
     </div>
@@ -1049,6 +1067,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       <div>&copy; 2026 VTSU Lyndon Alumni Council &bull; All rights reserved</div>
       <div style="display:flex;gap:1.25rem">
         <a href="#contact">Contact</a>
+        <a href="fundraising_dashboard.html" style="opacity:.35" title="Council Members Only">Council Dashboard</a>
         <span style="opacity:.35">Campus photos: Wikimedia Commons CC BY-SA 4.0</span>
       </div>
     </div>
