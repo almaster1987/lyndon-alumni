@@ -7,29 +7,29 @@
 <meta name="description" content="Official home of the VTSU Lyndon Alumni Council — connecting alumni of Lyndon Teachers College, Lyndon State College, Northern Vermont University, and VTSU Lyndon since 1911.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
-  --green:      #1b5e35;
-  --green-dk:   #0f3d22;
-  --green-md:   #2d7a4a;
-  --green-lt:   #e8f5ee;
-  --gold:       #c49a0f;
-  --gold-md:    #e0b424;
-  --gold-lt:    #fdf8e1;
-  --white:      #ffffff;
-  --off:        #f7faf8;
-  --g100:       #eef2ef;
-  --g200:       #dce5de;
-  --g400:       #99a89c;
-  --g500:       #6b7a6d;
-  --g700:       #3d4d3e;
-  --text:       #1a2b1c;
-  --sh:         0 4px 12px rgba(0,0,0,.10),0 2px 4px rgba(0,0,0,.06);
-  --sh-lg:      0 20px 40px rgba(0,0,0,.12),0 8px 16px rgba(0,0,0,.08);
-  --r:          12px;
-  --r-sm:       8px;
-  --r-lg:       20px;
+  --green:    #1b5e35;
+  --green-dk: #0f3d22;
+  --green-md: #2d7a4a;
+  --green-lt: #e8f5ee;
+  --gold:     #c49a0f;
+  --gold-md:  #e0b424;
+  --gold-lt:  #fdf8e1;
+  --white:    #ffffff;
+  --off:      #f7faf8;
+  --g100:     #eef2ef;
+  --g200:     #dce5de;
+  --g400:     #99a89c;
+  --g500:     #6b7a6d;
+  --g700:     #3d4d3e;
+  --text:     #1a2b1c;
+  --sh:       0 4px 12px rgba(0,0,0,.10),0 2px 4px rgba(0,0,0,.06);
+  --sh-lg:    0 20px 40px rgba(0,0,0,.14),0 8px 16px rgba(0,0,0,.08);
+  --r:        12px;
+  --r-sm:     8px;
+  --r-lg:     20px;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -38,11 +38,13 @@ a{color:inherit;text-decoration:none}
 ul{list-style:none}
 button{cursor:pointer;font-family:inherit}
 h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2}
+img{display:block;max-width:100%}
 
 /* TYPOGRAPHY */
-.lbl{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);margin-bottom:.5rem;display:block}
-.ttl{font-size:clamp(1.8rem,4vw,2.8rem);color:var(--green-dk);margin-bottom:1rem}
-.sub{font-size:1.05rem;color:var(--g500);line-height:1.7}
+.lbl{font-size:.73rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);margin-bottom:.5rem;display:block}
+.ttl{font-size:clamp(1.8rem,4vw,2.75rem);color:var(--green-dk);margin-bottom:.9rem}
+.sub{font-size:1.05rem;color:var(--g500);line-height:1.75}
+.credit{font-size:.65rem;color:var(--g400);text-align:right;margin-top:.3rem;font-style:italic}
 
 /* LAYOUT */
 .c{max-width:1140px;margin:0 auto;padding:0 1.5rem}
@@ -60,27 +62,26 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2}
 .btn-gold{background:var(--gold);color:var(--green-dk)}
 .btn-gold:hover{background:var(--gold-md);transform:translateY(-2px);box-shadow:0 8px 20px rgba(196,154,15,.35)}
 .btn-ghost{background:none;border:2px solid rgba(255,255,255,.5);color:var(--white)}
-.btn-ghost:hover{border-color:white;background:rgba(255,255,255,.1)}
+.btn-ghost:hover{border-color:white;background:rgba(255,255,255,.12)}
 
-/* ANNOUNCEMENT BAR */
+/* ANNOUNCEMENT */
 .ann{background:var(--gold);color:var(--green-dk);text-align:center;padding:.55rem 1rem;font-size:.84rem;font-weight:600}
 .ann a{text-decoration:underline;margin-left:.4rem}
 
 /* NAV */
-.nav{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:1px solid var(--g100);box-shadow:0 1px 3px rgba(0,0,0,.07)}
+.nav{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--g100);box-shadow:0 1px 3px rgba(0,0,0,.06)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px;gap:1rem}
 .brand{display:flex;align-items:center;gap:.75rem;flex-shrink:0}
 .brand-ico{width:42px;height:42px;background:linear-gradient(135deg,var(--green-dk),var(--green-md));border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0}
 .brand-txt strong{font-size:.92rem;font-weight:800;color:var(--green-dk);display:block;line-height:1.2}
 .brand-txt span{font-size:.65rem;text-transform:uppercase;letter-spacing:.05em;color:var(--g400)}
-.nav-links{display:flex;align-items:center;gap:.15rem}
-.nl{padding:.42rem .8rem;font-size:.86rem;font-weight:500;color:var(--g700);border-radius:var(--r-sm);transition:all .15s}
-.nl:hover{background:var(--green-lt);color:var(--green)}
-.nl.active{background:var(--green-lt);color:var(--green)}
-.nav-cta{padding:.48rem 1.2rem;background:var(--green);color:var(--white);border-radius:var(--r-sm);font-size:.86rem;font-weight:700;transition:all .2s;border:none}
+.nav-links{display:flex;align-items:center;gap:.1rem}
+.nl{padding:.4rem .78rem;font-size:.85rem;font-weight:500;color:var(--g700);border-radius:var(--r-sm);transition:all .15s}
+.nl:hover,.nl.on{background:var(--green-lt);color:var(--green)}
+.nav-cta{padding:.46rem 1.15rem;background:var(--green);color:var(--white);border-radius:var(--r-sm);font-size:.85rem;font-weight:700;transition:all .2s;border:none}
 .nav-cta:hover{background:var(--green-dk)}
 .hbg{display:none;flex-direction:column;gap:5px;padding:6px;border:none;background:none}
-.hbg span{display:block;width:24px;height:2px;background:var(--g700);border-radius:2px;transition:all .3s}
+.hbg span{display:block;width:24px;height:2px;background:var(--g700);border-radius:2px}
 .mob{display:none}
 @media(max-width:880px){
   .nav-links{display:none}.hbg{display:flex}
@@ -89,55 +90,161 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2}
   .mob .nav-cta{display:block;margin-top:.75rem;text-align:center;padding:.75rem}
 }
 
-/* HERO */
-.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(160deg,var(--green-dk) 0%,var(--green) 50%,var(--green-md) 100%)}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 900px 600px at 85% 15%,rgba(196,154,15,.18) 0%,transparent 60%)}
-.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:110px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 110' preserveAspectRatio='none'%3E%3Cpath d='M0,110 L0,75 Q200,15 400,55 Q600,95 800,35 Q1000,-15 1200,50 Q1360,95 1440,60 L1440,110Z' fill='rgba(255,255,255,0.05)'/%3E%3Cpath d='M0,110 L0,90 Q250,60 500,80 Q750,100 1000,65 Q1200,35 1440,75 L1440,110Z' fill='rgba(255,255,255,0.04)'/%3E%3C/svg%3E") no-repeat bottom/cover}
-.hero-c{position:relative;z-index:1;color:var(--white);max-width:760px;padding:4rem 0}
-.eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(196,154,15,.25);border:1px solid rgba(196,154,15,.4);color:var(--gold-md);padding:.3rem .9rem;border-radius:999px;font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:1.5rem}
-.hero-c h1{font-size:clamp(2.4rem,6vw,4.2rem);color:var(--white);line-height:1.08;margin-bottom:1.2rem}
-.hero-c h1 em{font-style:normal;color:var(--gold-md)}
-.hero-sub{font-size:clamp(.95rem,2vw,1.15rem);color:rgba(255,255,255,.8);max-width:540px;margin-bottom:2.5rem;line-height:1.7}
+/* ─── HERO ─── */
+.hero{
+  position:relative;
+  min-height:92vh;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;
+  inset:0;
+  background-image:url('https://upload.wikimedia.org/wikipedia/commons/4/4b/Fall_Foliage_Along_Norton_Pond_Northeast_Kingdom_Vermont_2021_Season_%2851585141337%29.jpg');
+  background-size:cover;
+  background-position:center 40%;
+  transform:scale(1.03);
+  transition:transform 8s ease;
+}
+.hero:hover .hero-bg{transform:scale(1.0)}
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    160deg,
+    rgba(10,38,20,.88) 0%,
+    rgba(15,61,34,.80) 45%,
+    rgba(27,94,53,.70) 100%
+  );
+}
+.hero-overlay::after{
+  content:'';
+  position:absolute;
+  bottom:0;left:0;right:0;
+  height:160px;
+  background:linear-gradient(to top,rgba(10,38,20,.6),transparent);
+}
+.hero-c{
+  position:relative;
+  z-index:1;
+  color:var(--white);
+  max-width:760px;
+  padding:4rem 0;
+}
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  background:rgba(196,154,15,.22);
+  border:1px solid rgba(196,154,15,.45);
+  color:var(--gold-md);
+  padding:.3rem .9rem;
+  border-radius:999px;
+  font-size:.75rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-bottom:1.5rem;
+}
+.hero-c h1{
+  font-size:clamp(2.6rem,6.5vw,4.4rem);
+  color:var(--white);
+  line-height:1.07;
+  margin-bottom:1.2rem;
+  text-shadow:0 2px 20px rgba(0,0,0,.3);
+}
+.hero-c h1 em{font-style:italic;color:var(--gold-md)}
+.hero-sub{
+  font-size:clamp(.95rem,2vw,1.15rem);
+  color:rgba(255,255,255,.82);
+  max-width:560px;
+  margin-bottom:2.5rem;
+  line-height:1.75;
+}
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
-.hero-stats{display:flex;gap:2.5rem;margin-top:3.5rem;padding-top:3rem;border-top:1px solid rgba(255,255,255,.12);flex-wrap:wrap}
+.hero-stats{
+  display:flex;
+  gap:2.5rem;
+  margin-top:3.5rem;
+  padding-top:3rem;
+  border-top:1px solid rgba(255,255,255,.15);
+  flex-wrap:wrap;
+}
 .hs-num{font-family:'Playfair Display',serif;font-size:2.1rem;font-weight:900;color:var(--gold-md)}
-.hs-lbl{font-size:.76rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.06em}
+.hs-lbl{font-size:.74rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.06em}
+.hero-photo-credit{
+  position:absolute;
+  bottom:.5rem;right:.75rem;
+  font-size:.6rem;
+  color:rgba(255,255,255,.35);
+  z-index:2;
+}
 
 /* QUICK LINKS */
 .ql{padding:2.25rem 0;border-bottom:1px solid var(--g100)}
 .ql-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-.ql-card{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.7rem;padding:1.6rem 1rem;border-radius:var(--r);border:1px solid var(--g100);transition:all .2s;background:var(--white)}
-.ql-card:hover{border-color:var(--green-lt);box-shadow:var(--sh);transform:translateY(-3px)}
-.ql-ico{width:50px;height:50px;border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.ql-card{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.65rem;padding:1.6rem 1rem;border-radius:var(--r);border:1px solid var(--g100);transition:all .2s;background:var(--white)}
+.ql-card:hover{border-color:var(--green);box-shadow:var(--sh);transform:translateY(-3px)}
+.ql-ico{width:50px;height:50px;border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;font-size:1.35rem}
 .ql-ico.gr{background:var(--green-lt)}
 .ql-ico.go{background:var(--gold-lt)}
-.ql-card h3{font-family:'Inter',sans-serif;font-size:.92rem;font-weight:700;color:var(--green-dk)}
-.ql-card p{font-size:.78rem;color:var(--g500)}
+.ql-card h3{font-family:'Inter',sans-serif;font-size:.9rem;font-weight:700;color:var(--green-dk)}
+.ql-card p{font-size:.77rem;color:var(--g500)}
 @media(max-width:680px){.ql-grid{grid-template-columns:repeat(2,1fr)}}
 
 /* ABOUT */
 .ab-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
 @media(max-width:768px){.ab-grid{grid-template-columns:1fr;gap:2.5rem}}
-.ab-img{border-radius:var(--r-lg);min-height:400px;background:linear-gradient(135deg,var(--green-dk),var(--green-md));display:flex;flex-direction:column;align-items:center;justify-content:center;color:white;text-align:center;gap:1rem;padding:2rem}
-.ab-img p{font-size:.78rem;opacity:.55;font-style:italic;max-width:220px}
-.ab-img .add-photo{margin-top:.75rem;padding:.65rem 1.25rem;background:rgba(255,255,255,.1);border-radius:var(--r-sm);font-size:.78rem;opacity:.7}
-.mission{background:var(--green-lt);border-left:4px solid var(--green);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:1rem;font-style:italic;color:var(--green-dk);line-height:1.7}
-.bullets{display:flex;flex-direction:column;gap:.7rem;margin-top:1.25rem}
-.bullet{display:flex;align-items:flex-start;gap:.7rem;font-size:.9rem;color:var(--g700)}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:.5rem}
+.ab-img-wrap{position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-lg)}
+.ab-img-wrap img{width:100%;height:440px;object-fit:cover;object-position:center}
+.ab-img-badge{
+  position:absolute;bottom:1.25rem;left:1.25rem;
+  background:rgba(15,61,34,.9);
+  color:white;
+  padding:.5rem 1rem;
+  border-radius:var(--r-sm);
+  font-size:.78rem;
+  font-weight:600;
+  backdrop-filter:blur(4px);
+}
+.mission{background:var(--green-lt);border-left:4px solid var(--green);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:1rem;font-style:italic;color:var(--green-dk);line-height:1.75}
+.bullets{display:flex;flex-direction:column;gap:.65rem;margin-top:1.25rem}
+.bullet{display:flex;align-items:flex-start;gap:.7rem;font-size:.88rem;color:var(--g700)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:.52rem}
+
+/* CAMPUS PHOTO STRIP */
+.gallery-strip{padding:2rem 0;background:var(--green-dk);overflow:hidden}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}
+.gallery-item{position:relative;overflow:hidden;aspect-ratio:4/3;cursor:pointer}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.85)}
+.gallery-item:hover img{transform:scale(1.06);filter:brightness(1)}
+.gallery-item::after{
+  content:attr(data-caption);
+  position:absolute;
+  bottom:0;left:0;right:0;
+  background:linear-gradient(to top,rgba(0,0,0,.75),transparent);
+  color:white;
+  font-size:.7rem;
+  padding:1.25rem .75rem .5rem;
+  opacity:0;
+  transition:opacity .3s;
+}
+.gallery-item:hover::after{opacity:1}
+@media(max-width:680px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
 
 /* TIMELINE */
 .tl-sec{background:var(--green-dk);color:white;padding:5rem 0}
 .tl-hdr{text-align:center;margin-bottom:3.5rem}
 .tl-hdr .lbl{color:var(--gold-md)}
 .tl-hdr .ttl{color:white}
-.tl{display:flex;gap:0;position:relative}
-.tl::before{content:'';position:absolute;top:30px;left:0;right:0;height:2px;background:rgba(255,255,255,.12)}
+.tl{display:flex;position:relative}
+.tl::before{content:'';position:absolute;top:28px;left:0;right:0;height:2px;background:rgba(255,255,255,.12)}
 .tl-item{flex:1;padding:0 1rem;text-align:center;position:relative}
-.tl-dot{width:15px;height:15px;border-radius:50%;background:var(--gold);margin:0 auto 1.25rem;position:relative;z-index:1;border:3px solid var(--green-dk);box-shadow:0 0 0 3px var(--gold)}
-.tl-yr{font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:900;color:var(--gold-md);margin-bottom:.2rem}
-.tl-name{font-size:.86rem;font-weight:700;color:white;margin-bottom:.4rem}
-.tl-desc{font-size:.76rem;color:rgba(255,255,255,.5);line-height:1.5}
+.tl-dot{width:14px;height:14px;border-radius:50%;background:var(--gold);margin:0 auto 1.25rem;position:relative;z-index:1;border:3px solid var(--green-dk);box-shadow:0 0 0 3px var(--gold)}
+.tl-yr{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:var(--gold-md);margin-bottom:.2rem}
+.tl-name{font-size:.84rem;font-weight:700;color:white;margin-bottom:.4rem}
+.tl-desc{font-size:.74rem;color:rgba(255,255,255,.5);line-height:1.55}
 @media(max-width:600px){
   .tl{flex-direction:column}
   .tl::before{display:none}
@@ -148,47 +255,91 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2}
 /* EVENTS */
 .ev-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
 @media(max-width:760px){.ev-grid{grid-template-columns:1fr}}
-.ev-card{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh);transition:transform .2s,box-shadow .2s}
+.ev-card{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh);transition:transform .2s,box-shadow .2s;background:white}
 .ev-card:hover{transform:translateY(-4px);box-shadow:var(--sh-lg)}
-.ev-hdr{padding:2rem;color:white;position:relative}
-.ev-hdr.fall{background:linear-gradient(135deg,#1b5e35,#2d7a4a)}
-.ev-hdr.spring{background:linear-gradient(135deg,#c49a0f,#e0b424);color:var(--green-dk)}
-.ev-badge{display:inline-block;padding:.22rem .7rem;border-radius:999px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;background:rgba(255,255,255,.2);margin-bottom:.7rem}
-.ev-hdr.spring .ev-badge{background:rgba(27,94,53,.15)}
-.ev-hdr h3{font-size:1.35rem;margin-bottom:.35rem}
-.ev-date{display:inline-flex;align-items:center;gap:.4rem;font-size:.84rem;font-weight:600;margin-top:.4rem;opacity:.9}
-.ev-body{background:white;padding:1.75rem}
-.ev-body>p{font-size:.88rem;color:var(--g500);margin-bottom:1.25rem;line-height:1.7}
-.acts{display:flex;flex-direction:column;gap:.45rem;margin-bottom:1.5rem}
-.act{display:flex;align-items:center;gap:.6rem;font-size:.84rem;color:var(--g700)}
+
+/* Fall Weekend card - real photo header */
+.ev-photo-hdr{position:relative;height:220px;overflow:hidden}
+.ev-photo-hdr img{width:100%;height:100%;object-fit:cover;object-position:center}
+.ev-photo-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,38,20,.9) 0%,rgba(10,38,20,.3) 60%,transparent 100%);
+}
+.ev-photo-content{position:absolute;bottom:0;left:0;right:0;padding:1.5rem}
+.ev-photo-content h3{font-size:1.3rem;color:white;margin-bottom:.2rem}
+.ev-photo-content .ev-date{font-size:.82rem;color:rgba(255,255,255,.8);font-weight:600}
+.ev-badge-abs{position:absolute;top:1rem;left:1rem;background:rgba(255,255,255,.2);backdrop-filter:blur(4px);color:white;border:1px solid rgba(255,255,255,.3);padding:.22rem .7rem;border-radius:999px;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+
+/* Spring Homecoming card - gold header */
+.ev-hdr-gold{padding:2rem;background:linear-gradient(135deg,#c49a0f,#e0b424);color:var(--green-dk)}
+.ev-hdr-gold .ev-badge-gold{display:inline-block;padding:.22rem .7rem;border-radius:999px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;background:rgba(27,94,53,.15);margin-bottom:.7rem}
+.ev-hdr-gold h3{font-size:1.3rem;margin-bottom:.3rem}
+.ev-hdr-gold .ev-date{font-size:.82rem;font-weight:600;opacity:.85}
+
+.ev-body{padding:1.75rem}
+.ev-body>p{font-size:.87rem;color:var(--g500);margin-bottom:1.25rem;line-height:1.75}
+.acts{display:flex;flex-direction:column;gap:.42rem;margin-bottom:1.5rem}
+.act{display:flex;align-items:center;gap:.6rem;font-size:.83rem;color:var(--g700)}
 .act::before{content:'✦';color:var(--gold);font-size:.55rem;flex-shrink:0}
 
-/* HOF BANNER */
+/* HOF */
 .hof{margin-top:2.5rem;background:white;border-radius:var(--r-lg);padding:2rem 2.5rem;box-shadow:0 1px 3px rgba(0,0,0,.07);border:1px solid var(--g100)}
 .hof-in{display:flex;justify-content:space-between;align-items:flex-start;gap:1.5rem;flex-wrap:wrap}
-.hof-btns{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
 
 /* SPOTLIGHT */
 .sp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
 @media(max-width:900px){.sp-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.sp-grid{grid-template-columns:1fr}}
 .sp-card{border-radius:var(--r);overflow:hidden;background:white;border:1px solid var(--g100);transition:all .2s}
-.sp-card:hover{box-shadow:var(--sh);transform:translateY(-2px)}
-.sp-img{height:170px;background:linear-gradient(135deg,var(--green-lt),var(--g100));display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative}
-.class-bdg{position:absolute;top:.75rem;right:.75rem;background:var(--green);color:white;font-size:.68rem;font-weight:700;padding:.2rem .55rem;border-radius:999px}
+.sp-card:hover{box-shadow:var(--sh);transform:translateY(-3px)}
+
+/* Styled spotlight header (no photo needed) */
+.sp-hdr{
+  height:160px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:.75rem;
+  position:relative;
+  overflow:hidden;
+}
+.sp-hdr.cantore{background:linear-gradient(135deg,#0f3d22 0%,#1b5e35 60%,#2d7a4a 100%)}
+.sp-hdr.gregory{background:linear-gradient(135deg,#0d3560 0%,#1a5288 60%,#2874a6 100%)}
+.sp-hdr.ph{background:linear-gradient(135deg,#3d4d3e,#6b7a6d)}
+.sp-hdr::before{
+  content:'';
+  position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='25' fill='none' stroke='rgba(255,255,255,0.04)' stroke-width='1'/%3E%3C/svg%3E") repeat;
+}
+.sp-initials{
+  font-family:'Playfair Display',serif;
+  font-size:2.5rem;
+  font-weight:900;
+  color:rgba(255,255,255,.9);
+  position:relative;z-index:1;
+  line-height:1;
+}
+.sp-icon{font-size:1.6rem;position:relative;z-index:1}
+.class-bdg{position:absolute;top:.75rem;right:.75rem;background:var(--gold);color:var(--green-dk);font-size:.68rem;font-weight:700;padding:.2rem .55rem;border-radius:999px}
 .sp-body{padding:1.25rem}
-.sp-body h3{font-family:'Inter',sans-serif;font-size:.98rem;font-weight:700;margin-bottom:.15rem}
-.sp-role{font-size:.78rem;color:var(--gold);font-weight:600;margin-bottom:.45rem}
-.sp-body p{font-size:.8rem;color:var(--g500);line-height:1.6}
-.sp-ph{border:2px dashed var(--g200)}
-.sp-ph .sp-img{background:var(--off)}
+.sp-body h3{font-family:'Inter',sans-serif;font-size:.98rem;font-weight:700;margin-bottom:.15rem;color:var(--green-dk)}
+.sp-role{font-size:.76rem;color:var(--gold);font-weight:600;margin-bottom:.45rem}
+.sp-body p{font-size:.8rem;color:var(--g500);line-height:1.65}
+.sp-link{display:inline-flex;align-items:center;gap:.3rem;font-size:.78rem;font-weight:700;color:var(--green);margin-top:.75rem}
+.sp-link:hover{color:var(--green-dk)}
 
 /* GIVE */
-.give-sec{background:var(--green-dk);color:white}
-.give-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.give-sec{background:var(--green-dk);color:white;position:relative;overflow:hidden}
+.give-sec::before{
+  content:'';
+  position:absolute;inset:0;
+  background-image:url('https://upload.wikimedia.org/wikipedia/commons/3/36/Northern_Vermont_University_Lyndon_campus_Lyndon_VT_September_2017.jpg');
+  background-size:cover;background-position:center;
+  opacity:.08;
+}
+.give-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1}
 @media(max-width:768px){.give-grid{grid-template-columns:1fr;gap:2.5rem}}
-.give-ttl{color:white}
-.give-sub{color:rgba(255,255,255,.7)}
 .give-ways{display:flex;flex-direction:column;gap:1rem;margin-top:1.75rem}
 .gw{display:flex;gap:1rem;align-items:flex-start}
 .gw-ico{width:42px;height:42px;border-radius:var(--r-sm);background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
@@ -210,7 +361,7 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2}
 @media(max-width:900px){.inv-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.inv-grid{grid-template-columns:1fr}}
 .inv-card{background:white;border-radius:var(--r);padding:1.75rem;border:1px solid var(--g100);transition:all .2s}
-.inv-card:hover{border-color:var(--green-lt);box-shadow:var(--sh)}
+.inv-card:hover{border-color:var(--green);box-shadow:var(--sh)}
 .inv-ico{font-size:1.9rem;margin-bottom:.9rem}
 .inv-card h3{font-family:'Inter',sans-serif;font-size:.97rem;font-weight:700;color:var(--green-dk);margin-bottom:.35rem}
 .inv-card p{font-size:.8rem;color:var(--g500);line-height:1.65;margin-bottom:.9rem}
@@ -220,7 +371,7 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2}
 .cmt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:1.5rem}
 .cmt{background:white;border-radius:var(--r);padding:1.1rem;border:1px solid var(--g100)}
 .cmt-lbl{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin-bottom:.3rem}
-.cmt-mems{font-size:.84rem;color:var(--g700)}
+.cmt-mems{font-size:.83rem;color:var(--g700)}
 
 /* NEWS */
 .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
@@ -228,38 +379,39 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2}
 @media(max-width:560px){.news-grid{grid-template-columns:1fr}}
 .nc{border-radius:var(--r);overflow:hidden;background:white;border:1px solid var(--g100);transition:all .2s}
 .nc:hover{box-shadow:var(--sh);transform:translateY(-2px)}
-.nc-img{height:135px;background:linear-gradient(135deg,var(--green-lt),var(--g100));display:flex;align-items:center;justify-content:center;font-size:2.25rem;color:var(--g400)}
+.nc-img{height:140px;overflow:hidden;position:relative}
+.nc-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.nc:hover .nc-img img{transform:scale(1.05)}
+.nc-img-ph{height:140px;background:linear-gradient(135deg,var(--green-lt),var(--g100));display:flex;align-items:center;justify-content:center;font-size:2.5rem;color:var(--g400)}
 .nc-body{padding:1.15rem}
 .nc-cat{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--gold);margin-bottom:.35rem}
 .nc-body h3{font-family:'Inter',sans-serif;font-size:.9rem;font-weight:700;margin-bottom:.35rem;color:var(--green-dk);line-height:1.4}
 .nc-body p{font-size:.78rem;color:var(--g500);line-height:1.6;margin-bottom:.65rem}
 .nc-date{font-size:.7rem;color:var(--g400)}
-.nc-ph{border:2px dashed var(--g200)}
-.nc-ph .nc-img{background:var(--off)}
 
 /* SOCIAL */
 .soc-sec{background:var(--green-lt);padding:3.5rem 0}
 .soc-in{display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap}
-.soc-txt h2{font-size:1.7rem;color:var(--green-dk);margin-bottom:.35rem}
-.soc-txt p{color:var(--g500);font-size:.9rem}
+.soc-txt h2{font-size:1.65rem;color:var(--green-dk);margin-bottom:.3rem}
+.soc-txt p{color:var(--g500);font-size:.88rem}
 .soc-links{display:flex;gap:.65rem;flex-wrap:wrap}
-.soc-btn{display:flex;align-items:center;gap:.55rem;padding:.6rem 1.15rem;background:white;border:1px solid var(--g200);border-radius:var(--r-sm);font-size:.84rem;font-weight:600;color:var(--g700);transition:all .2s}
+.soc-btn{display:flex;align-items:center;gap:.55rem;padding:.6rem 1.1rem;background:white;border:1px solid var(--g200);border-radius:var(--r-sm);font-size:.83rem;font-weight:600;color:var(--g700);transition:all .2s}
 .soc-btn:hover{border-color:var(--green);color:var(--green);box-shadow:0 1px 3px rgba(0,0,0,.08)}
 
 /* NEWSLETTER */
 .nl-sec{background:var(--gold-lt);border-top:1px solid rgba(196,154,15,.2);border-bottom:1px solid rgba(196,154,15,.2);padding:3.5rem 0}
 .nl-in{display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap}
-.nl-txt h2{font-size:1.45rem;color:var(--green-dk)}
-.nl-txt p{font-size:.88rem;color:var(--g500);margin-top:.25rem}
+.nl-txt h2{font-size:1.4rem;color:var(--green-dk)}
+.nl-txt p{font-size:.86rem;color:var(--g500);margin-top:.25rem}
 .nl-form{display:flex;gap:.65rem;flex-wrap:wrap}
-.nl-form input{padding:.72rem 1.15rem;border:1px solid var(--g200);border-radius:var(--r-sm);font-size:.88rem;min-width:230px;outline:none;transition:border-color .2s}
+.nl-form input{padding:.7rem 1.1rem;border:1px solid var(--g200);border-radius:var(--r-sm);font-size:.88rem;min-width:220px;outline:none;transition:border-color .2s}
 .nl-form input:focus{border-color:var(--green)}
-.nl-form button{padding:.72rem 1.6rem;background:var(--green);color:white;border:none;border-radius:var(--r-sm);font-size:.88rem;font-weight:700;transition:background .2s}
+.nl-form button{padding:.7rem 1.5rem;background:var(--green);color:white;border:none;border-radius:var(--r-sm);font-size:.88rem;font-weight:700;transition:background .2s}
 .nl-form button:hover{background:var(--green-dk)}
-.contact-row{margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(196,154,15,.2);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}
-.cr-lbl{font-size:.75rem;font-weight:700;color:var(--green-dk);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35rem}
+.cr-row{margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(196,154,15,.2);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}
+.cr-lbl{font-size:.74rem;font-weight:700;color:var(--green-dk);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35rem}
 .cr-val{font-size:.9rem;font-weight:600}
-.cr-sub{font-size:.8rem;color:var(--g500)}
+.cr-sub{font-size:.78rem;color:var(--g500)}
 
 /* FOOTER */
 footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2rem}
@@ -267,20 +419,17 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
 @media(max-width:900px){.ft-grid{grid-template-columns:1fr 1fr;gap:2rem}}
 @media(max-width:500px){.ft-grid{grid-template-columns:1fr}}
 .ft-brand h2{font-size:1.05rem;color:white;margin-bottom:.4rem}
-.ft-brand p{font-size:.8rem;line-height:1.7;max-width:270px}
-.ft-brand em{font-size:.76rem;opacity:.45;display:block;margin-top:.75rem}
+.ft-brand p{font-size:.8rem;line-height:1.75;max-width:270px}
+.ft-brand em{font-size:.76rem;opacity:.4;display:block;margin-top:.75rem}
 .ft-socials{display:flex;gap:.6rem;margin-top:1.1rem}
 .ft-socials a{opacity:.55;font-size:1.05rem;transition:opacity .2s}
 .ft-socials a:hover{opacity:1}
-.ft-col h3{font-family:'Inter',sans-serif;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.35);margin-bottom:.9rem}
+.ft-col h3{font-family:'Inter',sans-serif;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.32);margin-bottom:.9rem}
 .ft-col ul{display:flex;flex-direction:column;gap:.45rem}
-.ft-col a{font-size:.83rem;transition:color .15s}
+.ft-col a{font-size:.82rem;transition:color .15s}
 .ft-col a:hover{color:white}
-.ft-bot{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.65rem;font-size:.76rem}
+.ft-bot{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.65rem;font-size:.74rem}
 .ft-bot a:hover{color:white}
-
-/* PLACEHOLDER */
-.ph{display:inline-block;background:rgba(196,154,15,.14);border:1px dashed var(--gold);color:var(--gold);font-size:.65rem;font-weight:700;padding:.12rem .45rem;border-radius:4px;text-transform:uppercase;letter-spacing:.04em}
 
 /* BACK TO TOP */
 .btt{position:fixed;bottom:1.75rem;right:1.75rem;width:42px;height:42px;background:var(--green);color:white;border:none;border-radius:50%;font-size:1rem;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh);opacity:0;transform:translateY(8px);transition:all .3s;z-index:100}
@@ -320,22 +469,22 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       <span></span><span></span><span></span>
     </button>
   </div>
-  <div class="c">
-    <div class="mob" id="navMob">
-      <a href="#about" class="nl" onclick="toggleMenu()">About</a>
-      <a href="#events" class="nl" onclick="toggleMenu()">Events</a>
-      <a href="#spotlight" class="nl" onclick="toggleMenu()">Alumni</a>
-      <a href="#give" class="nl" onclick="toggleMenu()">Give</a>
-      <a href="#involved" class="nl" onclick="toggleMenu()">Get Involved</a>
-      <a href="#news" class="nl" onclick="toggleMenu()">News</a>
-      <a href="#contact" class="nl" onclick="toggleMenu()">Contact</a>
-      <a href="#give" class="nav-cta" onclick="toggleMenu()">Give Now</a>
-    </div>
-  </div>
+  <div class="c"><div class="mob" id="navMob">
+    <a href="#about" class="nl" onclick="toggleMenu()">About</a>
+    <a href="#events" class="nl" onclick="toggleMenu()">Events</a>
+    <a href="#spotlight" class="nl" onclick="toggleMenu()">Alumni</a>
+    <a href="#give" class="nl" onclick="toggleMenu()">Give</a>
+    <a href="#involved" class="nl" onclick="toggleMenu()">Get Involved</a>
+    <a href="#news" class="nl" onclick="toggleMenu()">News</a>
+    <a href="#contact" class="nl" onclick="toggleMenu()">Contact</a>
+    <a href="#give" class="nav-cta" onclick="toggleMenu()">Give Now</a>
+  </div></div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO — aerial NEK fall foliage drone photo -->
 <section class="hero" id="home">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
   <div class="c">
     <div class="hero-c">
       <div class="eyebrow">⚡ Official VTSU Lyndon Alumni Council</div>
@@ -353,32 +502,17 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       </div>
     </div>
   </div>
+  <div class="hero-photo-credit">Photo: Norton Pond, Vermont's Northeast Kingdom &bull; Anthony Quintano / Wikimedia Commons CC BY 4.0</div>
 </section>
 
 <!-- QUICK LINKS -->
 <section class="ql">
   <div class="c">
     <div class="ql-grid">
-      <a href="#events" class="ql-card">
-        <div class="ql-ico gr">🍂</div>
-        <h3>Fall Weekend 2026</h3>
-        <p>Late September on campus — golf, bonfires &amp; alumni games</p>
-      </a>
-      <a href="#give" class="ql-card">
-        <div class="ql-ico go">🎓</div>
-        <h3>Give to Lyndon</h3>
-        <p>Support scholarships, athletics, and campus traditions</p>
-      </a>
-      <a href="#involved" class="ql-card">
-        <div class="ql-ico gr">🤝</div>
-        <h3>Join the Council</h3>
-        <p>Help shape the future — 2 &amp; 3-year terms, Zoom-friendly</p>
-      </a>
-      <a href="#spotlight" class="ql-card">
-        <div class="ql-ico go">⭐</div>
-        <h3>Alumni Spotlight</h3>
-        <p>Meet Hornets making an impact across the country</p>
-      </a>
+      <a href="#events" class="ql-card"><div class="ql-ico gr">🍂</div><h3>Fall Weekend 2026</h3><p>Late September on campus — golf, bonfires &amp; alumni games</p></a>
+      <a href="#give" class="ql-card"><div class="ql-ico go">🎓</div><h3>Give to Lyndon</h3><p>Support scholarships, athletics, and campus traditions</p></a>
+      <a href="#involved" class="ql-card"><div class="ql-ico gr">🤝</div><h3>Join the Council</h3><p>Help shape the future — 2 &amp; 3-year terms, Zoom-friendly</p></a>
+      <a href="#spotlight" class="ql-card"><div class="ql-ico go">⭐</div><h3>Alumni Spotlight</h3><p>Meet Hornets making an impact across the country</p></a>
     </div>
   </div>
 </section>
@@ -387,26 +521,27 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
 <section class="sec" id="about">
   <div class="c">
     <div class="ab-grid">
-      <div class="ab-img">
-        <div style="font-size:4rem;opacity:.35">🏔</div>
-        <h3 style="color:rgba(255,255,255,.9);font-size:1.1rem">Lyndonville, Vermont</h3>
-        <p>195-acre hilltop campus in Vermont's Northeast Kingdom</p>
-        <div class="add-photo">📸 Add campus photo here</div>
+      <div>
+        <div class="ab-img-wrap">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/3/36/Northern_Vermont_University_Lyndon_campus_Lyndon_VT_September_2017.jpg"
+            alt="Northern Vermont University Lyndon Campus, Lyndonville VT"
+            loading="lazy"
+          >
+          <div class="ab-img-badge">📍 Lyndonville, Vermont &bull; 195-Acre Campus</div>
+        </div>
+        <p class="credit">NVU Lyndon Campus, Sept. 2017 &bull; Artaxerxes / Wikimedia Commons CC BY-SA 4.0</p>
       </div>
       <div>
         <span class="lbl">Who We Are</span>
         <h2 class="ttl">The VTSU Lyndon<br>Alumni Council</h2>
-        <div class="mission">
-          "To engage and connect alumni, support the Lyndon campus and its students, and preserve the unique identity, history, and traditions of our beloved college — through every name change and beyond."
-        </div>
-        <p style="font-size:.9rem;color:var(--g500);line-height:1.75;margin-bottom:1rem">
-          Whether you graduated when it was Lyndon Teachers College, Lyndon State College, Northern Vermont University, or VTSU Lyndon — this is your home. The campus has had many names, but the Hornet spirit never changes.
-        </p>
+        <div class="mission">"To engage and connect alumni, support the Lyndon campus and its students, and preserve the unique identity, history, and traditions of our beloved college — through every name change and beyond."</div>
+        <p style="font-size:.9rem;color:var(--g500);line-height:1.75;margin-bottom:1rem">Whether you graduated when it was Lyndon Teachers College, Lyndon State College, Northern Vermont University, or VTSU Lyndon — this is your home. The campus has had many names, but the Hornet spirit never changes.</p>
         <div class="bullets">
           <div class="bullet"><div class="dot"></div><span>Led by President <strong>Steve Cormier</strong> (LSC Class of '82) with 15 active council members</span></div>
           <div class="bullet"><div class="dot"></div><span>Six standing committees: Executive, Membership, Fundraising, Alumni/Student, Communications &amp; Events</span></div>
           <div class="bullet"><div class="dot"></div><span>Meetings held via Zoom — location is no barrier to participation</span></div>
-          <div class="bullet"><div class="dot"></div><span>Actively advocating for campus-specific graduation ceremonies, the Pipe and Drum tradition, and Lyndon's identity</span></div>
+          <div class="bullet"><div class="dot"></div><span>Advocating for campus-specific graduation ceremonies and the Pipe &amp; Drum tradition</span></div>
           <div class="bullet"><div class="dot"></div><span>Affiliated with the <strong>Manor Vail Society</strong> — preserving &amp; digitizing Lyndon's historic legacy</span></div>
         </div>
       </div>
@@ -414,45 +549,54 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
   </div>
 </section>
 
+<!-- CAMPUS PHOTO STRIP -->
+<div class="gallery-strip">
+  <div class="gallery-grid">
+    <div class="gallery-item" data-caption="Academic &amp; Student Activity Center">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/b/be/Lyndon_State_College.jpg"
+        alt="Academic and Student Activity Center, Lyndon State College"
+        loading="lazy"
+      >
+    </div>
+    <div class="gallery-item" data-caption="Samuel Read Hall — Lyndon Campus">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/0/02/Samuel_Read_Hall_Northern_Vermont_University_Lyndon_Campus_June_2018.jpg"
+        alt="Samuel Read Hall, Northern Vermont University Lyndon Campus"
+        loading="lazy"
+      >
+    </div>
+    <div class="gallery-item" data-caption="Whitelaw &amp; Crevecour Residence Halls">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/1/14/LSC_Residence_Halls.jpg"
+        alt="LSC Residence Halls — Whitelaw and Crevecour"
+        loading="lazy"
+      >
+    </div>
+    <div class="gallery-item" data-caption="Campus Entrance — Vail Drive &amp; College Rd">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/3/35/Main_Entrance_sign_Northern_Vermont_University_Lyndon_Campus_Lyndon_VT_August_2022.jpg"
+        alt="Main Entrance sign, NVU Lyndon Campus, August 2022"
+        loading="lazy"
+      >
+    </div>
+  </div>
+</div>
+
 <!-- TIMELINE -->
 <section class="tl-sec">
   <div class="c">
     <div class="tl-hdr">
       <span class="lbl">Our Heritage</span>
       <h2 class="ttl" style="color:white">115 Years of Lyndon Education</h2>
-      <p style="color:rgba(255,255,255,.55);font-size:.92rem;max-width:480px;margin:.65rem auto 0">Many names. One community. You're part of a legacy that spans more than a century.</p>
+      <p style="color:rgba(255,255,255,.55);font-size:.92rem;max-width:480px;margin:.6rem auto 0">Many names. One community. You're part of a legacy that spans more than a century.</p>
     </div>
     <div class="tl">
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-yr">1911</div>
-        <div class="tl-name">Lyndon Training Course</div>
-        <div class="tl-desc">Founded as a one-year normal school in Lyndonville, Vermont</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-yr">1940s</div>
-        <div class="tl-name">Lyndon Teachers College</div>
-        <div class="tl-desc">Moved to the Theodore N. Vail estate in 1951; first male &amp; out-of-state students</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-yr">1961</div>
-        <div class="tl-name">Lyndon State College</div>
-        <div class="tl-desc">Established in the VT State Colleges system; Hornets athletics begin</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-yr">2018</div>
-        <div class="tl-name">NVU — Lyndon Campus</div>
-        <div class="tl-desc">Merged with Johnson State College to form Northern Vermont University</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-yr">2023</div>
-        <div class="tl-name">VTSU Lyndon</div>
-        <div class="tl-desc">Merged with Castleton &amp; Vermont Tech to form Vermont State University</div>
-      </div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1911</div><div class="tl-name">Lyndon Training Course</div><div class="tl-desc">Founded as a one-year normal school in Lyndonville, Vermont</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1940s</div><div class="tl-name">Lyndon Teachers College</div><div class="tl-desc">Moved to the Theodore N. Vail estate in 1951; first male &amp; out-of-state students</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1961</div><div class="tl-name">Lyndon State College</div><div class="tl-desc">Established in the VT State Colleges system; Hornets athletics begin</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">2018</div><div class="tl-name">NVU — Lyndon Campus</div><div class="tl-desc">Merged with Johnson State College to form Northern Vermont University</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">2023</div><div class="tl-name">VTSU Lyndon</div><div class="tl-desc">Merged with Castleton &amp; Vermont Tech to form Vermont State University</div></div>
     </div>
   </div>
 </section>
@@ -463,19 +607,28 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
     <div class="tc mb3">
       <span class="lbl">Mark Your Calendar</span>
       <h2 class="ttl">Events &amp; Traditions</h2>
-      <p class="sub" style="max-width:560px;margin:0 auto">Cherished traditions, reimagined for today's Hornet community.</p>
+      <p class="sub" style="max-width:540px;margin:0 auto">Cherished traditions, reimagined for today's Hornet community.</p>
     </div>
     <div class="ev-grid">
 
-      <!-- Fall Weekend -->
+      <!-- Fall Weekend — real 2025 event photo header -->
       <div class="ev-card">
-        <div class="ev-hdr fall">
-          <span class="ev-badge">Annual Tradition</span>
-          <h3>Lyndon Fall Weekend for Alumni &amp; Families</h3>
-          <div class="ev-date">📅 Late September 2026 · Lyndonville, VT &nbsp;<span class="ph">Date TBD</span></div>
+        <div class="ev-photo-hdr">
+          <img
+            src="https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/lyndonhornets.com/images/2025/9/22/IMG_0965.jpeg"
+            alt="Lyndon Alumni Council Fall Weekend 2025"
+            loading="lazy"
+            onerror="this.parentElement.style.background='linear-gradient(135deg,#1b5e35,#2d7a4a)';this.style.display='none'"
+          >
+          <div class="ev-photo-overlay"></div>
+          <span class="ev-badge-abs">Annual Tradition</span>
+          <div class="ev-photo-content">
+            <h3>Lyndon Fall Weekend for Alumni &amp; Families</h3>
+            <div class="ev-date">📅 Late September 2026 &bull; Lyndonville, VT</div>
+          </div>
         </div>
         <div class="ev-body">
-          <p>The Alumni Council's signature event — created to keep autumn homecoming alive after the university moved the official celebration to spring. Alumni return from across the country every September.</p>
+          <p>The Alumni Council's signature fall event — created to keep autumn homecoming alive after the university moved the official celebration to spring. Alumni return from across the country every September.</p>
           <div class="acts">
             <div class="act">Lyndon Athletics Golf Classic at Orleans Country Club</div>
             <div class="act">Athletic Hall of Fame &amp; Alumni Awards Banquet</div>
@@ -485,27 +638,27 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
             <div class="act">Manor Vail Museum tours with the Manor Vail Society</div>
             <div class="act">Cookouts, ice cream socials &amp; campus walks</div>
           </div>
-          <a href="#contact" class="btn btn-g">Get Notified When Dates Drop &rarr;</a>
+          <a href="#contact" class="btn btn-g" style="font-size:.84rem">Get Notified When Dates Drop &rarr;</a>
         </div>
       </div>
 
       <!-- Spring Homecoming -->
       <div class="ev-card">
-        <div class="ev-hdr spring">
-          <span class="ev-badge">University-Sponsored</span>
+        <div class="ev-hdr-gold">
+          <span class="ev-badge-gold">University-Sponsored</span>
           <h3>Spring Homecoming 2026</h3>
-          <div class="ev-date" style="color:var(--green-dk)">📅 April 24–26, 2026 · Lyndonville, VT</div>
+          <div class="ev-date">📅 April 24–26, 2026 &bull; Lyndonville, VT</div>
         </div>
         <div class="ev-body">
-          <p>The official VTSU Homecoming, moved to late April to align with end-of-year celebrations, Spring Day, GreggFest, and commencement for graduating seniors.</p>
+          <p>The official VTSU Homecoming, moved to late April to align with Spring Day, GreggFest, and commencement celebrations for graduating seniors.</p>
           <div class="acts">
             <div class="act">Spring Day &amp; GreggFest campus-wide celebration</div>
             <div class="act">Distinguished Alumni Award ceremony</div>
             <div class="act">Senior celebration &amp; commencement lead-up events</div>
-            <div class="act">Council advocacy for on-campus graduation &amp; Pipe &amp; Drum tradition</div>
-            <div class="act">Reconnect with faculty, staff, and current students</div>
+            <div class="act">Advocacy for on-campus graduation &amp; Pipe &amp; Drum tradition</div>
+            <div class="act">Reconnect with faculty, staff &amp; current students</div>
           </div>
-          <a href="#contact" class="btn btn-og">Register &nbsp;<span class="ph">Link TBD</span></a>
+          <a href="#contact" class="btn btn-og" style="font-size:.84rem">Register &mdash; Link Coming Soon</a>
         </div>
       </div>
     </div>
@@ -516,12 +669,12 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
         <div>
           <span class="lbl">Athletic Heritage</span>
           <h2 class="ttl" style="font-size:1.55rem;margin-bottom:.4rem">Athletic Hall of Fame</h2>
-          <p style="font-size:.86rem;color:var(--g500);max-width:460px">Honoring Lyndon's finest athletes since 1983. New inductees are celebrated each fall at the Alumni Weekend banquet.</p>
+          <p style="font-size:.86rem;color:var(--g500);max-width:460px">Honoring Lyndon's finest athletes since 1983. New inductees celebrated each fall at the Alumni Weekend banquet.</p>
           <p style="font-size:.8rem;color:var(--g400);margin-top:.4rem;font-style:italic">2024 Inductees: Mikayla Hodge '18 &bull; Brandon Hunter '19 &bull; Daniel Sleeman '94 &bull; Robert Trucott '13</p>
         </div>
-        <div class="hof-btns">
-          <a href="https://vtsuhornets.com/honors/vermont-state-lyndon-athletic-hall-of-fame" target="_blank" class="btn btn-og">View Hall of Fame &rarr;</a>
-          <a href="#contact" class="btn btn-g">Submit Nomination</a>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center">
+          <a href="https://vtsuhornets.com/honors/vermont-state-lyndon-athletic-hall-of-fame" target="_blank" class="btn btn-og" style="font-size:.84rem">View Hall of Fame &rarr;</a>
+          <a href="#contact" class="btn btn-g" style="font-size:.84rem">Submit Nomination</a>
         </div>
       </div>
     </div>
@@ -536,34 +689,51 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
         <span class="lbl">Hornets Making History</span>
         <h2 class="ttl">Alumni Spotlight</h2>
       </div>
-      <a href="#contact" class="btn btn-og">Nominate an Alum &rarr;</a>
+      <a href="#contact" class="btn btn-og" style="font-size:.84rem">Nominate an Alum &rarr;</a>
     </div>
     <div class="sp-grid">
+
+      <!-- Jim Cantore -->
       <div class="sp-card">
-        <div class="sp-img">🌪<span class="class-bdg">Class of '86</span></div>
+        <div class="sp-hdr cantore">
+          <span class="sp-icon">🌪</span>
+          <div class="sp-initials">J.C.</div>
+          <span class="class-bdg">Class of '86</span>
+        </div>
         <div class="sp-body">
           <h3>Jim Cantore</h3>
-          <div class="sp-role">Meteorologist · The Weather Channel</div>
-          <p>One of America's most recognized broadcast meteorologists, Jim has covered every major storm on The Weather Channel since graduating from Lyndon's renowned Atmospheric Sciences program.</p>
+          <div class="sp-role">Meteorologist &bull; The Weather Channel</div>
+          <p>One of America's most recognized broadcast meteorologists, Jim has covered every major storm on The Weather Channel since graduating from Lyndon's Atmospheric Sciences program. A White River Junction, VT native and proud Hornet.</p>
+          <a href="https://en.wikipedia.org/wiki/Jim_Cantore" target="_blank" class="sp-link">Read More &rarr;</a>
         </div>
       </div>
+
+      <!-- Nick Gregory -->
       <div class="sp-card">
-        <div class="sp-img">📡<span class="class-bdg">Class of '82</span></div>
+        <div class="sp-hdr gregory">
+          <span class="sp-icon">📡</span>
+          <div class="sp-initials">N.G.</div>
+          <span class="class-bdg">Class of '82</span>
+        </div>
         <div class="sp-body">
           <h3>Nick Gregory</h3>
-          <div class="sp-role">Chief Meteorologist · WNYW-TV (Fox 5), New York City</div>
-          <p>Nick has been a fixture on New York television for decades, a testament to the strength of Lyndon's broadcast and atmospheric sciences tradition.</p>
+          <div class="sp-role">Chief Meteorologist &bull; WNYW Fox 5, New York City</div>
+          <p>Nick has been a fixture on New York City television since 1986 — the longest-serving broadcast meteorologist at a single station. His career is a testament to the strength of Lyndon's broadcast and atmospheric sciences tradition.</p>
+          <a href="https://en.wikipedia.org/wiki/Nick_Gregory" target="_blank" class="sp-link">Read More &rarr;</a>
         </div>
       </div>
-      <div class="sp-card sp-ph">
-        <div class="sp-img" style="background:var(--off);color:var(--g400)">
-          <span class="ph" style="font-size:.72rem">Your Story Here</span>
+
+      <!-- Placeholder -->
+      <div class="sp-card" style="border:2px dashed var(--g200)">
+        <div class="sp-hdr ph">
+          <span class="sp-icon" style="font-size:2rem;opacity:.5">⭐</span>
+          <div style="font-size:.75rem;color:rgba(255,255,255,.5);font-style:italic">Your Story Here</div>
         </div>
         <div class="sp-body">
-          <h3 style="color:var(--g400)">Next Spotlight Placeholder</h3>
-          <div class="sp-role" style="color:var(--g200)">Class of XXXX &bull; Your Field</div>
-          <p style="font-style:italic;color:var(--g400)">Know a Hornet doing great things? Nominate them for our Alumni Spotlight feature.</p>
-          <a href="#contact" style="font-size:.82rem;font-weight:700;color:var(--green)">Nominate Someone &rarr;</a>
+          <h3 style="color:var(--g400)">Next Spotlight &mdash; Coming Soon</h3>
+          <div class="sp-role" style="color:var(--g300)">Class of XXXX &bull; Your Field</div>
+          <p style="font-style:italic;color:var(--g400)">Know a Hornet doing great things? Nominate them for our Alumni Spotlight.</p>
+          <a href="#contact" class="sp-link">Nominate Someone &rarr;</a>
         </div>
       </div>
     </div>
@@ -576,8 +746,8 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
     <div class="give-grid">
       <div>
         <span class="lbl">Support Lyndon</span>
-        <h2 class="ttl give-ttl">Give Back to the<br>Place That Shaped You</h2>
-        <p class="sub give-sub">Your gift keeps Lyndon's traditions alive — from the fire pit at Vail to the courts where Hornets still compete.</p>
+        <h2 class="ttl" style="color:white">Give Back to the<br>Place That Shaped You</h2>
+        <p class="sub" style="color:rgba(255,255,255,.7)">Your gift keeps Lyndon's traditions alive — from the fire pit at Vail to the courts where Hornets still compete.</p>
         <div class="give-ways">
           <div class="gw"><div class="gw-ico">🎓</div><div class="gw-txt"><strong>Scholarship Fund</strong><span>Help current Lyndon students afford the education that changed your life</span></div></div>
           <div class="gw"><div class="gw-ico">⚡</div><div class="gw-txt"><strong>Athletics Support</strong><span>Fuel the Hornets — equipment, travel, and facilities for student athletes</span></div></div>
@@ -587,7 +757,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       </div>
       <div class="give-card">
         <h3>Make a Gift Today</h3>
-        <p>Donations are processed securely through GiveCampus and may be tax-deductible through Vermont State University's 501(c)(3).</p>
+        <p>Donations processed securely through GiveCampus and may be tax-deductible through Vermont State University's 501(c)(3).</p>
         <div class="amounts">
           <button class="amt">$25</button>
           <button class="amt sel">$50</button>
@@ -599,8 +769,8 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
         <a href="https://www.givecampus.com" target="_blank">
           <button class="give-cta">Donate via GiveCampus &rarr;</button>
         </a>
-        <p class="tax">Donations processed through Vermont State University Foundation &bull; Consult your tax advisor</p>
-        <div class="giving-tip">💡 <strong>Giving Tuesday:</strong> Honor a professor, coach, or advisor who made a difference. Details each November.</div>
+        <p class="tax">Vermont State University Foundation &bull; Tax-deductible &bull; Consult your tax advisor</p>
+        <div class="giving-tip">💡 <strong>Giving Tuesday:</strong> Honor a professor, coach, or advisor. Details each November.</div>
       </div>
     </div>
   </div>
@@ -612,76 +782,26 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
     <div class="tc mb3">
       <span class="lbl">Join the Movement</span>
       <h2 class="ttl">Get Involved</h2>
-      <p class="sub" style="max-width:540px;margin:0 auto">There's a place for every Hornet — no matter where you are in the world.</p>
+      <p class="sub" style="max-width:520px;margin:0 auto">There's a place for every Hornet — no matter where you are in the world.</p>
     </div>
     <div class="inv-grid">
-      <div class="inv-card">
-        <div class="inv-ico">🏛</div>
-        <h3>Join the Alumni Council</h3>
-        <p>Growing toward 20 members and actively recruiting. Terms are 2–3 years with the option to renew. Meetings held via Zoom — no Vermont zip code required.</p>
-        <a href="#contact" class="inv-link">Apply Now &rarr;</a>
-      </div>
-      <div class="inv-card">
-        <div class="inv-ico">🎓</div>
-        <h3>Mentor a Current Student</h3>
-        <p>Connect with VTSU Lyndon students through the Handshake platform and the Alumni/Student Committee. Share your path and open doors for the next generation of Hornets.</p>
-        <a href="https://joinhandshake.com" target="_blank" class="inv-link">Join Handshake &rarr;</a>
-      </div>
-      <div class="inv-card">
-        <div class="inv-ico">📣</div>
-        <h3>Communications Committee</h3>
-        <p>Help shape the council's voice — social media, newsletters, content. Chair: Meaghan Meachem. Members: Alex Huff, Nick Russo, Erica Brisson, Dan Grube, Tyler Dumont.</p>
-        <a href="#contact" class="inv-link">Express Interest &rarr;</a>
-      </div>
-      <div class="inv-card">
-        <div class="inv-ico">🎉</div>
-        <h3>Event Volunteers</h3>
-        <p>Make Fall Weekend and Spring Homecoming happen. Help with planning, logistics, and day-of operations. Great for local alumni and those visiting Vermont.</p>
-        <a href="#contact" class="inv-link">Volunteer &rarr;</a>
-      </div>
-      <div class="inv-card">
-        <div class="inv-ico">💰</div>
-        <h3>Fundraising Committee</h3>
-        <p>Drive alumni giving campaigns, coordinate the Golf Classic, and secure sponsorships. Chair: John Kleinhans. Members: Alexander Lataille, Jeff Senterman, Erica Brisson, Carolyn Haggett.</p>
-        <a href="#contact" class="inv-link">Get Involved &rarr;</a>
-      </div>
-      <div class="inv-card">
-        <div class="inv-ico">🏺</div>
-        <h3>Manor Vail Society</h3>
-        <p>Preserve Lyndon's irreplaceable history. The MVS meets annually during Fall Weekend and actively digitizes the Vail Museum. Seeking artifacts, photos, and ephemera. Contact: Michael Thurston '74.</p>
-        <a href="#contact" class="inv-link">Learn More &rarr;</a>
-      </div>
+      <div class="inv-card"><div class="inv-ico">🏛</div><h3>Join the Alumni Council</h3><p>Growing toward 20 members and actively recruiting. Terms are 2–3 years, renewable. Meetings held via Zoom — no Vermont zip code required.</p><a href="#contact" class="inv-link">Apply Now &rarr;</a></div>
+      <div class="inv-card"><div class="inv-ico">🎓</div><h3>Mentor a Current Student</h3><p>Connect with VTSU Lyndon students through Handshake and the Alumni/Student Committee. Share your path and open doors for the next generation.</p><a href="https://joinhandshake.com" target="_blank" class="inv-link">Join Handshake &rarr;</a></div>
+      <div class="inv-card"><div class="inv-ico">📣</div><h3>Communications Committee</h3><p>Help shape the council's voice — social media, newsletters, content. Chair: Meaghan Meachem. Members: Alex Huff, Nick Russo, Erica Brisson, Dan Grube, Tyler Dumont.</p><a href="#contact" class="inv-link">Express Interest &rarr;</a></div>
+      <div class="inv-card"><div class="inv-ico">🎉</div><h3>Event Volunteers</h3><p>Make Fall Weekend and Spring Homecoming happen. Planning, logistics, and day-of support. Great for local alumni and those visiting Vermont.</p><a href="#contact" class="inv-link">Volunteer &rarr;</a></div>
+      <div class="inv-card"><div class="inv-ico">💰</div><h3>Fundraising Committee</h3><p>Drive giving campaigns, coordinate the Golf Classic, secure sponsorships. Chair: John Kleinhans. Members: Alexander Lataille, Jeff Senterman, Erica Brisson, Carolyn Haggett.</p><a href="#contact" class="inv-link">Get Involved &rarr;</a></div>
+      <div class="inv-card"><div class="inv-ico">🏺</div><h3>Manor Vail Society</h3><p>Preserve Lyndon's irreplaceable history. MVS meets annually at Fall Weekend, actively digitizing the Vail Museum. Seeking artifacts &amp; photos. Contact: Michael Thurston '74.</p><a href="#contact" class="inv-link">Learn More &rarr;</a></div>
     </div>
-
-    <!-- Committees Breakdown -->
     <div class="cmts">
       <span class="lbl">Council Structure</span>
-      <h2 class="ttl" style="font-size:1.5rem;margin-bottom:0">Leadership &amp; Committees</h2>
+      <h2 class="ttl" style="font-size:1.45rem;margin-bottom:0">Leadership &amp; Committees</h2>
       <div class="cmt-grid">
-        <div class="cmt">
-          <div class="cmt-lbl">Executive Committee</div>
-          <div class="cmt-mems">Steve Cormier &bull; Alex Huff &bull; Beth Fraser Kirker &bull; John Kleinhans</div>
-        </div>
-        <div class="cmt">
-          <div class="cmt-lbl">Membership / Scholarship / Recognition</div>
-          <div class="cmt-mems">Steve Cormier (Chair) &bull; Meaghan Meachem &bull; Beth Fraser Kirker &bull; Nick Russo &bull; Ethan Coppenrath &bull; John Kascenska</div>
-        </div>
-        <div class="cmt">
-          <div class="cmt-lbl">Fundraising Committee</div>
-          <div class="cmt-mems">John Kleinhans (Chair) &bull; Alexander Lataille &bull; Jeff Senterman &bull; Erica Brisson &bull; Carolyn Haggett</div>
-        </div>
-        <div class="cmt">
-          <div class="cmt-lbl">Alumni / Student Committee</div>
-          <div class="cmt-mems">Alex Huff (Chair) &bull; Jeff Senterman &bull; Dan Grube &bull; Dan Daley &bull; Cole Alexander</div>
-        </div>
-        <div class="cmt">
-          <div class="cmt-lbl">Communications Committee</div>
-          <div class="cmt-mems">Meaghan Meachem (Chair) &bull; Alex Huff &bull; Nick Russo &bull; Erica Brisson &bull; Dan Grube &bull; Tyler Dumont</div>
-        </div>
-        <div class="cmt">
-          <div class="cmt-lbl">Event Committee</div>
-          <div class="cmt-mems">Steve Cormier (Chair) &bull; Lisa Hayward &bull; John Kleinhans &bull; Dan Daley &bull; Adam Gordon &bull; Nick Russo</div>
-        </div>
+        <div class="cmt"><div class="cmt-lbl">Executive Committee</div><div class="cmt-mems">Steve Cormier &bull; Alex Huff &bull; Beth Fraser Kirker &bull; John Kleinhans</div></div>
+        <div class="cmt"><div class="cmt-lbl">Membership / Scholarship / Recognition</div><div class="cmt-mems">Steve Cormier (Chair) &bull; Meaghan Meachem &bull; Beth Fraser Kirker &bull; Nick Russo &bull; Ethan Coppenrath &bull; John Kascenska</div></div>
+        <div class="cmt"><div class="cmt-lbl">Fundraising Committee</div><div class="cmt-mems">John Kleinhans (Chair) &bull; Alexander Lataille &bull; Jeff Senterman &bull; Erica Brisson &bull; Carolyn Haggett</div></div>
+        <div class="cmt"><div class="cmt-lbl">Alumni / Student Committee</div><div class="cmt-mems">Alex Huff (Chair) &bull; Jeff Senterman &bull; Dan Grube &bull; Dan Daley &bull; Cole Alexander</div></div>
+        <div class="cmt"><div class="cmt-lbl">Communications Committee</div><div class="cmt-mems">Meaghan Meachem (Chair) &bull; Alex Huff &bull; Nick Russo &bull; Erica Brisson &bull; Dan Grube &bull; Tyler Dumont</div></div>
+        <div class="cmt"><div class="cmt-lbl">Event Committee</div><div class="cmt-mems">Steve Cormier (Chair) &bull; Lisa Hayward &bull; John Kleinhans &bull; Dan Daley &bull; Adam Gordon &bull; Nick Russo</div></div>
       </div>
     </div>
   </div>
@@ -691,38 +811,47 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
 <section class="sec" id="news">
   <div class="c">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem" class="mb3">
-      <div>
-        <span class="lbl">Stay in the Know</span>
-        <h2 class="ttl">Latest News</h2>
-      </div>
-      <a href="#contact" class="btn btn-og">Subscribe to Updates &rarr;</a>
+      <div><span class="lbl">Stay in the Know</span><h2 class="ttl">Latest News</h2></div>
+      <a href="#contact" class="btn btn-og" style="font-size:.84rem">Subscribe to Updates &rarr;</a>
     </div>
     <div class="news-grid">
       <div class="nc">
-        <div class="nc-img">🍂</div>
+        <div class="nc-img">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Banner_welcoming_alumni_and_parents_Northern_Vermont_University_Lyndon_campus_Lyndon_VT_September_2017.jpg"
+            alt="Alumni weekend welcome banner, NVU Lyndon Campus 2017"
+            loading="lazy"
+          >
+        </div>
         <div class="nc-body">
           <div class="nc-cat">Events</div>
           <h3>Fall Weekend 2025 Recap: Hornets Return to Campus</h3>
-          <p>Alumni from across the country returned to Lyndonville for the Alumni Council's annual fall celebration — golf, bonfires, alumni games, and the Hall of Fame banquet.</p>
-          <div class="nc-date">September 22, 2025 &bull; <span class="ph">Add Article Link</span></div>
+          <p>Alumni from across the country returned to Lyndonville for the council's annual fall celebration — golf, bonfires, alumni games, and the Hall of Fame banquet.</p>
+          <div class="nc-date">September 22, 2025</div>
         </div>
       </div>
       <div class="nc">
-        <div class="nc-img">🎓</div>
+        <div class="nc-img">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/b/be/Lyndon_State_College.jpg"
+            alt="Academic and Student Activity Center, Lyndon State College"
+            loading="lazy"
+          >
+        </div>
         <div class="nc-body">
           <div class="nc-cat">Council</div>
           <h3>Council Grows to 15 Members, Eyes 20-Member Goal</h3>
-          <p>The VTSU Lyndon Alumni Council expanded its membership and is actively recruiting alumni to join all six of its standing committees.</p>
-          <div class="nc-date">January 2025 &bull; <span class="ph">Add Article Link</span></div>
+          <p>The VTSU Lyndon Alumni Council expanded its membership and is actively recruiting alumni to join all six standing committees.</p>
+          <div class="nc-date">January 2025</div>
         </div>
       </div>
-      <div class="nc nc-ph">
-        <div class="nc-img" style="color:var(--g200)">📰</div>
+      <div class="nc" style="border:2px dashed var(--g200)">
+        <div class="nc-img-ph">📰</div>
         <div class="nc-body">
-          <div class="nc-cat" style="color:var(--g200)">Placeholder</div>
-          <h3 style="color:var(--g400)">Next Article Title Goes Here</h3>
-          <p style="font-style:italic;color:var(--g300)">Council news, event recaps, and campus announcements will appear here. Content added as stories develop.</p>
-          <div class="nc-date" style="color:var(--g200)"><span class="ph">Coming Soon</span></div>
+          <div class="nc-cat" style="color:var(--g300)">Coming Soon</div>
+          <h3 style="color:var(--g400)">Next Article &mdash; Placeholder</h3>
+          <p style="font-style:italic;color:var(--g400)">Council news, event recaps, and campus announcements will appear here as stories develop.</p>
+          <div class="nc-date" style="color:var(--g200)">TBD</div>
         </div>
       </div>
     </div>
@@ -739,10 +868,10 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       </div>
       <div class="soc-links">
         <a href="https://www.facebook.com/groups/LyndonAlums/" target="_blank" class="soc-btn">📘 Facebook Group</a>
-        <a href="#" class="soc-btn">📸 Instagram <span class="ph" style="margin-left:.25rem">Link TBD</span></a>
-        <a href="#" class="soc-btn">▶ YouTube <span class="ph" style="margin-left:.25rem">Link TBD</span></a>
+        <a href="#" class="soc-btn">📸 Instagram</a>
+        <a href="#" class="soc-btn">▶ YouTube</a>
         <a href="https://www.linkedin.com/school/lyndon-state-college/people" target="_blank" class="soc-btn">💼 LinkedIn</a>
-        <a href="https://joinhandshake.com" target="_blank" class="soc-btn">🤝 Handshake (Careers)</a>
+        <a href="https://joinhandshake.com" target="_blank" class="soc-btn">🤝 Handshake</a>
       </div>
     </div>
   </div>
@@ -761,27 +890,11 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
         <button type="submit">Subscribe &rarr;</button>
       </form>
     </div>
-    <div class="contact-row">
-      <div>
-        <div class="cr-lbl">Council President</div>
-        <div class="cr-val">Steve Cormier</div>
-        <div class="cr-sub">LSC Class of '82</div>
-      </div>
-      <div>
-        <div class="cr-lbl">Mailing Address</div>
-        <div class="cr-val"><span class="ph">Address TBD</span></div>
-        <div class="cr-sub">Lyndonville, VT area</div>
-      </div>
-      <div>
-        <div class="cr-lbl">Email Us</div>
-        <div class="cr-val"><span class="ph">Email Address TBD</span></div>
-        <div class="cr-sub">General inquiries &amp; nominations</div>
-      </div>
-      <div>
-        <div class="cr-lbl">Affiliated With</div>
-        <a href="https://vermontstate.edu/alumni/lyndon-alumni/" target="_blank" style="font-size:.88rem;color:var(--green);font-weight:700">Vermont State University Alumni &rarr;</a>
-        <div class="cr-sub" style="margin-top:.2rem">Donations via VSU Foundation</div>
-      </div>
+    <div class="cr-row">
+      <div><div class="cr-lbl">Council President</div><div class="cr-val">Steve Cormier</div><div class="cr-sub">LSC Class of '82</div></div>
+      <div><div class="cr-lbl">Mailing Address</div><div class="cr-val" style="color:var(--g400);font-style:italic">Coming Soon</div><div class="cr-sub">Lyndonville, VT area</div></div>
+      <div><div class="cr-lbl">Email Us</div><div class="cr-val" style="color:var(--g400);font-style:italic">Coming Soon</div><div class="cr-sub">General inquiries &amp; nominations</div></div>
+      <div><div class="cr-lbl">Affiliated With</div><a href="https://vermontstate.edu/alumni/lyndon-alumni/" target="_blank" style="font-size:.88rem;color:var(--green);font-weight:700">Vermont State University Alumni &rarr;</a><div class="cr-sub" style="margin-top:.2rem">Donations via VSU Foundation</div></div>
     </div>
   </div>
 </section>
@@ -835,8 +948,8 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
     <div class="ft-bot">
       <div>&copy; 2026 VTSU Lyndon Alumni Council &bull; All rights reserved</div>
       <div style="display:flex;gap:1.25rem">
-        <a href="#">Privacy Policy <span class="ph">TBD</span></a>
         <a href="#contact">Contact</a>
+        <span style="opacity:.35">Campus photos: Wikimedia Commons CC BY-SA 4.0</span>
       </div>
     </div>
   </div>
@@ -864,10 +977,9 @@ function handleSignup(e){
   const btn=e.target.querySelector('button'),orig=btn.textContent;
   btn.textContent='✓ Subscribed!';btn.style.background='var(--green-dk)';
   setTimeout(()=>{btn.textContent=orig;btn.style.background='';e.target.reset();},3000);
-  // TODO: Wire up to Mailchimp / ConvertKit / GoDaddy email marketing
 }
 
-// Nav highlight on scroll
+// Nav active state on scroll
 const nls=document.querySelectorAll('.nl[href^="#"]');
 const secs=[...document.querySelectorAll('section[id]')];
 window.addEventListener('scroll',()=>{
@@ -875,10 +987,15 @@ window.addEventListener('scroll',()=>{
   secs.forEach(s=>{if(scrollY>=s.offsetTop-130)cur=s.id});
   nls.forEach(l=>{
     const match=l.getAttribute('href')==='#'+cur;
-    l.style.background=match?'var(--green-lt)':'';
-    l.style.color=match?'var(--green)':'';
+    l.classList.toggle('on',match);
   });
-});
+},{ passive:true });
+
+// Hero parallax on scroll
+const heroBg=document.getElementById('heroBg');
+window.addEventListener('scroll',()=>{
+  heroBg.style.transform=`translateY(${scrollY*0.3}px) scale(1.03)`;
+},{ passive:true });
 </script>
 </body>
 </html>
