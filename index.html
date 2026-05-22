@@ -5,11 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VTSU Lyndon Alumni Council | Once a Hornet, Always a Hornet</title>
 <meta name="description" content="Official home of the VTSU Lyndon Alumni Council — connecting alumni of Lyndon Teachers College, Lyndon State College, Northern Vermont University, and VTSU Lyndon since 1911.">
-<link rel="canonical" href="https://almaster1987.github.io/lyndon-alumni/">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://almaster1987.github.io/lyndon-alumni/">
 <meta property="og:title" content="VTSU Lyndon Alumni Council | Once a Hornet, Always a Hornet">
 <meta property="og:description" content="Connecting alumni of Lyndon Teachers College, Lyndon State College, Northern Vermont University, and VTSU Lyndon — from 1911 to today and beyond.">
 <meta property="og:image" content="https://vermontstate.edu/wp-content/uploads/2023/09/Lyndon_Campus.jpg">
@@ -34,7 +32,6 @@
   "name": "VTSU Lyndon Alumni Council",
   "alternateName": ["Lyndon Alumni Council","LSC Alumni","NVU Lyndon Alumni"],
   "description": "Connecting alumni of Lyndon Teachers College, Lyndon State College, Northern Vermont University, and VTSU Lyndon since 1911.",
-  "url": "https://almaster1987.github.io/lyndon-alumni/",
   "foundingDate": "1911",
   "sameAs": [
     "https://www.facebook.com/groups/LyndonAlums/",
@@ -131,8 +128,11 @@ img{display:block;max-width:100%}
 .nav-links{display:flex;align-items:center;gap:.1rem}
 .nl{padding:.4rem .78rem;font-size:.85rem;font-weight:500;color:var(--g700);border-radius:var(--r-sm);transition:all .15s}
 .nl:hover,.nl.on{background:var(--green-lt);color:var(--green)}
-.nav-cta{padding:.46rem 1.15rem;background:var(--green);color:var(--white);border-radius:var(--r-sm);font-size:.85rem;font-weight:700;transition:all .2s;border:none}
-.nav-cta:hover{background:var(--green-dk)}
+.nav-cta{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1.15rem;background:var(--gold);color:var(--green-dk);border-radius:var(--r-sm);font-size:.86rem;font-weight:800;transition:all .2s;border:none;box-shadow:0 2px 6px rgba(196,154,15,.35);letter-spacing:.01em}
+.nav-cta:hover{background:var(--gold-md);transform:translateY(-1px);box-shadow:0 6px 14px rgba(196,154,15,.45)}
+.nav-cta::before{content:'♥';font-size:.78rem}
+@keyframes ctaPulse{0%,100%{box-shadow:0 2px 6px rgba(196,154,15,.35)}50%{box-shadow:0 2px 14px rgba(196,154,15,.65)}}
+.nav-cta{animation:ctaPulse 2.6s ease-in-out infinite}
 .hbg{display:none;flex-direction:column;gap:5px;padding:6px;border:none;background:none}
 .hbg span{display:block;width:24px;height:2px;background:var(--g700);border-radius:2px}
 .mob{display:none}
@@ -245,6 +245,10 @@ img{display:block;max-width:100%}
 .ql-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
 .ql-card{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.65rem;padding:1.6rem 1rem;border-radius:var(--r);border:1px solid var(--g100);transition:all .2s;background:var(--white)}
 .ql-card:hover{border-color:var(--green);box-shadow:var(--sh);transform:translateY(-3px)}
+.ql-card.ql-donate{background:linear-gradient(135deg,#fdf8e1 0%,#fff 100%);border:2px solid var(--gold);position:relative}
+.ql-card.ql-donate::after{content:'Most needed';position:absolute;top:-9px;right:12px;background:var(--gold);color:var(--green-dk);font-size:.6rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:.18rem .55rem;border-radius:999px}
+.ql-card.ql-donate:hover{border-color:var(--gold-md);box-shadow:0 8px 18px rgba(196,154,15,.25)}
+.ql-card.ql-donate .ql-ico{background:var(--gold);color:var(--white)}
 .ql-ico{width:50px;height:50px;border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;font-size:1.35rem}
 .ql-ico.gr{background:var(--green-lt)}
 .ql-ico.go{background:var(--gold-lt)}
@@ -398,14 +402,13 @@ img{display:block;max-width:100%}
 .gw-ico{width:42px;height:42px;border-radius:var(--r-sm);background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
 .gw-txt strong{display:block;font-size:.88rem;font-weight:700;margin-bottom:.1rem}
 .gw-txt span{font-size:.78rem;color:rgba(255,255,255,.6)}
-.give-card{background:white;border-radius:var(--r-lg);padding:2.25rem;color:var(--text)}
-.give-card h3{font-size:1.25rem;color:var(--green-dk);margin-bottom:.4rem}
-.give-card>p{font-size:.86rem;color:var(--g500);margin-bottom:1.5rem}
-.amounts{display:grid;grid-template-columns:repeat(3,1fr);gap:.65rem;margin-bottom:1rem}
-.amt{padding:.7rem;border:2px solid var(--g200);border-radius:var(--r-sm);background:white;font-size:.95rem;font-weight:700;color:var(--green-dk);transition:all .2s}
-.amt:hover,.amt.sel{border-color:var(--green);background:var(--green-lt)}
-.give-cta{width:100%;padding:.95rem;background:var(--green);color:white;border:none;border-radius:var(--r-sm);font-size:1rem;font-weight:700;transition:background .2s}
-.give-cta:hover{background:var(--green-dk)}
+.give-card{background:white;border-radius:var(--r-lg);padding:2.25rem;color:var(--text);border:3px solid var(--gold);box-shadow:0 24px 50px rgba(0,0,0,.25),0 0 0 6px rgba(196,154,15,.15);position:relative}
+.give-card-flag{display:inline-block;background:var(--gold);color:var(--green-dk);font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding:.3rem .85rem;border-radius:999px;margin-bottom:.85rem}
+.give-card h3{font-size:1.4rem;color:var(--green-dk);margin-bottom:.5rem;line-height:1.25}
+.give-card>p{font-size:.92rem;color:var(--g500);margin-bottom:1.75rem;line-height:1.75}
+.give-cta-link{display:block}
+.give-cta{width:100%;padding:1.15rem;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-md) 100%);color:var(--green-dk);border:none;border-radius:var(--r-sm);font-size:1.05rem;font-weight:800;transition:all .2s;box-shadow:0 6px 18px rgba(196,154,15,.4);letter-spacing:.01em;cursor:pointer}
+.give-cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(196,154,15,.55)}
 .tax{font-size:.7rem;text-align:center;color:var(--g400);margin-top:.65rem}
 .giving-tip{margin-top:1.1rem;padding:.75rem;background:var(--green-lt);border-radius:var(--r-sm);font-size:.78rem;color:var(--g700);text-align:center}
 
@@ -497,7 +500,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
 
 /* PRINT */
 @media print{
-  .nav,.ann,.btt,.hero-bg,.hero-overlay,.hero-photo-credit,.gallery-strip,.soc-sec,.nl-form,.give-card .amounts,.give-card .give-cta{display:none}
+  .nav,.ann,.btt,.hero-bg,.hero-overlay,.hero-photo-credit,.gallery-strip,.soc-sec,.nl-form,.give-card .give-cta{display:none}
   .hero{min-height:auto;background:var(--green-dk);padding:2rem 0}
   .hero-c{animation:none}
   .reveal{opacity:1!important;transform:none!important}
@@ -545,7 +548,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       <a href="#news" class="nl">News</a>
       <a href="#contact" class="nl">Contact</a>
     </div>
-    <a href="#give" class="nav-cta">Give Now</a>
+    <a href="#give" class="nav-cta">Donate to the Association</a>
     <button class="hbg" onclick="toggleMenu()" aria-label="Toggle navigation menu">
       <span></span><span></span><span></span>
     </button>
@@ -558,7 +561,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
     <a href="#involved" class="nl" onclick="toggleMenu()">Get Involved</a>
     <a href="#news" class="nl" onclick="toggleMenu()">News</a>
     <a href="#contact" class="nl" onclick="toggleMenu()">Contact</a>
-    <a href="#give" class="nav-cta" onclick="toggleMenu()">Give Now</a>
+    <a href="#give" class="nav-cta" onclick="toggleMenu()">Donate to the Association</a>
   </div></div>
 </nav>
 
@@ -576,7 +579,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       <p class="hero-sub">Connecting alumni of Lyndon Teachers College, Lyndon State College, Northern Vermont University, and VTSU Lyndon — from 1911 to today and beyond.</p>
       <div class="hero-btns">
         <a href="#events" class="btn btn-gold">Upcoming Events &rarr;</a>
-        <a href="#give" class="btn btn-ghost">Support Lyndon</a>
+        <a href="#give" class="btn btn-ghost">♥ Donate to the Association</a>
       </div>
       <div class="hero-stats">
         <div><div class="hs-num">1911</div><div class="hs-lbl">Founded</div></div>
@@ -594,7 +597,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
   <div class="c">
     <div class="ql-grid">
       <a href="#events" class="ql-card"><div class="ql-ico gr">🍂</div><h3>Fall Weekend 2026</h3><p>Late September on campus — golf, bonfires &amp; alumni games</p></a>
-      <a href="#give" class="ql-card"><div class="ql-ico go">🎓</div><h3>Give to Lyndon</h3><p>Support scholarships, athletics, and campus traditions</p></a>
+      <a href="#give" class="ql-card ql-donate"><div class="ql-ico go">♥</div><h3>Donate to the Association</h3><p>Direct support for Alumni Council programs &amp; traditions</p></a>
       <a href="#involved" class="ql-card"><div class="ql-ico gr">🤝</div><h3>Join the Council</h3><p>Help shape the future — 2 &amp; 3-year terms, Zoom-friendly</p></a>
       <a href="#spotlight" class="ql-card"><div class="ql-ico go">⭐</div><h3>Alumni Spotlight</h3><p>Meet Hornets making an impact across the country</p></a>
     </div>
@@ -690,7 +693,8 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       <p style="color:rgba(255,255,255,.55);font-size:.92rem;max-width:480px;margin:.6rem auto 0">Many names. One community. You're part of a legacy that spans more than a century.</p>
     </div>
     <div class="tl reveal">
-      <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1911</div><div class="tl-name">Lyndon Training Course</div><div class="tl-desc">Founded as a one-year normal school in Lyndonville, Vermont</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1911</div><div class="tl-name">Teacher Training Course</div><div class="tl-desc">One-year program housed on the Lyndon Institute campus</div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1920s</div><div class="tl-name">Lyndon Normal School</div><div class="tl-desc">Expanded to a two- then three-year program — a school within a school at LI</div></div>
       <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1940s</div><div class="tl-name">Lyndon Teachers College</div><div class="tl-desc">Moved to the Theodore N. Vail estate in 1951; first male &amp; out-of-state students</div></div>
       <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">1961</div><div class="tl-name">Lyndon State College</div><div class="tl-desc">Established in the VT State Colleges system; Hornets athletics begin</div></div>
       <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">2018</div><div class="tl-name">NVU — Lyndon Campus</div><div class="tl-desc">Merged with Johnson State College to form Northern Vermont University</div></div>
@@ -856,31 +860,24 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
   <div class="c">
     <div class="give-grid">
       <div>
-        <span class="lbl">Support Lyndon</span>
-        <h2 class="ttl" style="color:white">Give Back to the<br>Place That Shaped You</h2>
-        <p class="sub" style="color:rgba(255,255,255,.7)">Your gift keeps Lyndon's traditions alive — from the fire pit at Vail to the courts where Hornets still compete.</p>
+        <span class="lbl">Support the Alumni Association</span>
+        <h2 class="ttl" style="color:white">Donate to the<br>Lyndon Alumni Association</h2>
+        <p class="sub" style="color:rgba(255,255,255,.7)">Your gift goes directly to the Alumni Association — not the university — to fund Council-led programs, scholarships, and traditions that keep the Hornet community connected.</p>
         <div class="give-ways">
-          <div class="gw"><div class="gw-ico">🎓</div><div class="gw-txt"><strong>Scholarship Fund</strong><span>Help current Lyndon students afford the education that changed your life</span></div></div>
-          <div class="gw"><div class="gw-ico">⚡</div><div class="gw-txt"><strong>Athletics Support</strong><span>Fuel the Hornets — equipment, travel, and facilities for student athletes</span></div></div>
-          <div class="gw"><div class="gw-ico">🏛</div><div class="gw-txt"><strong>Manor Vail Society</strong><span>Preserve artifacts, photos, and the history of Lyndon's unique heritage</span></div></div>
-          <div class="gw"><div class="gw-ico">📅</div><div class="gw-txt"><strong>Events &amp; Programming</strong><span>Keep Fall Weekend, reunions, and alumni traditions funded and growing</span></div></div>
+          <div class="gw"><div class="gw-ico">🎓</div><div class="gw-txt"><strong>Alumni Scholarship Fund</strong><span>Awarded by the Alumni Council to current Lyndon students</span></div></div>
+          <div class="gw"><div class="gw-ico">⚡</div><div class="gw-txt"><strong>Athletics &amp; Hall of Fame</strong><span>Fuel the Hornets and the annual Athletic Hall of Fame banquet</span></div></div>
+          <div class="gw"><div class="gw-ico">🏛</div><div class="gw-txt"><strong>Manor Vail Society</strong><span>Preserve artifacts, photos, and Lyndon's irreplaceable history</span></div></div>
+          <div class="gw"><div class="gw-ico">📅</div><div class="gw-txt"><strong>Council Events &amp; Programming</strong><span>Fund Fall Weekend, reunions, and alumni-only traditions</span></div></div>
         </div>
       </div>
       <div class="give-card">
-        <h3>Make a Gift Today</h3>
-        <p>Donations processed securely through Vermont State University Foundation and may be tax-deductible through VSU's 501(c)(3).</p>
-        <div class="amounts">
-          <button class="amt">$25</button>
-          <button class="amt sel">$50</button>
-          <button class="amt">$100</button>
-          <button class="amt">$250</button>
-          <button class="amt">$500</button>
-          <button class="amt">Other</button>
-        </div>
-        <a href="https://host.nxt.blackbaud.com/donor-form?svcid=tcs&formId=6aadac22-a243-48be-9f82-65c708af78eb&envid=p-BzoGXjMynEG3LMXBAdBMug&zone=usa" target="_blank" rel="noopener">
-          <button class="give-cta">Donate to VTSU Lyndon &rarr;</button>
+        <div class="give-card-flag">♥ Alumni Association Fund</div>
+        <h3>Donate to the Alumni Association</h3>
+        <p>Every gift goes directly to the Lyndon Alumni Association — funding Council-led scholarships, the Athletic Hall of Fame, Fall Weekend, and the alumni traditions that keep our community connected.</p>
+        <a href="https://host.nxt.blackbaud.com/donor-form/?svcid=renxt&formId=0b410455-55fc-46ec-866d-a3b8598f61bc&envid=p-BzoGXjMynEG3LMXBAdBMug&zone=usa" target="_blank" rel="noopener" class="give-cta-link">
+          <button class="give-cta">♥ Donate to the Alumni Association &rarr;</button>
         </a>
-        <p class="tax">Vermont State University Foundation &bull; Tax-deductible &bull; Consult your tax advisor</p>
+        <p class="tax">Secure form &bull; Tax-deductible &bull; Consult your tax advisor</p>
         <div class="giving-tip">💡 <strong>Giving Tuesday:</strong> Honor a professor, coach, or advisor. Details each November.</div>
       </div>
     </div>
@@ -1006,7 +1003,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       <div><div class="cr-lbl">Council President</div><div class="cr-val">Steve Cormier</div><div class="cr-sub">LSC Class of '82</div></div>
       <div><div class="cr-lbl">Mailing Address</div><div class="cr-val" style="color:var(--g400);font-style:italic">Coming Soon</div><div class="cr-sub">Lyndonville, VT area</div></div>
       <div><div class="cr-lbl">Email Us</div><div class="cr-val" style="color:var(--g400);font-style:italic">Coming Soon</div><div class="cr-sub">General inquiries &amp; nominations</div></div>
-      <div><div class="cr-lbl">Affiliated With</div><a href="https://vermontstate.edu/alumni/lyndon-alumni/" target="_blank" rel="noopener" style="font-size:.88rem;color:var(--green);font-weight:700">Vermont State University Alumni &rarr;</a><div class="cr-sub" style="margin-top:.2rem">Donations via VSU Foundation</div></div>
+      <div><div class="cr-lbl">Affiliated With</div><a href="https://vermontstate.edu/alumni/lyndon-alumni/" target="_blank" rel="noopener" style="font-size:.88rem;color:var(--green);font-weight:700">VTSU Lyndon Alumni &rarr;</a><div class="cr-sub" style="margin-top:.2rem">Vermont State University</div></div>
     </div>
   </div>
 </section>
@@ -1056,7 +1053,8 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
           <li><a href="https://vermontstate.edu/alumni/vermont-state-alumni-contact-information-form/" target="_blank" rel="noopener">Update Your Info</a></li>
           <li><a href="https://vermontstate.edu/alumni/lyndon-alumni/manor-vail-society/" target="_blank" rel="noopener">Manor Vail Society</a></li>
           <li><a href="https://joinhandshake.com" target="_blank" rel="noopener">Handshake — Careers</a></li>
-          <li><a href="https://host.nxt.blackbaud.com/donor-form?svcid=tcs&formId=6aadac22-a243-48be-9f82-65c708af78eb&envid=p-BzoGXjMynEG3LMXBAdBMug&zone=usa" target="_blank" rel="noopener">Give to VTSU Lyndon</a></li>
+          <li><a href="https://host.nxt.blackbaud.com/donor-form/?svcid=renxt&formId=0b410455-55fc-46ec-866d-a3b8598f61bc&envid=p-BzoGXjMynEG3LMXBAdBMug&zone=usa" target="_blank" rel="noopener"><strong>Donate to the Alumni Association</strong></a></li>
+          <li><a href="https://www.lyndonstatecollegefoundation.com" target="_blank" rel="noopener">Lyndon State College Foundation</a></li>
           <li><a href="https://vtsuhornets.com" target="_blank" rel="noopener">VTSU Hornets Athletics</a></li>
           <li><a href="https://vermontstate.edu" target="_blank" rel="noopener">Vermont State University</a></li>
           <li><a href="https://en.wikipedia.org/wiki/Lyndon_State_College" target="_blank" rel="noopener">LSC History</a></li>
@@ -1083,12 +1081,6 @@ function toggleMenu(){document.getElementById('navMob').classList.toggle('open')
 // Back to top
 const btt=document.getElementById('btt');
 window.addEventListener('scroll',()=>btt.classList.toggle('vis',scrollY>400),{passive:true});
-
-// Give amount selection
-document.querySelectorAll('.amt').forEach(b=>b.addEventListener('click',()=>{
-  document.querySelectorAll('.amt').forEach(x=>x.classList.remove('sel'));
-  b.classList.add('sel');
-}));
 
 // Newsletter
 function handleSignup(e){

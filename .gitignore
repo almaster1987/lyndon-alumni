@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+.netlify/
+.vscode/
+node_modules/
+*.log
+
+# Read-only reference clone of the upstream repo — never deploy or edit
+lyndon-alumni-original/
+
+# Council-internal: prospect tracker + Council Dashboard. NEVER push to public GitHub.
+fundraising/
+
+# Keep docs/ AND CLAUDE.md tracked — they carry portable context
