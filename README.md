@@ -13,7 +13,7 @@ python -m http.server 8000
 
 ## Deploy
 
-Live on **Cloudflare Pages**, git-connected to this repo — every push to `main` auto-deploys (run `push-to-github.bat` for one-click). Build command: *none*; output dir: `/`. Headers come from `_headers`. GitHub Pages stays enabled as a fallback. No build step.
+Live on **Cloudflare Pages**, git-connected to this repo — every push to `main` auto-deploys (run `push-to-github.bat` for one-click). Build command: *none*; output dir: `/`. Headers come from `_headers`. **GitHub Pages (the prior host) was disabled 2026-05-31** — `lyndon-alumni.pages.dev` is the sole URL. No build step.
 
 ## Documentation
 

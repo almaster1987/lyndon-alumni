@@ -40,7 +40,7 @@ The site is git-connected to Cloudflare Pages: **just push to `main`** (or run `
 
 Cloudflare project settings: build command *none*, output directory `/`. Security + cache headers live in the `_headers` file — Cloudflare ignores `netlify.toml`.
 
-GitHub Pages (`https://almaster1987.github.io/lyndon-alumni/`) stays enabled as a fallback and also redeploys on push. `netlify.toml` is kept only as a dormant alternative.
+GitHub Pages (the prior host) was **disabled on 2026-05-31** (Pages source → None), so `lyndon-alumni.pages.dev` is the sole live URL and the old `github.io` URL 404s. `netlify.toml` is kept only as a dormant alternative.
 
 ## 5. Make the context portable to Claude Code
 
