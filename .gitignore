@@ -11,4 +11,7 @@ lyndon-alumni-original/
 # Council-internal: prospect tracker + Council Dashboard. NEVER push to public GitHub.
 fundraising/
 
+# Old/archived material (incl. a copy of the prospect data) — keep out of the repo and deploys
+Archive/
+
 # Keep docs/ AND CLAUDE.md tracked — they carry portable context

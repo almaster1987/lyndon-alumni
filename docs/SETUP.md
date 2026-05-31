@@ -34,14 +34,13 @@ npx serve .
 
 If you're editing the donate flow, **read `docs/DONATE_FLOW.md` first.** There are rules.
 
-## 4. Deploy to Netlify
+## 4. Deploy to Cloudflare Pages
 
-Two options:
+The site is git-connected to Cloudflare Pages: **just push to `main`** (or run `push-to-github.bat`) and Cloudflare rebuilds in seconds. There is no build step.
 
-- **Drag-and-drop:** open https://app.netlify.com/drop, drag the `Lyndon/` folder. Done.
-- **Connected git:** point Netlify at the upstream repo. `netlify.toml` sets `publish = "."` and includes basic security headers. No build command.
+Cloudflare project settings: build command *none*, output directory `/`. Security + cache headers live in the `_headers` file — Cloudflare ignores `netlify.toml`.
 
-Either way, the site goes live in seconds.
+GitHub Pages (`https://almaster1987.github.io/lyndon-alumni/`) stays enabled as a fallback and also redeploys on push. `netlify.toml` is kept only as a dormant alternative.
 
 ## 5. Make the context portable to Claude Code
 
@@ -54,7 +53,9 @@ The `docs/` folder is the long-form version of the same context (for humans).
 ```
 Lyndon/
 ├── index.html              # the site
-├── netlify.toml            # publish dir + headers
+├── _headers                # Cloudflare Pages headers (live config)
+├── netlify.toml            # dormant Netlify config (not the live host)
+├── push-to-github.bat      # one-click commit + push → auto-deploy
 ├── README.md               # entry-point readme
 ├── CLAUDE.md               # auto-loaded project context for Claude
 ├── .gitignore
@@ -69,7 +70,7 @@ Lyndon/
 
 - Node / npm / yarn — none.
 - Python — only if you want a local HTTP server, otherwise no.
-- Netlify CLI — drag-and-drop works.
+- Cloudflare or Netlify CLI — a plain `git push` auto-deploys.
 - Build tools — there is no build.
 
 ## Common gotchas

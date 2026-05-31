@@ -38,9 +38,10 @@ The Council's public-facing home outside of the VTSU university site. Highlights
 
 ## Hosting / source
 
-- **Live:** Netlify (drop or connected git deploy)
-- **Upstream mirror:** https://github.com/almaster1987/lyndon-alumni
-- **Prior host:** GitHub Pages (`almaster1987.github.io/lyndon-alumni`) — being migrated to Netlify
+- **Live:** Cloudflare Pages — git-connected to the repo, auto-deploys on every push to `main`. Headers from `_headers`; no build step.
+- **Upstream mirror / source:** https://github.com/almaster1987/lyndon-alumni
+- **Fallback:** GitHub Pages (`almaster1987.github.io/lyndon-alumni`) — still enabled, also auto-deploys on push. Kept live during and after the Cloudflare cutover.
+- **Dormant:** `netlify.toml` — Netlify was never actually wired up despite earlier docs.
 
 ## Owner
 

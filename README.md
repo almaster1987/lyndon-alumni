@@ -1,6 +1,6 @@
 # VTSU Lyndon Alumni Council
 
-Static single-page site for the VTSU Lyndon Alumni Council. Deployed via Netlify.
+Static single-page site for the VTSU Lyndon Alumni Council. Deployed via Cloudflare Pages.
 
 ## Quick start
 
@@ -13,7 +13,7 @@ python -m http.server 8000
 
 ## Deploy
 
-Drag the folder onto https://app.netlify.com/drop, or connect the git repo and let Netlify use `netlify.toml` (publish dir = `.`). No build step.
+Live on **Cloudflare Pages**, git-connected to this repo — every push to `main` auto-deploys (run `push-to-github.bat` for one-click). Build command: *none*; output dir: `/`. Headers come from `_headers`. GitHub Pages stays enabled as a fallback. No build step.
 
 ## Documentation
 

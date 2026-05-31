@@ -4,7 +4,7 @@
 
 ## What this is
 
-Static single-page site for the VTSU Lyndon Alumni Council (Lyndon Teachers College → Lyndon State College → NVU Lyndon → VTSU Lyndon, since 1911). Deployed via Netlify. Source: `index.html` at root, no build step.
+Static single-page site for the VTSU Lyndon Alumni Council (Lyndon Teachers College → Lyndon State College → NVU Lyndon → VTSU Lyndon, since 1911). Deployed via Cloudflare Pages (git-connected to the repo). Source: `index.html` at root, no build step.
 
 - **Upstream mirror:** https://github.com/almaster1987/lyndon-alumni
 - **Owner / contact:** Alex Lataille (Alexander.Lataille@icf.com), member of the Council's Fundraising Committee.
@@ -30,7 +30,9 @@ Gifts go to the **Lyndon Alumni Association** directly — *not* to VSU/VTSU and
 
 ## Deploy
 
-Drag the project folder onto https://app.netlify.com/drop, or connect the repo and let Netlify pick up `netlify.toml` (publish dir = `.`). No build step.
+**Live host: Cloudflare Pages**, git-connected to the upstream repo. Every push to `main` auto-deploys — including via the one-click `push-to-github.bat`. No build step (build command: *none*, output dir: `/`). Security + cache headers come from the `_headers` file — **Cloudflare ignores `netlify.toml`**.
+
+GitHub Pages stays enabled as a fallback at `https://almaster1987.github.io/lyndon-alumni/` and also auto-deploys on push. `netlify.toml` is a dormant alternative config, not the live host.
 
 Local preview: open `index.html` in a browser, or `python -m http.server 8000`.
 
@@ -39,7 +41,9 @@ Local preview: open `index.html` in a browser, or `python -m http.server 8000`.
 ```
 Lyndon/
 ├── index.html            # the site
-├── netlify.toml          # Netlify config (headers, publish dir)
+├── _headers              # Cloudflare Pages security + cache headers (LIVE config)
+├── netlify.toml          # dormant Netlify config — NOT the live host
+├── push-to-github.bat    # one-click commit + push (auto-deploys to Cloudflare)
 ├── README.md             # human-facing readme
 ├── CLAUDE.md             # this file — Claude Code auto-loads it
 ├── .gitignore
@@ -47,6 +51,7 @@ Lyndon/
 │   ├── PROJECT_CONTEXT.md   # full project background
 │   ├── DONATE_FLOW.md       # donate-specific rules + URL
 │   └── SETUP.md             # onboarding on a new machine
+├── fundraising/          # Council-internal (gitignored — never deployed)
 └── lyndon-alumni-original/  # read-only reference clone (gitignored)
 ```
 

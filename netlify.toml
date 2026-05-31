@@ -1,4 +1,6 @@
 # Netlify configuration — VTSU Lyndon Alumni Council
+# DORMANT: the live host is Cloudflare Pages (see the _headers file). Netlify is not
+# currently wired up — this file is kept only as a backup/alternative deploy config.
 # Static single-page site, no build step.
 
 [build]
