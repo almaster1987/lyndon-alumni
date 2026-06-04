@@ -1,6 +1,8 @@
 # Project context — VTSU Lyndon Alumni Council site
 
 > Auto-loaded by Claude Code. If you're a future Claude session, read this before editing.
+>
+> **▶ A QC turn is next — read `docs/QC-HANDOFF.md` first.** It has the full link/asset checklist and pending items as of 2026-06-04.
 
 ## What this is
 
