@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VTSU Lyndon Alumni Council | Once a Hornet, Always a Hornet</title>
-<meta name="description" content="Official home of the VTSU Lyndon Alumni Council — connecting alumni of Lyndon Teachers College, Lyndon State College, Northern Vermont University, and VTSU Lyndon since 1911.">
+<title>Lyndon Alumni Council | Once a Hornet, Always a Hornet</title>
+<meta name="description" content="Official home of the Lyndon Alumni Council — connecting alumni of Lyndon Teachers College, Lyndon State College, Northern Vermont University, and Vermont State University Lyndon since 1911.">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="VTSU Lyndon Alumni Council | Once a Hornet, Always a Hornet">
-<meta property="og:description" content="Connecting alumni of Lyndon Teachers College, Lyndon State College, Northern Vermont University, and VTSU Lyndon — from 1911 to today and beyond.">
+<meta property="og:title" content="Lyndon Alumni Council | Once a Hornet, Always a Hornet">
+<meta property="og:description" content="Connecting alumni of Lyndon Teachers College, Lyndon State College, Northern Vermont University, and Vermont State University Lyndon — from 1911 to today and beyond.">
 <meta property="og:image" content="https://vermontstate.edu/wp-content/uploads/2023/09/Lyndon_Campus.jpg">
-<meta property="og:site_name" content="VTSU Lyndon Alumni Council">
+<meta property="og:site_name" content="Lyndon Alumni Council">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="VTSU Lyndon Alumni Council">
+<meta name="twitter:title" content="Lyndon Alumni Council">
 <meta name="twitter:description" content="Once a Hornet, Always a Hornet. Connecting Lyndon alumni since 1911.">
 <meta name="twitter:image" content="https://vermontstate.edu/wp-content/uploads/2023/09/Lyndon_Campus.jpg">
 
@@ -29,9 +29,9 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "VTSU Lyndon Alumni Council",
+  "name": "Lyndon Alumni Council",
   "alternateName": ["Lyndon Alumni Council","LSC Alumni","NVU Lyndon Alumni"],
-  "description": "Connecting alumni of Lyndon Teachers College, Lyndon State College, Northern Vermont University, and VTSU Lyndon since 1911.",
+  "description": "Connecting alumni of Lyndon Teachers College, Lyndon State College, Northern Vermont University, and Vermont State University Lyndon since 1911.",
   "foundingDate": "1911",
   "sameAs": [
     "https://www.facebook.com/groups/LyndonAlums/",
@@ -297,6 +297,21 @@ img{display:block;max-width:100%}
 @media(max-width:900px){.gallery-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:560px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
 
+/* CAMPUS CAROUSEL */
+.carousel{position:relative;overflow:hidden;border-radius:var(--r);box-shadow:0 12px 30px rgba(0,0,0,.3)}
+.carousel-track{display:flex;transition:transform .6s cubic-bezier(.4,0,.2,1);will-change:transform}
+.carousel-slide{min-width:100%;position:relative;aspect-ratio:21/9;background:var(--green-dk)}
+.carousel-slide img{width:100%;height:100%;object-fit:cover}
+.carousel-cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,.78),transparent);color:#fff;font-size:.82rem;font-weight:500;padding:2.2rem 1.25rem .9rem}
+.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border:none;border-radius:50%;background:rgba(15,61,34,.5);color:#fff;font-size:1.7rem;line-height:1;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);transition:background .2s;z-index:2}
+.carousel-btn:hover{background:rgba(15,61,34,.85)}
+.carousel-btn.prev{left:.75rem}
+.carousel-btn.next{right:.75rem}
+.carousel-dots{position:absolute;bottom:.8rem;left:50%;transform:translateX(-50%);display:flex;gap:.4rem;z-index:2}
+.carousel-dot{width:8px;height:8px;border-radius:50%;border:none;background:rgba(255,255,255,.5);padding:0;cursor:pointer;transition:background .2s,width .2s}
+.carousel-dot.active{background:var(--gold-md);width:22px;border-radius:4px}
+@media(max-width:600px){.carousel-slide{aspect-ratio:16/10}.carousel-cap{font-size:.72rem}.carousel-btn{width:36px;height:36px;font-size:1.3rem}}
+
 /* TIMELINE */
 .tl-sec{background:var(--green-dk);color:white;padding:5rem 0}
 .tl-hdr{text-align:center;margin-bottom:3.5rem}
@@ -322,7 +337,7 @@ img{display:block;max-width:100%}
 .ev-card{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh);transition:transform .2s,box-shadow .2s;background:white}
 .ev-card:hover{transform:translateY(-4px);box-shadow:var(--sh-lg)}
 
-/* Fall Weekend card */
+/* Fall Homecoming card */
 .ev-photo-hdr{position:relative;height:220px;overflow:hidden}
 .ev-photo-hdr img{width:100%;height:100%;object-fit:cover;object-position:center}
 .ev-photo-overlay{
@@ -334,7 +349,7 @@ img{display:block;max-width:100%}
 .ev-photo-content .ev-date{font-size:.82rem;color:rgba(255,255,255,.8);font-weight:600}
 .ev-badge-abs{position:absolute;top:1rem;left:1rem;background:rgba(255,255,255,.2);backdrop-filter:blur(4px);color:white;border:1px solid rgba(255,255,255,.3);padding:.22rem .7rem;border-radius:999px;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
 
-/* Spring Homecoming card */
+/* Golf Classic card */
 .ev-hdr-gold{padding:2rem;background:linear-gradient(135deg,#c49a0f,#e0b424);color:var(--green-dk)}
 .ev-hdr-gold .ev-badge-gold{display:inline-block;padding:.22rem .7rem;border-radius:999px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;background:rgba(27,94,53,.15);margin-bottom:.7rem}
 .ev-hdr-gold h3{font-size:1.3rem;margin-bottom:.3rem}
@@ -526,7 +541,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
 
 <!-- ANNOUNCEMENT -->
 <div class="ann">
-  🗓 Spring Homecoming 2026: April 24–26 on the Lyndon Campus &mdash;
+  🍂 Fall Homecoming for Alumni &amp; Families &mdash; Late September on the Lyndon campus.
   <a href="#events">Learn More</a>
 </div>
 
@@ -545,7 +560,6 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       <a href="#spotlight" class="nl">Alumni</a>
       <a href="#give" class="nl">Give</a>
       <a href="#involved" class="nl">Get Involved</a>
-      <a href="#news" class="nl">News</a>
       <a href="#contact" class="nl">Contact</a>
     </div>
     <a href="#give" class="nav-cta">Donate to the Association</a>
@@ -559,7 +573,6 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
     <a href="#spotlight" class="nl" onclick="toggleMenu()">Alumni</a>
     <a href="#give" class="nl" onclick="toggleMenu()">Give</a>
     <a href="#involved" class="nl" onclick="toggleMenu()">Get Involved</a>
-    <a href="#news" class="nl" onclick="toggleMenu()">News</a>
     <a href="#contact" class="nl" onclick="toggleMenu()">Contact</a>
     <a href="#give" class="nav-cta" onclick="toggleMenu()">Donate to the Association</a>
   </div></div>
@@ -574,17 +587,17 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
   <div class="hero-overlay"></div>
   <div class="c">
     <div class="hero-c">
-      <div class="eyebrow">⚡ Official VTSU Lyndon Alumni Council</div>
+      <div class="eyebrow">⚡ Official Lyndon Alumni Council</div>
       <h1>Once a Hornet,<br><em>Always a Hornet.</em></h1>
-      <p class="hero-sub">Connecting alumni of Lyndon Teachers College, Lyndon State College, Northern Vermont University, and VTSU Lyndon — from 1911 to today and beyond.</p>
+      <p class="hero-sub">Connecting alumni of Lyndon Teachers College, Lyndon State College, Northern Vermont University, and Vermont State University Lyndon — from 1911 to today and beyond.</p>
       <div class="hero-btns">
         <a href="#events" class="btn btn-gold">Upcoming Events &rarr;</a>
         <a href="#give" class="btn btn-ghost">♥ Donate to the Association</a>
       </div>
       <div class="hero-stats">
         <div><div class="hs-num">1911</div><div class="hs-lbl">Founded</div></div>
-        <div><div class="hs-num">60K+</div><div class="hs-lbl">VTSU Alumni Network</div></div>
-        <div><div class="hs-num">15</div><div class="hs-lbl">Council Members</div></div>
+        <div><div class="hs-num">60K+</div><div class="hs-lbl">Alumni Network</div></div>
+        <div><div class="hs-num">20</div><div class="hs-lbl">Council Members</div></div>
         <div><div class="hs-num">115+</div><div class="hs-lbl">Years of Hornets</div></div>
       </div>
     </div>
@@ -596,9 +609,9 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
 <section class="ql reveal">
   <div class="c">
     <div class="ql-grid">
-      <a href="#events" class="ql-card"><div class="ql-ico gr">🍂</div><h3>Fall Weekend 2026</h3><p>Late September on campus — golf, bonfires &amp; alumni games</p></a>
       <a href="#give" class="ql-card ql-donate"><div class="ql-ico go">♥</div><h3>Donate to the Association</h3><p>Direct support for Alumni Council programs &amp; traditions</p></a>
-      <a href="#involved" class="ql-card"><div class="ql-ico gr">🤝</div><h3>Join the Council</h3><p>Help shape the future — 2 &amp; 3-year terms, Zoom-friendly</p></a>
+      <a href="#events" class="ql-card"><div class="ql-ico gr">🍂</div><h3>Fall Homecoming</h3><p>Late September on campus — golf, bonfires &amp; alumni games</p></a>
+      <a href="#involved" class="ql-card"><div class="ql-ico gr">🤝</div><h3>Join the Council</h3><p>Help shape the future — 2 &amp; 3-year terms, meet virtually</p></a>
       <a href="#spotlight" class="ql-card"><div class="ql-ico go">⭐</div><h3>Alumni Spotlight</h3><p>Meet Hornets making an impact across the country</p></a>
     </div>
   </div>
@@ -621,65 +634,54 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       </div>
       <div>
         <span class="lbl">Who We Are</span>
-        <h2 class="ttl">The VTSU Lyndon<br>Alumni Council</h2>
+        <h2 class="ttl">The Lyndon<br>Alumni Council</h2>
         <div class="mission">"To engage and connect alumni, support the Lyndon campus and its students, and preserve the unique identity, history, and traditions of our beloved college — through every name change and beyond."</div>
-        <p style="font-size:.9rem;color:var(--g500);line-height:1.75;margin-bottom:1rem">Whether you graduated when it was Lyndon Teachers College, Lyndon State College, Northern Vermont University, or VTSU Lyndon — this is your home. The campus has had many names, but the Hornet spirit never changes.</p>
+        <p style="font-size:.9rem;color:var(--g500);line-height:1.75;margin-bottom:1rem">Whether you graduated when it was Lyndon Teachers College, Lyndon State College, Northern Vermont University, or Vermont State University Lyndon — this is your home. The campus has had many names, but the Hornet spirit never changes.</p>
         <div class="bullets">
-          <div class="bullet"><div class="dot"></div><span>Led by President <strong>Steve Cormier</strong> (LSC Class of '82) with 15 active council members</span></div>
+          <div class="bullet"><div class="dot"></div><span>Led by President <strong>Steve Cormier</strong> (LSC Class of '82) with 20 active council members</span></div>
           <div class="bullet"><div class="dot"></div><span>Six standing committees: Executive, Membership, Fundraising, Alumni/Student, Communications &amp; Events</span></div>
-          <div class="bullet"><div class="dot"></div><span>Meetings held via Zoom — location is no barrier to participation</span></div>
-          <div class="bullet"><div class="dot"></div><span>Advocating for campus-specific graduation ceremonies and the Pipe &amp; Drum tradition</span></div>
-          <div class="bullet"><div class="dot"></div><span>Affiliated with the <strong>Manor Vail Society</strong> — preserving &amp; digitizing Lyndon's historic legacy</span></div>
+          <div class="bullet"><div class="dot"></div><span>Meetings held virtually — location is no barrier to participation</span></div>
+          <div class="bullet"><div class="dot"></div><span>Advocating for alumni and keeping our community connected and informed</span></div>
+          <div class="bullet"><div class="dot"></div><span>Affiliated with the <strong><a href="https://vermontstate.edu/alumni/lyndon-alumni/manor-vail-society/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Manor Vail Society</a></strong> — preserving &amp; digitizing Lyndon's historic legacy</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CAMPUS PHOTO STRIP -->
+<!-- CAMPUS PHOTO CAROUSEL -->
 <div class="gallery-strip reveal">
-  <div class="gallery-grid">
-    <div class="gallery-item" data-caption="Academic &amp; Student Activity Center">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/b/be/Lyndon_State_College.jpg"
-        alt="Academic and Student Activity Center, Lyndon State College"
-        loading="lazy"
-      >
-    </div>
-    <div class="gallery-item" data-caption="Samuel Read Hall — Lyndon Campus">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/0/02/Samuel_Read_Hall_Northern_Vermont_University_Lyndon_Campus_June_2018.jpg"
-        alt="Samuel Read Hall, Northern Vermont University Lyndon Campus"
-        loading="lazy"
-      >
-    </div>
-    <div class="gallery-item" data-caption="Whitelaw &amp; Crevecour Residence Halls">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/1/14/LSC_Residence_Halls.jpg"
-        alt="LSC Residence Halls — Whitelaw and Crevecour"
-        loading="lazy"
-      >
-    </div>
-    <div class="gallery-item" data-caption="GreggFest — Campus Tradition">
-      <img
-        src="https://vermontstate.edu/wp-content/uploads/2023/09/Greggfest2023-1200x541.jpg"
-        alt="GreggFest outdoor concert and campus celebration"
-        loading="lazy"
-      >
-    </div>
-    <div class="gallery-item" data-caption="Campus Entrance — Vail Drive &amp; College Rd">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/3/35/Main_Entrance_sign_Northern_Vermont_University_Lyndon_Campus_Lyndon_VT_August_2022.jpg"
-        alt="Main Entrance sign, NVU Lyndon Campus, August 2022"
-        loading="lazy"
-      >
-    </div>
-    <div class="gallery-item" data-caption="Fall on the Lyndon Campus">
-      <img
-        src="https://vermontstate.edu/wp-content/uploads/2023/09/Overlooking_pond.jpg"
-        alt="Fall foliage overlooking the campus pond, Lyndon Vermont"
-        loading="lazy"
-      >
+  <div class="c">
+    <div class="carousel" id="campusCarousel">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Lyndon_State_College.jpg" alt="Academic and Student Activity Center, Lyndon State College" loading="lazy">
+          <div class="carousel-cap">Academic &amp; Student Activity Center</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Samuel_Read_Hall_Northern_Vermont_University_Lyndon_Campus_June_2018.jpg" alt="Samuel Read Hall, Northern Vermont University Lyndon Campus" loading="lazy">
+          <div class="carousel-cap">Samuel Read Hall — Lyndon Campus</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/LSC_Residence_Halls.jpg" alt="LSC Residence Halls — Whitelaw and Crevecour" loading="lazy">
+          <div class="carousel-cap">Whitelaw &amp; Crevecour Residence Halls</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="https://vermontstate.edu/wp-content/uploads/2023/09/Greggfest2023-1200x541.jpg" alt="GreggFest outdoor concert and campus celebration" loading="lazy">
+          <div class="carousel-cap">GreggFest — Campus Tradition</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Main_Entrance_sign_Northern_Vermont_University_Lyndon_Campus_Lyndon_VT_August_2022.jpg" alt="Main Entrance sign, NVU Lyndon Campus, August 2022" loading="lazy">
+          <div class="carousel-cap">Campus Entrance — Vail Drive &amp; College Rd</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="https://vermontstate.edu/wp-content/uploads/2023/09/Overlooking_pond.jpg" alt="Fall foliage overlooking the campus pond, Lyndon Vermont" loading="lazy">
+          <div class="carousel-cap">Fall on the Lyndon Campus</div>
+        </div>
+      </div>
+      <button class="carousel-btn prev" id="carPrev" aria-label="Previous photo">‹</button>
+      <button class="carousel-btn next" id="carNext" aria-label="Next photo">›</button>
+      <div class="carousel-dots" id="carouselDots"></div>
     </div>
   </div>
 </div>
@@ -713,30 +715,28 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
     </div>
     <div class="ev-grid">
 
-      <!-- Fall Weekend -->
+      <!-- Fall Homecoming -->
       <div class="ev-card">
         <div class="ev-photo-hdr">
           <img
             src="https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/lyndonhornets.com/images/2025/9/22/IMG_0965.jpeg"
-            alt="Lyndon Alumni Council Fall Weekend 2025"
+            alt="Lyndon Alumni Council Fall Homecoming 2025"
             loading="lazy"
             onerror="this.parentElement.style.background='linear-gradient(135deg,#1b5e35,#2d7a4a)';this.style.display='none'"
           >
           <div class="ev-photo-overlay"></div>
           <span class="ev-badge-abs">Annual Tradition</span>
           <div class="ev-photo-content">
-            <h3>Lyndon Fall Weekend for Alumni &amp; Families</h3>
+            <h3>Lyndon Fall Homecoming for Alumni &amp; Families</h3>
             <div class="ev-date">📅 Late September 2026 &bull; Lyndonville, VT</div>
           </div>
         </div>
         <div class="ev-body">
           <p>The Alumni Council's signature fall event — created to keep autumn homecoming alive after the university moved the official celebration to spring. Alumni return from across the country every September.</p>
           <div class="acts">
-            <div class="act">Lyndon Athletics Golf Classic at Orleans Country Club</div>
             <div class="act">Athletic Hall of Fame &amp; Alumni Awards Banquet</div>
             <div class="act">Alumni vs. Varsity games — basketball, baseball, rugby, soccer &amp; softball</div>
             <div class="act">Bonfires &amp; s'mores at the Vail Fire Pit</div>
-            <div class="act">Morning gatherings at the Freighthouse Market &amp; Café</div>
             <div class="act">Manor Vail Museum tours with the Manor Vail Society</div>
             <div class="act">Cookouts, ice cream socials &amp; campus walks</div>
           </div>
@@ -744,21 +744,20 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
         </div>
       </div>
 
-      <!-- Spring Homecoming -->
+      <!-- Lyndon Athletics Golf Classic -->
       <div class="ev-card">
         <div class="ev-hdr-gold">
-          <span class="ev-badge-gold">University-Sponsored</span>
-          <h3>Spring Homecoming 2026</h3>
-          <div class="ev-date">📅 April 24–26, 2026 &bull; Lyndonville, VT</div>
+          <span class="ev-badge-gold">Part of Fall Homecoming</span>
+          <h3>Lyndon Athletics Golf Classic</h3>
+          <div class="ev-date">📅 Late September 2026 &bull; Orleans Country Club</div>
         </div>
         <div class="ev-body">
-          <p>The official VTSU Homecoming, moved to late April to align with Spring Day, GreggFest, and commencement celebrations for graduating seniors.</p>
+          <p>Our signature golf outing and a Fall Homecoming highlight — a full day on the course at Orleans Country Club supporting Lyndon alumni. Bring a foursome or join as a single.</p>
           <div class="acts">
-            <div class="act">Spring Day &amp; GreggFest campus-wide celebration</div>
-            <div class="act">Distinguished Alumni Award ceremony</div>
-            <div class="act">Senior celebration &amp; commencement lead-up events</div>
-            <div class="act">Advocacy for on-campus graduation &amp; Pipe &amp; Drum tradition</div>
-            <div class="act">Reconnect with faculty, staff &amp; current students</div>
+            <div class="act">Scramble format at Orleans Country Club</div>
+            <div class="act">Foursomes, singles &amp; hole sponsorships welcome</div>
+            <div class="act">Prizes, raffles &amp; alumni camaraderie</div>
+            <div class="act">Proceeds support the Lyndon Alumni Council</div>
           </div>
           <a href="#contact" class="btn btn-og" style="font-size:.84rem">Register &mdash; Link Coming Soon</a>
         </div>
@@ -860,25 +859,25 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
   <div class="c">
     <div class="give-grid">
       <div>
-        <span class="lbl">Support the Alumni Association</span>
+        <span class="lbl">Support the Alumni Council</span>
         <h2 class="ttl" style="color:white">Donate to the<br>Lyndon Alumni Association</h2>
-        <p class="sub" style="color:rgba(255,255,255,.7)">Your gift goes directly to the Alumni Association — not the university — to fund Council-led programs, scholarships, and traditions that keep the Hornet community connected.</p>
+        <p class="sub" style="color:rgba(255,255,255,.7)">Your gift goes directly to the Lyndon Alumni Council Fund — the one fund the Council controls — supporting Homecoming, alumni programs, and the traditions that keep the Hornet community connected.</p>
         <div class="give-ways">
-          <div class="gw"><div class="gw-ico">🎓</div><div class="gw-txt"><strong>Alumni Scholarship Fund</strong><span>Awarded by the Alumni Council to current Lyndon students</span></div></div>
-          <div class="gw"><div class="gw-ico">⚡</div><div class="gw-txt"><strong>Athletics &amp; Hall of Fame</strong><span>Fuel the Hornets and the annual Athletic Hall of Fame banquet</span></div></div>
-          <div class="gw"><div class="gw-ico">🏛</div><div class="gw-txt"><strong>Manor Vail Society</strong><span>Preserve artifacts, photos, and Lyndon's irreplaceable history</span></div></div>
-          <div class="gw"><div class="gw-ico">📅</div><div class="gw-txt"><strong>Council Events &amp; Programming</strong><span>Fund Fall Weekend, reunions, and alumni-only traditions</span></div></div>
+          <div class="gw"><div class="gw-ico">🍂</div><div class="gw-txt"><strong>Homecoming &amp; Alumni Events</strong><span>Fund Fall Homecoming, the Golf Classic, reunions, and the gatherings that bring Hornets back together</span></div></div>
+          <div class="gw"><div class="gw-ico">🎓</div><div class="gw-txt"><strong>Student Scholarships</strong><span>As our fund grows, the Council directs gifts toward scholarships for current Lyndon students</span></div></div>
+          <div class="gw"><div class="gw-ico">🌐</div><div class="gw-txt"><strong>Communications &amp; This Website</strong><span>Keep alumni connected through outreach, this site, and day-to-day Council operations</span></div></div>
+          <div class="gw"><div class="gw-ico">🚀</div><div class="gw-txt"><strong>What's Next</strong><span>Help us build new programs, traditions, and regional events as the Council grows</span></div></div>
         </div>
       </div>
       <div class="give-card">
-        <div class="give-card-flag">♥ Alumni Association Fund</div>
+        <div class="give-card-flag">♥ Lyndon Alumni Council Fund</div>
         <h3>Donate to the Alumni Association</h3>
-        <p>Every gift goes directly to the Lyndon Alumni Association — funding Council-led scholarships, the Athletic Hall of Fame, Fall Weekend, and the alumni traditions that keep our community connected.</p>
-        <a href="https://host.nxt.blackbaud.com/donor-form/?svcid=renxt&formId=0b410455-55fc-46ec-866d-a3b8598f61bc&envid=p-BzoGXjMynEG3LMXBAdBMug&zone=usa" target="_blank" rel="noopener" class="give-cta-link">
+        <p>Every gift goes directly to the Lyndon Alumni Council Fund — supporting Homecoming, alumni programs, communications, and the traditions that keep our community connected. Gifts are processed securely and can be claimed on your taxes.</p>
+        <a href="https://host.nxt.blackbaud.com/donor-form/?svcid=renxt&formId=fed909dd-635d-47ad-9868-24becf560417&envid=p-BzoGXjMynEG3LMXBAdBMug&zone=usa" target="_blank" rel="noopener" class="give-cta-link">
           <button class="give-cta">♥ Donate to the Alumni Association &rarr;</button>
         </a>
         <p class="tax">Secure form &bull; Tax-deductible &bull; Consult your tax advisor</p>
-        <div class="giving-tip">💡 <strong>Giving Tuesday:</strong> Honor a professor, coach, or advisor. Details each November.</div>
+        <div class="giving-tip">💡 <strong>Giving Tuesday:</strong> Remember the Lyndon Alumni Council each November.</div>
       </div>
     </div>
   </div>
@@ -893,12 +892,9 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       <p class="sub" style="max-width:520px;margin:0 auto">There's a place for every Hornet — no matter where you are in the world.</p>
     </div>
     <div class="inv-grid">
-      <div class="inv-card"><div class="inv-ico">🏛</div><h3>Join the Alumni Council</h3><p>Growing toward 20 members and actively recruiting. Terms are 2–3 years, renewable. Meetings held via Zoom — no Vermont zip code required.</p><a href="#contact" class="inv-link">Apply Now &rarr;</a></div>
+      <div class="inv-card"><div class="inv-ico">🏛</div><h3>Join the Alumni Council</h3><p>Growing toward 20 members and actively recruiting. Terms are 2–3 years, renewable, and meetings are held virtually — no Vermont zip code required. We also welcome volunteers for Fall Homecoming and alumni events.</p><a href="mailto:scormier55@comcast.net?subject=Interested%20in%20the%20Lyndon%20Alumni%20Council" class="inv-link">Contact Steve Cormier &rarr;</a></div>
       <div class="inv-card"><div class="inv-ico">🎓</div><h3>Mentor a Current Student</h3><p>Connect with VTSU Lyndon students through Handshake and the Alumni/Student Committee. Share your path and open doors for the next generation.</p><a href="https://joinhandshake.com" target="_blank" rel="noopener" class="inv-link">Join Handshake &rarr;</a></div>
-      <div class="inv-card"><div class="inv-ico">📣</div><h3>Communications Committee</h3><p>Help shape the council's voice — social media, newsletters, content. Chair: Meaghan Meachem. Members: Alex Huff, Nick Russo, Erica Brisson, Dan Grube, Tyler Dumont.</p><a href="#contact" class="inv-link">Express Interest &rarr;</a></div>
-      <div class="inv-card"><div class="inv-ico">🎉</div><h3>Event Volunteers</h3><p>Make Fall Weekend and Spring Homecoming happen. Planning, logistics, and day-of support. Great for local alumni and those visiting Vermont.</p><a href="#contact" class="inv-link">Volunteer &rarr;</a></div>
-      <div class="inv-card"><div class="inv-ico">💰</div><h3>Fundraising Committee</h3><p>Drive giving campaigns, coordinate the Golf Classic, secure sponsorships. Chair: John Kleinhans. Members: Alexander Lataille, Jeff Senterman, Erica Brisson, Carolyn Haggett.</p><a href="#contact" class="inv-link">Get Involved &rarr;</a></div>
-      <div class="inv-card"><div class="inv-ico">🏺</div><h3>Manor Vail Society</h3><p>Preserve Lyndon's irreplaceable history. MVS meets annually at Fall Weekend, actively digitizing the Vail Museum. Seeking artifacts &amp; photos. Contact: Michael Thurston '74.</p><a href="https://vermontstate.edu/alumni/lyndon-alumni/manor-vail-society/" target="_blank" rel="noopener" class="inv-link">Learn More &rarr;</a></div>
+      <div class="inv-card"><div class="inv-ico">📣</div><h3>Connect with Fellow Alumni</h3><p>Find Hornets near you and stay in the loop. Join the conversation on our Facebook group and follow Lyndon alumni across social media.</p><a href="https://www.facebook.com/groups/LyndonAlums/" target="_blank" rel="noopener" class="inv-link">Connect on Social &rarr;</a></div>
     </div>
     <div class="cmts reveal">
       <span class="lbl">Council Structure</span>
@@ -907,7 +903,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
         <div class="cmt"><div class="cmt-lbl">Executive Committee</div><div class="cmt-mems">Steve Cormier &bull; Alex Huff &bull; Beth Fraser Kirker &bull; John Kleinhans</div></div>
         <div class="cmt"><div class="cmt-lbl">Membership / Scholarship / Recognition</div><div class="cmt-mems">Steve Cormier (Chair) &bull; Meaghan Meachem &bull; Beth Fraser Kirker &bull; Nick Russo &bull; Ethan Coppenrath &bull; John Kascenska</div></div>
         <div class="cmt"><div class="cmt-lbl">Fundraising Committee</div><div class="cmt-mems">John Kleinhans (Chair) &bull; Alexander Lataille &bull; Jeff Senterman &bull; Erica Brisson &bull; Carolyn Haggett</div></div>
-        <div class="cmt"><div class="cmt-lbl">Alumni / Student Committee</div><div class="cmt-mems">Alex Huff (Chair) &bull; Jeff Senterman &bull; Dan Grube &bull; Dan Daley &bull; Cole Alexander</div></div>
+        <div class="cmt"><div class="cmt-lbl">Alumni / Student Committee</div><div class="cmt-mems">Alex Huff (Chair) &bull; Jeff Senterman &bull; Dan Grube &bull; Dan Daley</div></div>
         <div class="cmt"><div class="cmt-lbl">Communications Committee</div><div class="cmt-mems">Meaghan Meachem (Chair) &bull; Alex Huff &bull; Nick Russo &bull; Erica Brisson &bull; Dan Grube &bull; Tyler Dumont</div></div>
         <div class="cmt"><div class="cmt-lbl">Event Committee</div><div class="cmt-mems">Steve Cormier (Chair) &bull; Lisa Hayward &bull; John Kleinhans &bull; Dan Daley &bull; Adam Gordon &bull; Nick Russo</div></div>
       </div>
@@ -915,56 +911,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
   </div>
 </section>
 
-<!-- NEWS -->
-<section class="sec reveal" id="news">
-  <div class="c">
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem" class="mb3">
-      <div><span class="lbl">Stay in the Know</span><h2 class="ttl">Latest News</h2></div>
-      <a href="#contact" class="btn btn-og" style="font-size:.84rem">Subscribe to Updates &rarr;</a>
-    </div>
-    <div class="news-grid">
-      <div class="nc">
-        <div class="nc-img">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Banner_welcoming_alumni_and_parents_Northern_Vermont_University_Lyndon_campus_Lyndon_VT_September_2017.jpg"
-            alt="Alumni weekend welcome banner, NVU Lyndon Campus 2017"
-            loading="lazy"
-          >
-        </div>
-        <div class="nc-body">
-          <div class="nc-cat">Events</div>
-          <h3>Fall Weekend 2025 Recap: Hornets Return to Campus</h3>
-          <p>Alumni from across the country returned to Lyndonville for the council's annual fall celebration — golf, bonfires, alumni games, and the Hall of Fame banquet.</p>
-          <div class="nc-date">September 22, 2025</div>
-        </div>
-      </div>
-      <div class="nc">
-        <div class="nc-img">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/b/be/Lyndon_State_College.jpg"
-            alt="Academic and Student Activity Center, Lyndon State College"
-            loading="lazy"
-          >
-        </div>
-        <div class="nc-body">
-          <div class="nc-cat">Council</div>
-          <h3>Council Grows to 15 Members, Eyes 20-Member Goal</h3>
-          <p>The VTSU Lyndon Alumni Council expanded its membership and is actively recruiting alumni to join all six standing committees.</p>
-          <div class="nc-date">January 2025</div>
-        </div>
-      </div>
-      <div class="nc" style="border:2px dashed var(--g200)">
-        <div class="nc-img-ph">📰</div>
-        <div class="nc-body">
-          <div class="nc-cat" style="color:var(--g300)">Coming Soon</div>
-          <h3 style="color:var(--g400)">Next Article &mdash; Placeholder</h3>
-          <p style="font-style:italic;color:var(--g400)">Council news, event recaps, and campus announcements will appear here as stories develop.</p>
-          <div class="nc-date" style="color:var(--g200)">TBD</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- NEWS section removed 2026-06-04 per meeting — returns once Comms (Meaghan) sends press releases -->
 
 <!-- SOCIAL / CONNECT -->
 <section class="soc-sec reveal">
@@ -992,18 +939,14 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
     <div class="nl-in">
       <div class="nl-txt">
         <h2>Stay Connected to Lyndon</h2>
-        <p>Event announcements, alumni spotlights, and council updates. No spam — just Hornet news.</p>
+        <p>Questions, ideas, or want to get involved? Reach out to the Council using the details below.</p>
       </div>
-      <form class="nl-form" onsubmit="handleSignup(event)">
-        <input type="email" placeholder="your@email.com" required aria-label="Email address">
-        <button type="submit">Subscribe &rarr;</button>
-      </form>
     </div>
     <div class="cr-row">
       <div><div class="cr-lbl">Council President</div><div class="cr-val">Steve Cormier</div><div class="cr-sub">LSC Class of '82</div></div>
-      <div><div class="cr-lbl">Mailing Address</div><div class="cr-val" style="color:var(--g400);font-style:italic">Coming Soon</div><div class="cr-sub">Lyndonville, VT area</div></div>
-      <div><div class="cr-lbl">Email Us</div><div class="cr-val" style="color:var(--g400);font-style:italic">Coming Soon</div><div class="cr-sub">General inquiries &amp; nominations</div></div>
-      <div><div class="cr-lbl">Affiliated With</div><a href="https://vermontstate.edu/alumni/lyndon-alumni/" target="_blank" rel="noopener" style="font-size:.88rem;color:var(--green);font-weight:700">VTSU Lyndon Alumni &rarr;</a><div class="cr-sub" style="margin-top:.2rem">Vermont State University</div></div>
+      <div><div class="cr-lbl">Mailing Address</div><div class="cr-val">1001 College Road</div><div class="cr-sub">Lyndonville, VT 05851 &bull; Attn: Alumni Council</div></div>
+      <div><div class="cr-lbl">Email Us</div><a href="mailto:scormier55@comcast.net" style="font-size:.9rem;color:var(--green);font-weight:600">scormier55@comcast.net</a><div class="cr-sub" style="margin-top:.2rem">Steve Cormier &bull; General inquiries</div></div>
+      <div><div class="cr-lbl">Affiliated With</div><a href="https://vermontstate.edu/alumni/lyndon-alumni/" target="_blank" rel="noopener" style="font-size:.88rem;color:var(--green);font-weight:700">Lyndon Alumni at Vermont State &rarr;</a><div class="cr-sub" style="margin-top:.2rem">Vermont State University</div></div>
     </div>
   </div>
 </section>
@@ -1015,7 +958,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
   <div class="c">
     <div class="ft-grid">
       <div class="ft-brand">
-        <h2>VTSU Lyndon Alumni Council</h2>
+        <h2>Lyndon Alumni Council</h2>
         <p>Connecting generations of alumni from Lyndon Teachers College, Lyndon State College, Northern Vermont University, and Vermont State University Lyndon.</p>
         <em>"Once a Hornet, Always a Hornet."</em>
         <div class="ft-socials">
@@ -1039,10 +982,9 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       <div class="ft-col">
         <h3>Events</h3>
         <ul>
-          <li><a href="#events">Fall Weekend</a></li>
-          <li><a href="#events">Spring Homecoming</a></li>
-          <li><a href="#events">Hall of Fame Banquet</a></li>
+          <li><a href="#events">Fall Homecoming</a></li>
           <li><a href="#events">Golf Classic</a></li>
+          <li><a href="#events">Hall of Fame Banquet</a></li>
           <li><a href="#give">Giving Tuesday</a></li>
         </ul>
       </div>
@@ -1053,7 +995,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
           <li><a href="https://vermontstate.edu/alumni/vermont-state-alumni-contact-information-form/" target="_blank" rel="noopener">Update Your Info</a></li>
           <li><a href="https://vermontstate.edu/alumni/lyndon-alumni/manor-vail-society/" target="_blank" rel="noopener">Manor Vail Society</a></li>
           <li><a href="https://joinhandshake.com" target="_blank" rel="noopener">Handshake — Careers</a></li>
-          <li><a href="https://host.nxt.blackbaud.com/donor-form/?svcid=renxt&formId=0b410455-55fc-46ec-866d-a3b8598f61bc&envid=p-BzoGXjMynEG3LMXBAdBMug&zone=usa" target="_blank" rel="noopener"><strong>Donate to the Alumni Association</strong></a></li>
+          <li><a href="https://host.nxt.blackbaud.com/donor-form/?svcid=renxt&formId=fed909dd-635d-47ad-9868-24becf560417&envid=p-BzoGXjMynEG3LMXBAdBMug&zone=usa" target="_blank" rel="noopener"><strong>Donate to the Alumni Association</strong></a></li>
           <li><a href="https://www.lyndonstatecollegefoundation.com" target="_blank" rel="noopener">Lyndon State College Foundation</a></li>
           <li><a href="https://vtsuhornets.com" target="_blank" rel="noopener">VTSU Hornets Athletics</a></li>
           <li><a href="https://vermontstate.edu" target="_blank" rel="noopener">Vermont State University</a></li>
@@ -1062,7 +1004,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       </div>
     </div>
     <div class="ft-bot">
-      <div>&copy; 2026 VTSU Lyndon Alumni Council &bull; All rights reserved</div>
+      <div>&copy; 2026 Lyndon Alumni Council &bull; All rights reserved</div>
       <div style="display:flex;gap:1.25rem">
         <a href="#contact">Contact</a>
         <a href="fundraising_dashboard.html" style="opacity:.35" title="Council Members Only">Council Dashboard</a>
@@ -1082,13 +1024,36 @@ function toggleMenu(){document.getElementById('navMob').classList.toggle('open')
 const btt=document.getElementById('btt');
 window.addEventListener('scroll',()=>btt.classList.toggle('vis',scrollY>400),{passive:true});
 
-// Newsletter
-function handleSignup(e){
-  e.preventDefault();
-  const btn=e.target.querySelector('button'),orig=btn.textContent;
-  btn.textContent='✓ Subscribed!';btn.style.background='var(--green-dk)';
-  setTimeout(()=>{btn.textContent=orig;btn.style.background='';e.target.reset();},3000);
-}
+// Campus photo carousel
+(function(){
+  const track=document.getElementById('carouselTrack');
+  if(!track)return;
+  const slides=[...track.children];
+  const dotsWrap=document.getElementById('carouselDots');
+  const car=document.getElementById('campusCarousel');
+  let i=0,timer=null;
+  const reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  slides.forEach((_,n)=>{
+    const d=document.createElement('button');
+    d.className='carousel-dot'+(n===0?' active':'');
+    d.setAttribute('aria-label','Go to photo '+(n+1));
+    d.addEventListener('click',()=>{go(n);reset();});
+    dotsWrap.appendChild(d);
+  });
+  const dots=[...dotsWrap.children];
+  function go(n){
+    i=(n+slides.length)%slides.length;
+    track.style.transform='translateX(-'+(i*100)+'%)';
+    dots.forEach((d,k)=>d.classList.toggle('active',k===i));
+  }
+  document.getElementById('carNext').addEventListener('click',()=>{go(i+1);reset();});
+  document.getElementById('carPrev').addEventListener('click',()=>{go(i-1);reset();});
+  function start(){if(!reduce)timer=setInterval(()=>go(i+1),5000);}
+  function reset(){clearInterval(timer);start();}
+  car.addEventListener('mouseenter',()=>clearInterval(timer));
+  car.addEventListener('mouseleave',start);
+  start();
+})();
 
 // Nav active state on scroll
 const nls=document.querySelectorAll('.nl[href^="#"]');

@@ -5,10 +5,10 @@ How the donate CTA works on this site, and what's off-limits.
 ## Active form URL
 
 ```
-https://host.nxt.blackbaud.com/donor-form/?svcid=renxt&formId=0b410455-55fc-46ec-866d-a3b8598f61bc&envid=p-BzoGXjMynEG3LMXBAdBMug&zone=usa
+https://host.nxt.blackbaud.com/donor-form/?svcid=renxt&formId=fed909dd-635d-47ad-9868-24becf560417&envid=p-BzoGXjMynEG3LMXBAdBMug&zone=usa
 ```
 
-This is a Blackbaud Renxt-hosted form. Gifts are earmarked for the **Lyndon Alumni Association**.
+This is a Blackbaud Renxt-hosted form. Gifts are earmarked for the **Lyndon Alumni Council Fund** — the one fund the Council controls.
 
 ## What changed (April 2026)
 
@@ -31,16 +31,18 @@ Where the Foundation appears now:
 
 If a future change tries to put the Foundation in the donate card, the contact section, or the tax line: don't.
 
+## What changed (June 2026)
+
+The fund link was corrected after the June 3 meeting. The prior formId (`0b410455-…`) sometimes resolved to the wrong Blackbaud fund (the Lyndon *annual fund*, which routes to the college). The form now uses formId **`fed909dd-…`** = the **Lyndon Alumni Council Fund**, the fund the Council actually controls. The corrected link Alex captured carried a `bbeml=…` email-tracking token (per-recipient Blackbaud tracking) — that was **stripped** before going on the site. Never hardcode a `bbeml` param.
+
 ## Where the donate URL lives in the site
 
-- Nav CTA (`<a class="nav-cta">`)
-- Mobile nav CTA
-- Hero secondary button
-- Quick-links donate card (top of page)
-- Donate card on the Give section
+Only **two** places hardcode the Blackbaud URL:
+
+- Donate card button on the Give section (`<a class="give-cta-link">`)
 - Footer Resources block
 
-Six places. If you change the URL, update all six. Run a grep to catch them all:
+The other donate CTAs — nav CTA, mobile nav CTA, hero secondary button, and the quick-links donate card — point to the `#give` anchor (they scroll to the Give section, no URL). If you change the URL, update the two hardcoded spots. Run a grep to catch them:
 
 ```
 host.nxt.blackbaud.com

@@ -14,4 +14,10 @@ fundraising/
 # Old/archived material (incl. a copy of the prospect data) — keep out of the repo and deploys
 Archive/
 
+# Council-internal working materials — never deploy or push (meeting recordings, sponsorship prospects)
+Meeting Transcripts/
+Lyndon State Alumni Sponsorship Emails/
+*.xlsx
+*.docx
+
 # Keep docs/ AND CLAUDE.md tracked — they carry portable context
