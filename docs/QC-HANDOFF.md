@@ -50,10 +50,9 @@
 - [ ] `https://www.linkedin.com/school/lyndon-state-college/people` (×2)
 - [ ] `https://bsky.app/profile/vermontstateu.bsky.social` (×2) — VTSU-wide Bluesky, not Lyndon-specific.
 
-### F. Dead placeholder links — DECIDE (currently `href="#"`, 5 total)
-- [ ] **Instagram** (Social section + footer) → goes nowhere. Add real URL or remove.
-- [ ] **YouTube** (Social section + footer) → goes nowhere. Add real URL or remove.
-- [ ] Brand logo `<a href="#" class="brand">` (top-left) — scrolls to top; fine as-is.
+### F. Dead placeholder links
+- [x] **Instagram & YouTube removed** from the Social section + footer (2026-06-04, per Alex). Facebook, LinkedIn, Bluesky, Handshake remain.
+- [ ] Brand logo `<a href="#" class="brand">` (top-left) — scrolls to top; fine as-is. This is the only remaining `href="#"`.
 
 ### G. Images that could break (all hotlinked; spot-check they render)
 - [ ] **Vail Museum CDN** `d8e7jbdw4fu0e.cloudfront.net` (×8: About aerial + 7 carousel) — **confirm usage rights with Michael Thurston / MVS** (Kanell Collection postcards). Each has an `onerror` fallback to a campus photo.
@@ -75,7 +74,7 @@
 ## Flags to confirm with the Council
 - [ ] **Golf venue** = St. Johnsbury Country Club (per Steve's email; old site said Orleans).
 - [ ] **Vail Museum image rights** (see G above).
-- [ ] **60K+ alumni** hero stat is unverified (Steve → Ernie).
+- [x] **60K+ alumni** hero stat — confirmed OK by Alex (2026-06-04); keep as-is.
 - [ ] Committee roster accuracy (Cole removed; Meaghan was going to QC the full list).
 
 ## Odds & ends from Alex (fill in during QC)
