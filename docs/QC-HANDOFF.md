@@ -10,6 +10,22 @@
 - **Last commit this session:** `631d886` (verify `git log` is in sync before QC)
 - **Deploy:** `git push` (or `push-to-github.bat`) → Cloudflare. No build step.
 
+---
+
+## ✅ QC RESULTS — 2026-06-04 (this checklist was run)
+
+**Verdict: passed.** 40+ links and all 21 images verified live (HTTP status + rendered DOM); every internal `#anchor` resolves; zero hard 404s; all June 3–4 content confirmed live.
+
+- **A. Donate flow:** Blackbaud URL byte-exact in both spots, no `bbeml`, `formId=fed909dd-…`, returns 200; CTA copy correct ("Donate to the Alumni Association", no "Give Now"); nav/mobile/hero/quick-link all → `#give`. ⚠️ *Couldn't headlessly confirm the rendered "Lyndon Alumni Council Fund" label* — the donor form renders it via JS and the local preview blocks cross-origin navigation. `formId` is unchanged from the one Alex validated last session, so it resolves to the same fund; **left as a 5-sec manual click-test.**
+- **B. Internal anchors:** all resolve; **no `#news`**; exactly one `href="#"` (brand logo). ✓
+- **C. mailto:** both = `scormier55@comcast.net`. ✓
+- **D. External links:** all 200 — vermontstate.edu pages, both vtsuhornets pages, Foundation, 4× Wikipedia, Handshake. `/nominate` 301→ real **"VTSU Alumni Award Nomination"** Formstack form. *Note:* HOF "Submit Nomination" also uses `/nominate` (general alumni-award form, not HOF-specific) — works, minor mismatch.
+- **E. Social:** Bluesky 200. LinkedIn `999` + Facebook `400` are anti-bot walls (fine in-browser). ⚠️ **FB group (×3) not auto-confirmable past the login gate — worth one manual check.**
+- **F. Placeholders:** IG/YT confirmed gone. ⚠️ **FIXED THIS TURN:** footer "Council Dashboard" link → `fundraising_dashboard.html` (not deployed; Cloudflare served the homepage at 200 for it — soft dead-end). The real dashboard stays gitignored/undeployed (no data exposure). **Link removed from the footer per Alex.**
+- **G. Images:** all 21 resolve 200 (8 Vail CDN, 15 carousel, Homecoming, Golf, 3 headshots). Cantore/Gregory headshots are news-site hotlinks (could be referrer-blocked in-browser; both have `onerror` fallbacks).
+
+**Remaining human-only checks:** (1) click the Donate button and confirm the form shows the **Lyndon Alumni Council Fund**; (2) confirm the **Facebook group** loads.
+
 ## What changed this session (integrating the June 3 alumni-team meeting + Steve's Homecoming email)
 1. **Donate fund link** updated to formId `fed909dd-…` = **Lyndon Alumni Council Fund** (old `0b410455-…` could hit the wrong fund); stripped the `bbeml=` email-tracking token.
 2. **Brand → "Lyndon Alumni Council"** (dropped the "VTSU" prefix from the council name); spell out "Vermont State University" in prose. Kept "VTSU Lyndon" only on the Mentor card, the 2023 timeline node, the nav lineage chip, and the university's own VTSU links.
@@ -77,8 +93,8 @@
 - [x] **60K+ alumni** hero stat — confirmed OK by Alex (2026-06-04); keep as-is.
 - [ ] Committee roster accuracy (Cole removed; Meaghan was going to QC the full list).
 
-## Odds & ends from Alex (fill in during QC)
-- (next turn: add the specific fixes Alex calls out)
+## Odds & ends from Alex (done during QC)
+- **Removed** the footer "Council Dashboard" link — it pointed at `fundraising_dashboard.html`, which isn't deployed (Cloudflare served the homepage at 200, a soft dead-end). Done 2026-06-04. The dashboard itself stays in gitignored `fundraising/` and is never deployed.
 
 ## Domain
 - Alex to buy **`lyndonalumni.com`** (Meaghan gifting if <$50) and point it at Cloudflare (masks the pages.dev URL).
