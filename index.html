@@ -297,20 +297,22 @@ img{display:block;max-width:100%}
 @media(max-width:900px){.gallery-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:560px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
 
-/* CAMPUS CAROUSEL */
-.carousel{position:relative;overflow:hidden;border-radius:var(--r);box-shadow:0 12px 30px rgba(0,0,0,.3)}
+/* CAMPUS CAROUSELS (two side by side, caption centered below) */
+.carousel-row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+@media(max-width:760px){.carousel-row{grid-template-columns:1fr;gap:1.75rem}}
+.carousel-window{position:relative;overflow:hidden;border-radius:var(--r);box-shadow:0 12px 30px rgba(0,0,0,.3)}
 .carousel-track{display:flex;transition:transform .6s cubic-bezier(.4,0,.2,1);will-change:transform}
-.carousel-slide{min-width:100%;position:relative;aspect-ratio:21/9;background:var(--green-dk)}
-.carousel-slide img{width:100%;height:100%;object-fit:cover}
-.carousel-cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,.78),transparent);color:#fff;font-size:.82rem;font-weight:500;padding:2.2rem 1.25rem .9rem}
-.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border:none;border-radius:50%;background:rgba(15,61,34,.5);color:#fff;font-size:1.7rem;line-height:1;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);transition:background .2s;z-index:2}
+.carousel-slide{min-width:100%}
+.carousel-slide img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--green-md)}
+.carousel-cap{text-align:center;color:rgba(255,255,255,.9);font-size:.8rem;font-weight:500;padding:.7rem 1rem .15rem;min-height:2.5em}
+.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border:none;border-radius:50%;background:rgba(15,61,34,.5);color:#fff;font-size:1.5rem;line-height:1;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);transition:background .2s;z-index:2}
 .carousel-btn:hover{background:rgba(15,61,34,.85)}
-.carousel-btn.prev{left:.75rem}
-.carousel-btn.next{right:.75rem}
-.carousel-dots{position:absolute;bottom:.8rem;left:50%;transform:translateX(-50%);display:flex;gap:.4rem;z-index:2}
-.carousel-dot{width:8px;height:8px;border-radius:50%;border:none;background:rgba(255,255,255,.5);padding:0;cursor:pointer;transition:background .2s,width .2s}
-.carousel-dot.active{background:var(--gold-md);width:22px;border-radius:4px}
-@media(max-width:600px){.carousel-slide{aspect-ratio:16/10}.carousel-cap{font-size:.72rem}.carousel-btn{width:36px;height:36px;font-size:1.3rem}}
+.carousel-btn.prev{left:.6rem}
+.carousel-btn.next{right:.6rem}
+.carousel-dots{display:flex;gap:.4rem;justify-content:center;padding-top:.15rem}
+.carousel-dot{width:8px;height:8px;border-radius:50%;border:none;background:rgba(255,255,255,.4);padding:0;cursor:pointer;transition:background .2s,width .2s}
+.carousel-dot.active{background:var(--gold-md);width:20px;border-radius:4px}
+@media(max-width:600px){.carousel-btn{width:34px;height:34px;font-size:1.3rem}}
 
 /* TIMELINE */
 .tl-sec{background:var(--green-dk);color:white;padding:5rem 0}
@@ -649,39 +651,45 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
   </div>
 </section>
 
-<!-- CAMPUS PHOTO CAROUSEL -->
+<!-- CAMPUS PHOTO CAROUSELS -->
 <div class="gallery-strip reveal">
   <div class="c">
-    <div class="carousel" id="campusCarousel">
-      <div class="carousel-track" id="carouselTrack">
-        <div class="carousel-slide">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Lyndon_State_College.jpg" alt="Academic and Student Activity Center, Lyndon State College" loading="lazy">
-          <div class="carousel-cap">Academic &amp; Student Activity Center</div>
+    <div class="carousel-row">
+
+      <!-- Carousel A -->
+      <div class="carousel">
+        <div class="carousel-window">
+          <div class="carousel-track">
+            <div class="carousel-slide"><img loading="lazy" data-cap="Aerial of campus, c. 1976–77 · Vail Museum (Kanell Collection)" alt="Aerial photo of the Lyndon State College campus, circa 1976-77" src="https://d8e7jbdw4fu0e.cloudfront.net/11557/b890d7d0-2999-11ef-b8bd-4fb03cb97a49-vd3NFui.sm@2x.jpg" onerror="this.onerror=null;this.src='https://vermontstate.edu/wp-content/uploads/2023/09/Lyndon_Campus.jpg'"></div>
+            <div class="carousel-slide"><img loading="lazy" data-cap="Academic &amp; Student Activity Center" alt="Academic and Student Activity Center, Lyndon State College" src="https://upload.wikimedia.org/wikipedia/commons/b/be/Lyndon_State_College.jpg"></div>
+            <div class="carousel-slide"><img loading="lazy" data-cap="Samuel Read Hall — Lyndon Campus" alt="Samuel Read Hall, Northern Vermont University Lyndon Campus" src="https://upload.wikimedia.org/wikipedia/commons/0/02/Samuel_Read_Hall_Northern_Vermont_University_Lyndon_Campus_June_2018.jpg"></div>
+            <div class="carousel-slide"><img loading="lazy" data-cap="Whitelaw &amp; Crevecour Residence Halls" alt="LSC Residence Halls — Whitelaw and Crevecour" src="https://upload.wikimedia.org/wikipedia/commons/1/14/LSC_Residence_Halls.jpg"></div>
+            <div class="carousel-slide"><img loading="lazy" data-cap="Campus Entrance — Vail Drive &amp; College Rd" alt="Main Entrance sign, NVU Lyndon Campus, August 2022" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Main_Entrance_sign_Northern_Vermont_University_Lyndon_Campus_Lyndon_VT_August_2022.jpg"></div>
+          </div>
+          <button class="carousel-btn prev" aria-label="Previous photo">‹</button>
+          <button class="carousel-btn next" aria-label="Next photo">›</button>
         </div>
-        <div class="carousel-slide">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Samuel_Read_Hall_Northern_Vermont_University_Lyndon_Campus_June_2018.jpg" alt="Samuel Read Hall, Northern Vermont University Lyndon Campus" loading="lazy">
-          <div class="carousel-cap">Samuel Read Hall — Lyndon Campus</div>
-        </div>
-        <div class="carousel-slide">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/LSC_Residence_Halls.jpg" alt="LSC Residence Halls — Whitelaw and Crevecour" loading="lazy">
-          <div class="carousel-cap">Whitelaw &amp; Crevecour Residence Halls</div>
-        </div>
-        <div class="carousel-slide">
-          <img src="https://vermontstate.edu/wp-content/uploads/2023/09/Greggfest2023-1200x541.jpg" alt="GreggFest outdoor concert and campus celebration" loading="lazy">
-          <div class="carousel-cap">GreggFest — Campus Tradition</div>
-        </div>
-        <div class="carousel-slide">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Main_Entrance_sign_Northern_Vermont_University_Lyndon_Campus_Lyndon_VT_August_2022.jpg" alt="Main Entrance sign, NVU Lyndon Campus, August 2022" loading="lazy">
-          <div class="carousel-cap">Campus Entrance — Vail Drive &amp; College Rd</div>
-        </div>
-        <div class="carousel-slide">
-          <img src="https://vermontstate.edu/wp-content/uploads/2023/09/Overlooking_pond.jpg" alt="Fall foliage overlooking the campus pond, Lyndon Vermont" loading="lazy">
-          <div class="carousel-cap">Fall on the Lyndon Campus</div>
-        </div>
+        <div class="carousel-cap"></div>
+        <div class="carousel-dots"></div>
       </div>
-      <button class="carousel-btn prev" id="carPrev" aria-label="Previous photo">‹</button>
-      <button class="carousel-btn next" id="carNext" aria-label="Next photo">›</button>
-      <div class="carousel-dots" id="carouselDots"></div>
+
+      <!-- Carousel B -->
+      <div class="carousel">
+        <div class="carousel-window">
+          <div class="carousel-track">
+            <div class="carousel-slide"><img loading="lazy" data-cap="Aerial of campus, c. 1990s · Vail Museum (Kanell Collection)" alt="Aerial photo of the Lyndon State College campus, circa 1990s" src="https://d8e7jbdw4fu0e.cloudfront.net/11557/c09cf990-2502-11ef-8ce6-01dd49c3de53-vd3NDVM.sm@2x.jpg" onerror="this.onerror=null;this.src='https://vermontstate.edu/wp-content/uploads/2023/09/Overlooking_pond.jpg'"></div>
+            <div class="carousel-slide"><img loading="lazy" data-cap="GreggFest — Campus Tradition" alt="GreggFest outdoor concert and campus celebration" src="https://vermontstate.edu/wp-content/uploads/2023/09/Greggfest2023-1200x541.jpg"></div>
+            <div class="carousel-slide"><img loading="lazy" data-cap="Overlooking the campus pond" alt="Fall foliage overlooking the campus pond, Lyndon Vermont" src="https://vermontstate.edu/wp-content/uploads/2023/09/Overlooking_pond.jpg"></div>
+            <div class="carousel-slide"><img loading="lazy" data-cap="Welcoming alumni &amp; families to campus" alt="Banner welcoming alumni and parents, Lyndon campus, 2017" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Banner_welcoming_alumni_and_parents_Northern_Vermont_University_Lyndon_campus_Lyndon_VT_September_2017.jpg"></div>
+            <div class="carousel-slide"><img loading="lazy" data-cap="The Lyndon campus today" alt="View of the Lyndon campus" src="https://vermontstate.edu/wp-content/uploads/2023/09/Lyndon_Campus.jpg"></div>
+          </div>
+          <button class="carousel-btn prev" aria-label="Previous photo">‹</button>
+          <button class="carousel-btn next" aria-label="Next photo">›</button>
+        </div>
+        <div class="carousel-cap"></div>
+        <div class="carousel-dots"></div>
+      </div>
+
     </div>
   </div>
 </div>
@@ -1017,7 +1025,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       <div style="display:flex;gap:1.25rem">
         <a href="#contact">Contact</a>
         <a href="fundraising_dashboard.html" style="opacity:.35" title="Council Members Only">Council Dashboard</a>
-        <span style="opacity:.35">Campus photos: Wikimedia Commons CC BY-SA 4.0</span>
+        <span style="opacity:.35">Campus photos: Wikimedia Commons CC BY-SA 4.0 &bull; Historic aerials: Vail Museum (David &amp; Beth Kanell Collection)</span>
       </div>
     </div>
   </div>
@@ -1033,16 +1041,16 @@ function toggleMenu(){document.getElementById('navMob').classList.toggle('open')
 const btt=document.getElementById('btt');
 window.addEventListener('scroll',()=>btt.classList.toggle('vis',scrollY>400),{passive:true});
 
-// Campus photo carousel
-(function(){
-  const track=document.getElementById('carouselTrack');
+// Campus photo carousels — supports multiple instances; caption shown centered below each image
+document.querySelectorAll('.carousel').forEach((car,ci)=>{
+  const track=car.querySelector('.carousel-track');
   if(!track)return;
   const slides=[...track.children];
-  const dotsWrap=document.getElementById('carouselDots');
-  const car=document.getElementById('campusCarousel');
+  const capEl=car.querySelector('.carousel-cap');
+  const dotsWrap=car.querySelector('.carousel-dots');
   let i=0,timer=null;
   const reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-  slides.forEach((_,n)=>{
+  slides.forEach((s,n)=>{
     const d=document.createElement('button');
     d.className='carousel-dot'+(n===0?' active':'');
     d.setAttribute('aria-label','Go to photo '+(n+1));
@@ -1053,16 +1061,20 @@ window.addEventListener('scroll',()=>btt.classList.toggle('vis',scrollY>400),{pa
   function go(n){
     i=(n+slides.length)%slides.length;
     track.style.transform='translateX(-'+(i*100)+'%)';
+    const img=slides[i].querySelector('img');
+    if(capEl)capEl.textContent=img?(img.getAttribute('data-cap')||''):'';
     dots.forEach((d,k)=>d.classList.toggle('active',k===i));
   }
-  document.getElementById('carNext').addEventListener('click',()=>{go(i+1);reset();});
-  document.getElementById('carPrev').addEventListener('click',()=>{go(i-1);reset();});
-  function start(){if(!reduce)timer=setInterval(()=>go(i+1),5000);}
+  const nextBtn=car.querySelector('.carousel-btn.next'),prevBtn=car.querySelector('.carousel-btn.prev');
+  if(nextBtn)nextBtn.addEventListener('click',()=>{go(i+1);reset();});
+  if(prevBtn)prevBtn.addEventListener('click',()=>{go(i-1);reset();});
+  function start(){if(!reduce)timer=setInterval(()=>go(i+1),4500+ci*1200);}
   function reset(){clearInterval(timer);start();}
   car.addEventListener('mouseenter',()=>clearInterval(timer));
   car.addEventListener('mouseleave',start);
+  go(0);
   start();
-})();
+});
 
 // Nav active state on scroll
 const nls=document.querySelectorAll('.nl[href^="#"]');
