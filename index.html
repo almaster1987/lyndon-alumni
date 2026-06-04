@@ -298,8 +298,9 @@ img{display:block;max-width:100%}
 @media(max-width:560px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
 
 /* CAMPUS CAROUSELS (two side by side, caption centered below) */
-.carousel-row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
-@media(max-width:760px){.carousel-row{grid-template-columns:1fr;gap:1.75rem}}
+.carousel-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+@media(max-width:980px){.carousel-row{grid-template-columns:1fr 1fr;gap:1.25rem}}
+@media(max-width:620px){.carousel-row{grid-template-columns:1fr;gap:1.75rem}}
 .carousel-window{position:relative;overflow:hidden;border-radius:var(--r);box-shadow:0 12px 30px rgba(0,0,0,.3)}
 .carousel-track{display:flex;transition:transform .6s cubic-bezier(.4,0,.2,1);will-change:transform}
 .carousel-slide{min-width:100%}
@@ -626,13 +627,14 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       <div>
         <div class="ab-img-wrap">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/3/36/Northern_Vermont_University_Lyndon_campus_Lyndon_VT_September_2017.jpg"
-            alt="Northern Vermont University Lyndon Campus, Lyndonville VT"
+            src="https://d8e7jbdw4fu0e.cloudfront.net/11557/c09cf990-2502-11ef-8ce6-01dd49c3de53-vd3NDVM.sm@2x.jpg"
+            alt="Aerial photo of the Lyndon campus, circa 1990s"
             loading="lazy"
+            onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/3/36/Northern_Vermont_University_Lyndon_campus_Lyndon_VT_September_2017.jpg'"
           >
           <div class="ab-img-badge">📍 Lyndonville, Vermont &bull; 195-Acre Campus</div>
         </div>
-        <p class="credit">NVU Lyndon Campus, Sept. 2017 &bull; Artaxerxes / Wikimedia Commons CC BY-SA 4.0</p>
+        <p class="credit">Aerial of the Lyndon campus, c. 1990s &bull; Vail Museum, David &amp; Beth Kanell Collection</p>
       </div>
       <div>
         <span class="lbl">Who We Are</span>
@@ -656,15 +658,15 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
   <div class="c">
     <div class="carousel-row">
 
-      <!-- Carousel A -->
+      <!-- Carousel A — campus from above (historic) -->
       <div class="carousel">
         <div class="carousel-window">
           <div class="carousel-track">
-            <div class="carousel-slide"><img loading="lazy" data-cap="Aerial of campus, c. 1976–77 · Vail Museum (Kanell Collection)" alt="Aerial photo of the Lyndon State College campus, circa 1976-77" src="https://d8e7jbdw4fu0e.cloudfront.net/11557/b890d7d0-2999-11ef-b8bd-4fb03cb97a49-vd3NFui.sm@2x.jpg" onerror="this.onerror=null;this.src='https://vermontstate.edu/wp-content/uploads/2023/09/Lyndon_Campus.jpg'"></div>
-            <div class="carousel-slide"><img loading="lazy" data-cap="Academic &amp; Student Activity Center" alt="Academic and Student Activity Center, Lyndon State College" src="https://upload.wikimedia.org/wikipedia/commons/b/be/Lyndon_State_College.jpg"></div>
-            <div class="carousel-slide"><img loading="lazy" data-cap="Samuel Read Hall — Lyndon Campus" alt="Samuel Read Hall, Northern Vermont University Lyndon Campus" src="https://upload.wikimedia.org/wikipedia/commons/0/02/Samuel_Read_Hall_Northern_Vermont_University_Lyndon_Campus_June_2018.jpg"></div>
-            <div class="carousel-slide"><img loading="lazy" data-cap="Whitelaw &amp; Crevecour Residence Halls" alt="LSC Residence Halls — Whitelaw and Crevecour" src="https://upload.wikimedia.org/wikipedia/commons/1/14/LSC_Residence_Halls.jpg"></div>
-            <div class="carousel-slide"><img loading="lazy" data-cap="Campus Entrance — Vail Drive &amp; College Rd" alt="Main Entrance sign, NVU Lyndon Campus, August 2022" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Main_Entrance_sign_Northern_Vermont_University_Lyndon_Campus_Lyndon_VT_August_2022.jpg"></div>
+            <div class="carousel-slide"><img loading="lazy" data-cap="Aerial of campus, c. 1976–77 · Vail Museum (Kanell Collection)" alt="Aerial photo of the Lyndon State College campus, circa 1976-77" src="https://d8e7jbdw4fu0e.cloudfront.net/11557/b890d7d0-2999-11ef-b8bd-4fb03cb97a49-vd3NFui.lg@2x.jpg" onerror="this.onerror=null;this.src='https://vermontstate.edu/wp-content/uploads/2023/09/Lyndon_Campus.jpg'"></div>
+            <div class="carousel-slide"><img loading="lazy" data-cap="Aerial of campus, c. 1970 · Vail Museum (Kanell Collection)" alt="Aerial color photo postcard of Lyndon State College, circa 1970" src="https://d8e7jbdw4fu0e.cloudfront.net/11557/60376af0-235d-11ef-bf28-7b8175d77476-vd3NFrT.lg-nt@2x.jpg" onerror="this.onerror=null;this.src='https://vermontstate.edu/wp-content/uploads/2023/09/Lyndon_Campus.jpg'"></div>
+            <div class="carousel-slide"><img loading="lazy" data-cap="Aerial of campus, c. 1980s–90s · Vail Museum (Kanell Collection)" alt="Aerial color photo postcard of the campus, 1980s to 1990s" src="https://d8e7jbdw4fu0e.cloudfront.net/11557/5db22920-242d-11ef-b0d8-a98311224bf8-vd3NGvE.lg-nt@2x.jpg" onerror="this.onerror=null;this.src='https://vermontstate.edu/wp-content/uploads/2023/09/Lyndon_Campus.jpg'"></div>
+            <div class="carousel-slide"><img loading="lazy" data-cap="Lyndon Teachers College, c. early 1960s · Vail Museum (Kanell Collection)" alt="Lyndon Teachers College color postcard, early 1960s" src="https://d8e7jbdw4fu0e.cloudfront.net/11557/160743a0-18a5-11ef-ab25-85d8ef076e84-vd3NDX5.lg-nt@2x.jpg" onerror="this.onerror=null;this.src='https://vermontstate.edu/wp-content/uploads/2023/09/Lyndon_Campus.jpg'"></div>
+            <div class="carousel-slide"><img loading="lazy" data-cap="Campus at night · Vail Museum (Kanell Collection)" alt="Lyndon State College night scene postcard" src="https://d8e7jbdw4fu0e.cloudfront.net/11557/76bbe970-235a-11ef-bf28-7b8175d77476-vd3NGWT.lg-nt@2x.jpg" onerror="this.onerror=null;this.src='https://vermontstate.edu/wp-content/uploads/2023/09/Lyndon_Campus.jpg'"></div>
           </div>
           <button class="carousel-btn prev" aria-label="Previous photo">‹</button>
           <button class="carousel-btn next" aria-label="Next photo">›</button>
@@ -673,14 +675,31 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
         <div class="carousel-dots"></div>
       </div>
 
-      <!-- Carousel B -->
+      <!-- Carousel B — Vail Mansion & the valley -->
       <div class="carousel">
         <div class="carousel-window">
           <div class="carousel-track">
-            <div class="carousel-slide"><img loading="lazy" data-cap="Aerial of campus, c. 1990s · Vail Museum (Kanell Collection)" alt="Aerial photo of the Lyndon State College campus, circa 1990s" src="https://d8e7jbdw4fu0e.cloudfront.net/11557/c09cf990-2502-11ef-8ce6-01dd49c3de53-vd3NDVM.sm@2x.jpg" onerror="this.onerror=null;this.src='https://vermontstate.edu/wp-content/uploads/2023/09/Overlooking_pond.jpg'"></div>
-            <div class="carousel-slide"><img loading="lazy" data-cap="GreggFest — Campus Tradition" alt="GreggFest outdoor concert and campus celebration" src="https://vermontstate.edu/wp-content/uploads/2023/09/Greggfest2023-1200x541.jpg"></div>
+            <div class="carousel-slide"><img loading="lazy" data-cap="Manor Vail, Lyndon VT · Vail Museum (Kanell Collection)" alt="Manor Vail postcard, Lyndon Vermont" src="https://d8e7jbdw4fu0e.cloudfront.net/11557/ba9384c0-1705-11ef-8c36-a91bbe86b80a-vd3NGvl.lg-nt@2x.jpg" onerror="this.onerror=null;this.src='https://vermontstate.edu/wp-content/uploads/2023/09/Overlooking_pond.jpg'"></div>
+            <div class="carousel-slide"><img loading="lazy" data-cap="Burke Mountain &amp; the Passumpsic Valley, c. 1962 · Vail Museum (Kanell Collection)" alt="Fall view of Burke Mountain and the Passumpsic Valley from campus, 1962" src="https://d8e7jbdw4fu0e.cloudfront.net/11557/123e4070-30dd-11ef-93b8-2df533b3ab7c-vd3NFko.lg-nt@2x.jpg" onerror="this.onerror=null;this.src='https://vermontstate.edu/wp-content/uploads/2023/09/Overlooking_pond.jpg'"></div>
             <div class="carousel-slide"><img loading="lazy" data-cap="Overlooking the campus pond" alt="Fall foliage overlooking the campus pond, Lyndon Vermont" src="https://vermontstate.edu/wp-content/uploads/2023/09/Overlooking_pond.jpg"></div>
+            <div class="carousel-slide"><img loading="lazy" data-cap="GreggFest — Campus Tradition" alt="GreggFest outdoor concert and campus celebration" src="https://vermontstate.edu/wp-content/uploads/2023/09/Greggfest2023-1200x541.jpg"></div>
             <div class="carousel-slide"><img loading="lazy" data-cap="Welcoming alumni &amp; families to campus" alt="Banner welcoming alumni and parents, Lyndon campus, 2017" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Banner_welcoming_alumni_and_parents_Northern_Vermont_University_Lyndon_campus_Lyndon_VT_September_2017.jpg"></div>
+          </div>
+          <button class="carousel-btn prev" aria-label="Previous photo">‹</button>
+          <button class="carousel-btn next" aria-label="Next photo">›</button>
+        </div>
+        <div class="carousel-cap"></div>
+        <div class="carousel-dots"></div>
+      </div>
+
+      <!-- Carousel C — campus today -->
+      <div class="carousel">
+        <div class="carousel-window">
+          <div class="carousel-track">
+            <div class="carousel-slide"><img loading="lazy" data-cap="Academic &amp; Student Activity Center" alt="Academic and Student Activity Center, Lyndon State College" src="https://upload.wikimedia.org/wikipedia/commons/b/be/Lyndon_State_College.jpg"></div>
+            <div class="carousel-slide"><img loading="lazy" data-cap="Samuel Read Hall" alt="Samuel Read Hall, Northern Vermont University Lyndon Campus" src="https://upload.wikimedia.org/wikipedia/commons/0/02/Samuel_Read_Hall_Northern_Vermont_University_Lyndon_Campus_June_2018.jpg"></div>
+            <div class="carousel-slide"><img loading="lazy" data-cap="Whitelaw &amp; Crevecour Residence Halls" alt="LSC Residence Halls — Whitelaw and Crevecour" src="https://upload.wikimedia.org/wikipedia/commons/1/14/LSC_Residence_Halls.jpg"></div>
+            <div class="carousel-slide"><img loading="lazy" data-cap="Campus Entrance — Vail Drive &amp; College Rd" alt="Main Entrance sign, NVU Lyndon Campus, August 2022" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Main_Entrance_sign_Northern_Vermont_University_Lyndon_Campus_Lyndon_VT_August_2022.jpg"></div>
             <div class="carousel-slide"><img loading="lazy" data-cap="The Lyndon campus today" alt="View of the Lyndon campus" src="https://vermontstate.edu/wp-content/uploads/2023/09/Lyndon_Campus.jpg"></div>
           </div>
           <button class="carousel-btn prev" aria-label="Previous photo">‹</button>
