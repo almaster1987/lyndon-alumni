@@ -80,17 +80,17 @@
 ---
 
 ## Pending content (placeholders are live and labeled)
-- **Golf Classic:** exact day + tee time + entry fee + **register link** (John Lemieux's form) — card says "Link Coming Soon."
+- **Golf Classic:** day/tee time/entry fee now LIVE (2026-06-05, from the golf flyer): **Fri 9/25**, 11am registration · noon shotgun, **$125/golfer**, sponsor tiers ($2,500/$750/$100), contests + 50/50. *Still pending:* the online **pay-portal register link** (payment runs "through the college") — card still says "Link Coming Soon." (Internal flyer notes — volunteer/sponsor-prospect names + organizer cost basis — were intentionally NOT published.)
 - **Athletic Hall of Fame:** 2024 inductees still listed; Steve to send the **2026 inductee names + photos**.
 - **Alumni Spotlight:** still 3 (Cantore '86, Gregory '82, Bernier '81); expand toward 6 — candidates: **Mark Hilton** (distinguished alumni), **Mark Valli** (Carhartt CEO).
-- **Newsletter subscribe:** removed; needs a real form routing to **Kate** at the college (first/last name + email).
+- **Newsletter subscribe:** RESOLVED (2026-06-05) — per the college, instead of a custom form the **"Subscribe to Alumni Updates"** button now points to the VTSU alumni contact-info form (`https://vermontstate.edu/alumni/vermont-state-alumni-contact-information-form/`). Added to the Contact section (same destination as the footer "Update Your Info").
 - **Manor Vail:** decide with Michael whether MVS wants a dedicated **section** vs. the current links.
 - **More carousel photos:** Alex wants ~30; currently 15 (5×3) + can scale trivially. Get a batch from **MVS** (more Kanell/Vail Museum entries available at hub.catalogit.app/vail-museum — its `sitemap.xml` lists all entries; pull `og:image`, use `.lg@2x` / `.lg-nt@2x` renditions).
 
 ## Flags to confirm with the Council
 - [ ] **Golf venue** = St. Johnsbury Country Club (per Steve's email; old site said Orleans).
 - [ ] **Vail Museum image rights** (see G above).
-- [x] **60K+ alumni** hero stat — confirmed OK by Alex (2026-06-04); keep as-is.
+- [x] **Alumni hero stat** — was "60K+" (OK'd 06-04); college reported **10,344 known alumni** (2026-06-05), so the hero now shows **"10,000+"** per Alex's call.
 - [ ] Committee roster accuracy (Cole removed; Meaghan was going to QC the full list).
 
 ## Odds & ends from Alex (done during QC)
