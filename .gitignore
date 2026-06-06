@@ -2,6 +2,7 @@
 Thumbs.db
 .netlify/
 .vscode/
+.claude/
 node_modules/
 *.log
 
