@@ -133,14 +133,19 @@ img{display:block;max-width:100%}
 .nav-cta::before{content:'♥';font-size:.78rem}
 @keyframes ctaPulse{0%,100%{box-shadow:0 2px 6px rgba(196,154,15,.35)}50%{box-shadow:0 2px 14px rgba(196,154,15,.65)}}
 .nav-cta{animation:ctaPulse 2.6s ease-in-out infinite}
+.nav-signup{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1.05rem;background:transparent;color:var(--green);border:1.5px solid var(--green);border-radius:var(--r-sm);font-size:.86rem;font-weight:700;transition:all .2s;margin-right:.55rem;white-space:nowrap}
+.nav-signup:hover{background:var(--green);color:#fff;transform:translateY(-1px)}
+.nav-signup::before{content:'\2709';font-size:.82rem}
 .hbg{display:none;flex-direction:column;gap:5px;padding:6px;border:none;background:none}
 .hbg span{display:block;width:24px;height:2px;background:var(--g700);border-radius:2px}
 .mob{display:none}
 @media(max-width:880px){
   .nav-links{display:none}.hbg{display:flex}
+  .nav-in .nav-signup{display:none}
   .mob.open{display:block;position:absolute;top:68px;left:0;right:0;background:white;border-bottom:1px solid var(--g100);padding:1rem;box-shadow:var(--sh)}
   .mob .nl{display:block;padding:.75rem 1rem;font-size:.95rem}
-  .mob .nav-cta{display:block;margin-top:.75rem;text-align:center;padding:.75rem}
+  .mob .nav-signup{display:flex;justify-content:center;margin-top:.75rem;padding:.75rem}
+  .mob .nav-cta{display:block;margin-top:.6rem;text-align:center;padding:.75rem}
 }
 
 /* ─── HERO ─── */
@@ -565,6 +570,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       <a href="#involved" class="nl">Get Involved</a>
       <a href="#contact" class="nl">Contact</a>
     </div>
+    <a href="https://vermontstate.edu/alumni/vermont-state-alumni-contact-information-form/" target="_blank" rel="noopener" class="nav-signup">Sign Up</a>
     <a href="#give" class="nav-cta">Donate to the Association</a>
     <button class="hbg" onclick="toggleMenu()" aria-label="Toggle navigation menu">
       <span></span><span></span><span></span>
@@ -577,6 +583,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
     <a href="#give" class="nl" onclick="toggleMenu()">Give</a>
     <a href="#involved" class="nl" onclick="toggleMenu()">Get Involved</a>
     <a href="#contact" class="nl" onclick="toggleMenu()">Contact</a>
+    <a href="https://vermontstate.edu/alumni/vermont-state-alumni-contact-information-form/" target="_blank" rel="noopener" class="nav-signup" onclick="toggleMenu()">Sign Up</a>
     <a href="#give" class="nav-cta" onclick="toggleMenu()">Donate to the Association</a>
   </div></div>
 </nav>
@@ -833,25 +840,6 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
     </div>
     <div class="sp-grid">
 
-      <!-- Jim Cantore -->
-      <div class="sp-card">
-        <div class="sp-hdr">
-          <img
-            src="https://cdn.prod.website-files.com/6216b7b72ce9d79152be7bae/6227cac29b82ff81931d7129_Photo.jpg"
-            alt="Jim Cantore reporting during a storm for The Weather Channel"
-            loading="lazy"
-            onerror="this.style.display='none';this.parentElement.classList.add('ph');this.parentElement.innerHTML='<span class=sp-icon>🌪</span><div>J.C.</div>'+this.parentElement.innerHTML"
-          >
-          <span class="class-bdg">Class of '86</span>
-        </div>
-        <div class="sp-body">
-          <h3>Jim Cantore</h3>
-          <div class="sp-role">Meteorologist &bull; The Weather Channel</div>
-          <p>One of America's most recognized broadcast meteorologists, Jim has covered every major storm on The Weather Channel since graduating from Lyndon's Atmospheric Sciences program. A White River Junction, VT native and proud Hornet.</p>
-          <a href="https://en.wikipedia.org/wiki/Jim_Cantore" target="_blank" rel="noopener" class="sp-link">Read More &rarr;</a>
-        </div>
-      </div>
-
       <!-- Mark Valade -->
       <div class="sp-card">
         <div class="sp-hdr">
@@ -890,59 +878,22 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
         </div>
       </div>
 
-      <!-- Cindy Fitzgibbon -->
+      <!-- André Bernier -->
       <div class="sp-card">
         <div class="sp-hdr">
           <img
-            src="https://cdn.mos.cms.futurecdn.net/QHKFJTGS4vkjXsPeNSc7H.jpg"
-            alt="Cindy Fitzgibbon, Chief Meteorologist for WCVB StormTeam 5 in Boston"
+            src="https://upload.wikimedia.org/wikipedia/commons/a/ad/AndrePR3.jpg"
+            alt="André Bernier, retired Fox 8 Cleveland meteorologist"
             loading="lazy"
-            onerror="this.style.display='none';this.parentElement.classList.add('ph');this.parentElement.innerHTML='<span class=sp-icon>🌦️</span><div>C.F.</div>'+this.parentElement.innerHTML"
+            onerror="this.style.display='none';this.parentElement.classList.add('ph')"
           >
-          <span class="class-bdg">Class of '95</span>
+          <span class="class-bdg">Class of '81</span>
         </div>
         <div class="sp-body">
-          <h3>Cindy Fitzgibbon</h3>
-          <div class="sp-role">Chief Meteorologist &bull; WCVB-TV 5, Boston</div>
-          <p>Cindy made history in 2022 as the first female chief meteorologist in the Boston TV market, leading WCVB's StormTeam 5 after succeeding the legendary Harvey Leonard. With 25-plus years in weather — more than 20 forecasting for Boston — and a regional Emmy, she built her career on the foundation she earned in Lyndon's nationally recognized meteorology program. A proud Hornet, Class of 1995.</p>
-          <a href="https://www.nexttv.com/news/cindy-fitzgibbon-named-chief-meteorologist-at-wcvb-boston" target="_blank" rel="noopener" class="sp-link">Read More &rarr;</a>
-        </div>
-      </div>
-
-      <!-- Matthew P. Mayo -->
-      <div class="sp-card">
-        <div class="sp-hdr">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Matthew_P_Mayo_Author_Pic.jpg"
-            alt="Matthew P. Mayo, award-winning author and Lyndon State College alumnus"
-            loading="lazy"
-            onerror="this.style.display='none';this.parentElement.classList.add('ph');this.parentElement.innerHTML='<span class=sp-icon>📚</span><div>M.M.</div>'+this.parentElement.innerHTML"
-          >
-        </div>
-        <div class="sp-body">
-          <h3>Matthew P. Mayo</h3>
-          <div class="sp-role">Award-Winning Author &bull; Western Writers of America</div>
-          <p>A multiple-time Western Writers of America Spur Award winner, Matthew has written more than 30 books across Western, crime, humor, and horror — earning Spur Awards for "Tucker's Reckoning" and "Stranded," plus a National Cowboy &amp; Western Heritage (Wrangler) Award and a Willa Award. A Northeast Kingdom native who grew up on a Vermont dairy farm, he earned his B.A. in English at Lyndon State College. A proud Hornet.</p>
-          <a href="https://en.wikipedia.org/wiki/Matthew_P._Mayo" target="_blank" rel="noopener" class="sp-link">Read More &rarr;</a>
-        </div>
-      </div>
-
-      <!-- Justin Chenette -->
-      <div class="sp-card">
-        <div class="sp-hdr">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/c/c4/2016_session_photo_of_State_Rep._Justin_Chenette.JPG"
-            alt="Justin Chenette, Maine legislator and York County Commissioner, Lyndon State College class of 2012"
-            loading="lazy"
-            onerror="this.style.display='none';this.parentElement.classList.add('ph');this.parentElement.innerHTML='<span class=sp-icon>🏛️</span><div>J.C.</div>'+this.parentElement.innerHTML"
-          >
-          <span class="class-bdg">Class of '12</span>
-        </div>
-        <div class="sp-body">
-          <h3>Justin Chenette</h3>
-          <div class="sp-role">York County Commissioner &bull; Former Maine State Senator</div>
-          <p>A 2012 graduate of Lyndon's broadcasting program, Justin made history at 21 as the youngest legislator in Maine and the youngest openly gay state legislator in the country, serving in the Maine House and then the State Senate. An award-winning broadcast journalist before entering public life, he now serves as a York County Commissioner. A proud Hornet, named Lyndon's Outstanding Young Alumni in 2019.</p>
-          <a href="https://en.wikipedia.org/wiki/Justin_Chenette" target="_blank" rel="noopener" class="sp-link">Read More &rarr;</a>
+          <h3>André Bernier</h3>
+          <div class="sp-role">Meteorologist &bull; WJW Fox 8, Cleveland (Ret.)</div>
+          <p>A two-time Emmy winner, André was among the first on-camera meteorologists when The Weather Channel launched in 1982. He spent 36 years at Fox 8 Cleveland before retiring in 2024 — plus he's an ordained minister and documentary filmmaker.</p>
+          <a href="https://en.wikipedia.org/wiki/Andr%C3%A9_Bernier_(meteorologist)" target="_blank" rel="noopener" class="sp-link">Read More &rarr;</a>
         </div>
       </div>
 
@@ -965,6 +916,63 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
         </div>
       </div>
 
+      <!-- Jim Cantore -->
+      <div class="sp-card">
+        <div class="sp-hdr">
+          <img
+            src="https://cdn.prod.website-files.com/6216b7b72ce9d79152be7bae/6227cac29b82ff81931d7129_Photo.jpg"
+            alt="Jim Cantore reporting during a storm for The Weather Channel"
+            loading="lazy"
+            onerror="this.style.display='none';this.parentElement.classList.add('ph');this.parentElement.innerHTML='<span class=sp-icon>🌪</span><div>J.C.</div>'+this.parentElement.innerHTML"
+          >
+          <span class="class-bdg">Class of '86</span>
+        </div>
+        <div class="sp-body">
+          <h3>Jim Cantore</h3>
+          <div class="sp-role">Meteorologist &bull; The Weather Channel</div>
+          <p>One of America's most recognized broadcast meteorologists, Jim has covered every major storm on The Weather Channel since graduating from Lyndon's Atmospheric Sciences program. A White River Junction, VT native and proud Hornet.</p>
+          <a href="https://en.wikipedia.org/wiki/Jim_Cantore" target="_blank" rel="noopener" class="sp-link">Read More &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Matthew P. Mayo -->
+      <div class="sp-card">
+        <div class="sp-hdr">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Matthew_P_Mayo_Author_Pic.jpg"
+            alt="Matthew P. Mayo, award-winning author and Lyndon State College alumnus"
+            loading="lazy"
+            onerror="this.style.display='none';this.parentElement.classList.add('ph');this.parentElement.innerHTML='<span class=sp-icon>📚</span><div>M.M.</div>'+this.parentElement.innerHTML"
+          >
+          <span class="class-bdg">Class of '90</span>
+        </div>
+        <div class="sp-body">
+          <h3>Matthew P. Mayo</h3>
+          <div class="sp-role">Award-Winning Author &bull; Western Writers of America</div>
+          <p>A multiple-time Western Writers of America Spur Award winner, Matthew has written more than 30 books across Western, crime, humor, and horror — earning Spur Awards for "Tucker's Reckoning" and "Stranded," plus a National Cowboy &amp; Western Heritage (Wrangler) Award and a Willa Award. A Northeast Kingdom native who grew up on a Vermont dairy farm, he earned his B.A. in English at Lyndon State College. A proud Hornet.</p>
+          <a href="https://en.wikipedia.org/wiki/Matthew_P._Mayo" target="_blank" rel="noopener" class="sp-link">Read More &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Cindy Fitzgibbon -->
+      <div class="sp-card">
+        <div class="sp-hdr">
+          <img
+            src="https://cdn.mos.cms.futurecdn.net/QHKFJTGS4vkjXsPeNSc7H.jpg"
+            alt="Cindy Fitzgibbon, Chief Meteorologist for WCVB StormTeam 5 in Boston"
+            loading="lazy"
+            onerror="this.style.display='none';this.parentElement.classList.add('ph');this.parentElement.innerHTML='<span class=sp-icon>🌦️</span><div>C.F.</div>'+this.parentElement.innerHTML"
+          >
+          <span class="class-bdg">Class of '95</span>
+        </div>
+        <div class="sp-body">
+          <h3>Cindy Fitzgibbon</h3>
+          <div class="sp-role">Chief Meteorologist &bull; WCVB-TV 5, Boston</div>
+          <p>Cindy made history in 2022 as the first female chief meteorologist in the Boston TV market, leading WCVB's StormTeam 5 after succeeding the legendary Harvey Leonard. With 25-plus years in weather — more than 20 forecasting for Boston — and a regional Emmy, she built her career on the foundation she earned in Lyndon's nationally recognized meteorology program. A proud Hornet, Class of 1995.</p>
+          <a href="https://www.nexttv.com/news/cindy-fitzgibbon-named-chief-meteorologist-at-wcvb-boston" target="_blank" rel="noopener" class="sp-link">Read More &rarr;</a>
+        </div>
+      </div>
+
       <!-- Monique Priestley -->
       <div class="sp-card">
         <div class="sp-hdr">
@@ -974,6 +982,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
             loading="lazy"
             onerror="this.style.display='none';this.parentElement.classList.add('ph');this.parentElement.innerHTML='<span class=sp-icon>🏛️</span><div>M.P.</div>'+this.parentElement.innerHTML"
           >
+          <span class="class-bdg">Class of '09</span>
         </div>
         <div class="sp-body">
           <h3>Monique Priestley</h3>
@@ -983,22 +992,22 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
         </div>
       </div>
 
-      <!-- André Bernier -->
+      <!-- Justin Chenette -->
       <div class="sp-card">
         <div class="sp-hdr">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/a/ad/AndrePR3.jpg"
-            alt="André Bernier, retired Fox 8 Cleveland meteorologist"
+            src="https://upload.wikimedia.org/wikipedia/commons/c/c4/2016_session_photo_of_State_Rep._Justin_Chenette.JPG"
+            alt="Justin Chenette, Maine legislator and York County Commissioner, Lyndon State College class of 2012"
             loading="lazy"
-            onerror="this.style.display='none';this.parentElement.classList.add('ph')"
+            onerror="this.style.display='none';this.parentElement.classList.add('ph');this.parentElement.innerHTML='<span class=sp-icon>🏛️</span><div>J.C.</div>'+this.parentElement.innerHTML"
           >
-          <span class="class-bdg">Class of '81</span>
+          <span class="class-bdg">Class of '12</span>
         </div>
         <div class="sp-body">
-          <h3>André Bernier</h3>
-          <div class="sp-role">Meteorologist &bull; WJW Fox 8, Cleveland (Ret.)</div>
-          <p>A two-time Emmy winner, André was among the first on-camera meteorologists when The Weather Channel launched in 1982. He spent 36 years at Fox 8 Cleveland before retiring in 2024 — plus he's an ordained minister and documentary filmmaker.</p>
-          <a href="https://en.wikipedia.org/wiki/Andr%C3%A9_Bernier_(meteorologist)" target="_blank" rel="noopener" class="sp-link">Read More &rarr;</a>
+          <h3>Justin Chenette</h3>
+          <div class="sp-role">York County Commissioner &bull; Former Maine State Senator</div>
+          <p>A 2012 graduate of Lyndon's broadcasting program, Justin made history at 21 as the youngest legislator in Maine and the youngest openly gay state legislator in the country, serving in the Maine House and then the State Senate. An award-winning broadcast journalist before entering public life, he now serves as a York County Commissioner. A proud Hornet, named Lyndon's Outstanding Young Alumni in 2019.</p>
+          <a href="https://en.wikipedia.org/wiki/Justin_Chenette" target="_blank" rel="noopener" class="sp-link">Read More &rarr;</a>
         </div>
       </div>
     </div>
