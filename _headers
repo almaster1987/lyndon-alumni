@@ -3,7 +3,7 @@
 # Syntax: a path pattern on its own line, followed by indented "Header: value" lines.
 
 /*
-  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'self' https://lataille-command-center.pages.dev
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=()
