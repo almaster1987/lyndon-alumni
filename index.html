@@ -118,6 +118,8 @@ img{display:block;max-width:100%}
 /* ANNOUNCEMENT */
 .ann{background:var(--gold);color:var(--green-dk);text-align:center;padding:.55rem 1rem;font-size:.84rem;font-weight:600}
 .ann a{text-decoration:underline;margin-left:.4rem}
+.ann-award{background:var(--green);color:var(--white)}
+.ann-award a{color:var(--gold-md)}
 
 /* NAV */
 .nav{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--g100);box-shadow:0 1px 3px rgba(0,0,0,.06)}
@@ -259,6 +261,11 @@ img{display:block;max-width:100%}
 .ql-ico.go{background:var(--gold-lt)}
 .ql-card h3{font-family:'Inter',sans-serif;font-size:.9rem;font-weight:700;color:var(--green-dk)}
 .ql-card p{font-size:.77rem;color:var(--g500)}
+/* Alumni Award card — outline line chasing the border */
+.ql-card.ql-award{position:relative}
+.ql-award-line{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:1}
+.ql-award-line path{fill:none;stroke:var(--gold-md);stroke-width:2;vector-effect:non-scaling-stroke;stroke-dasharray:14 86;stroke-dashoffset:0;filter:drop-shadow(0 0 1.5px rgba(224,180,36,.7));animation:qlDash 3s linear infinite}
+@keyframes qlDash{to{stroke-dashoffset:-100}}
 @media(max-width:680px){.ql-grid{grid-template-columns:repeat(2,1fr)}}
 
 /* ABOUT */
@@ -539,6 +546,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
   .reveal{opacity:1;transform:none;transition:none}
   .hero-c{animation:none}
   .hero-bg{transition:none}
+  .ql-award-line path{animation:none;stroke-dasharray:none;stroke:rgba(224,180,36,.4);filter:none}
   html{scroll-behavior:auto}
 }
 </style>
@@ -552,6 +560,10 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
 <div class="ann">
   🍂 Homecoming returns to Lyndon &mdash; September 25–27, 2026.
   <a href="#events">Learn More</a>
+</div>
+<div class="ann ann-award">
+  🏆 Alumni Award nominations are open &mdash; honor a Hornet who's made their mark.
+  <a href="#awards">Nominate an Alum &rarr;</a>
 </div>
 
 <!-- NAV -->
@@ -622,7 +634,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
     <div class="ql-grid">
       <a href="#give" class="ql-card ql-donate"><div class="ql-ico go">♥</div><h3>Donate to the Association</h3><p>Direct support for Alumni Council programs &amp; traditions</p></a>
       <a href="#events" class="ql-card"><div class="ql-ico gr">🍂</div><h3>Fall Homecoming</h3><p>Sept 25–27 on campus — golf, alumni games &amp; Hall of Fame</p></a>
-      <a href="#involved" class="ql-card"><div class="ql-ico gr">🤝</div><h3>Join the Council</h3><p>Help shape the future — 2 &amp; 3-year terms, meet virtually</p></a>
+      <a href="#awards" class="ql-card ql-award"><svg class="ql-award-line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M6 1 H94 A5 5 0 0 1 99 6 V94 A5 5 0 0 1 94 99 H6 A5 5 0 0 1 1 94 V6 A5 5 0 0 1 6 1 Z" pathLength="100"/></svg><div class="ql-ico go">🏆</div><h3>Alumni Award Nominations</h3><p>Nominate a Hornet — Distinguished Alumni, Young Alumni &amp; more</p></a>
       <a href="#spotlight" class="ql-card"><div class="ql-ico go">⭐</div><h3>Alumni Spotlight</h3><p>Meet Hornets making an impact across the country</p></a>
     </div>
   </div>
