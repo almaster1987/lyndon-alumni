@@ -133,6 +133,7 @@ img{display:block;max-width:100%}
 .nav-cta{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1.15rem;background:var(--gold);color:var(--green-dk);border-radius:var(--r-sm);font-size:.86rem;font-weight:800;transition:all .2s;border:none;box-shadow:0 2px 6px rgba(196,154,15,.35);letter-spacing:.01em}
 .nav-cta:hover{background:var(--gold-md);transform:translateY(-1px);box-shadow:0 6px 14px rgba(196,154,15,.45)}
 .nav-cta::before{content:'♥';font-size:.78rem}
+.nav-cta .cta-sm{display:none}
 @keyframes ctaPulse{0%,100%{box-shadow:0 2px 6px rgba(196,154,15,.35)}50%{box-shadow:0 2px 14px rgba(196,154,15,.65)}}
 .nav-cta{animation:ctaPulse 2.6s ease-in-out infinite}
 .nav-signup{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1.05rem;background:transparent;color:var(--green);border:1.5px solid var(--green);border-radius:var(--r-sm);font-size:.86rem;font-weight:700;transition:all .2s;margin-right:.55rem;white-space:nowrap}
@@ -142,12 +143,29 @@ img{display:block;max-width:100%}
 .hbg span{display:block;width:24px;height:2px;background:var(--g700);border-radius:2px}
 .mob{display:none}
 @media(max-width:880px){
+  html{scroll-padding-top:80px}
   .nav-links{display:none}.hbg{display:flex}
+  .nav-in{gap:.55rem}
+  .brand-txt strong{font-size:1rem}
   .nav-in .nav-signup{display:none}
+  .nav-in .nav-cta{padding:.5rem .85rem;font-size:.8rem}
+  .nav-in .nav-cta .cta-lg{display:none}
+  .nav-in .nav-cta .cta-sm{display:inline}
   .mob.open{display:block;position:absolute;top:68px;left:0;right:0;background:white;border-bottom:1px solid var(--g100);padding:1rem;box-shadow:var(--sh)}
   .mob .nl{display:block;padding:.75rem 1rem;font-size:.95rem}
   .mob .nav-signup{display:flex;justify-content:center;margin-top:.75rem;padding:.75rem}
   .mob .nav-cta{display:block;margin-top:.6rem;text-align:center;padding:.75rem}
+}
+@media(max-width:430px){
+  .brand-txt strong{font-size:.9rem}
+  .brand-txt span{font-size:.58rem;letter-spacing:.04em}
+  .nav-in .nav-cta{padding:.45rem .7rem;font-size:.78rem}
+}
+@media(max-width:360px){
+  .nav-in{gap:.4rem}
+  .brand-txt strong{font-size:.8rem}
+  .brand-txt span{display:none}
+  .nav-in .nav-cta{padding:.4rem .6rem;font-size:.75rem}
 }
 
 /* ─── HERO ─── */
@@ -646,7 +664,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       <a href="#contact" class="nl">Contact</a>
     </div>
     <a href="https://vermontstate.edu/alumni/vermont-state-alumni-contact-information-form/" target="_blank" rel="noopener" class="nav-signup">Sign Up</a>
-    <a href="#give" class="nav-cta">Donate to the Association</a>
+    <a href="#give" class="nav-cta"><span class="cta-lg">Donate to the Association</span><span class="cta-sm">Donate</span></a>
     <button class="hbg" onclick="toggleMenu()" aria-label="Toggle navigation menu">
       <span></span><span></span><span></span>
     </button>
