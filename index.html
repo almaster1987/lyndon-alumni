@@ -397,6 +397,12 @@ img{display:block;max-width:100%}
 /* HOF */
 .hof{margin-top:2.5rem;background:white;border-radius:var(--r-lg);padding:2rem 2.5rem;box-shadow:0 1px 3px rgba(0,0,0,.07);border:1px solid var(--g100)}
 .hof-in{display:flex;justify-content:space-between;align-items:flex-start;gap:1.5rem;flex-wrap:wrap}
+.hof26-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem}
+@media(max-width:700px){.hof26-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:420px){.hof26-grid{grid-template-columns:1fr}}
+.hof26{background:var(--white);border:1px solid var(--g200);border-radius:var(--r-sm);padding:.75rem .5rem;text-align:center}
+.hof26 strong{display:block;font-size:.9rem;color:var(--green-dk)}
+.hof26 span{display:block;font-size:.78rem;color:var(--gold);font-weight:700;margin-top:.2rem}
 
 /* SPOTLIGHT */
 .sp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
@@ -911,12 +917,24 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
           <span class="lbl">Athletic Heritage</span>
           <h2 class="ttl" style="font-size:1.55rem;margin-bottom:.4rem">Athletic Hall of Fame</h2>
           <p style="font-size:.86rem;color:var(--g500);max-width:460px">Honoring Lyndon's finest athletes since 1983. New inductees celebrated each fall at the Alumni Weekend banquet.</p>
-          <p style="font-size:.8rem;color:var(--g400);margin-top:.4rem;font-style:italic">2024 Inductees: Mikayla Hodge '18 &bull; Brandon Hunter '19 &bull; Daniel Sleeman '94 &bull; Robert Trucott '13</p>
         </div>
         <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center">
           <a href="https://vtsuhornets.com/honors/vermont-state-lyndon-athletic-hall-of-fame" target="_blank" rel="noopener" class="btn btn-og" style="font-size:.84rem">View Hall of Fame &rarr;</a>
           <a href="https://vermontstate.edu/nominate" target="_blank" rel="noopener" class="btn btn-g" style="font-size:.84rem">Submit Nomination</a>
         </div>
+      </div>
+      <!-- 2026 induction class -->
+      <div style="margin-top:1.6rem;background:var(--gold-lt);border-left:4px solid var(--gold-md);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1.25rem 1.5rem">
+        <h3 style="font-size:1.05rem;color:var(--green-dk);margin-bottom:.2rem">🏆 Meet the Class of 2026</h3>
+        <p style="font-size:.82rem;color:var(--g500);margin-bottom:1rem">Congratulations to this year's inductees, to be honored at the Hall of Fame banquet during Homecoming Weekend.</p>
+        <div class="hof26-grid">
+          <div class="hof26"><strong>Wildens Fils</strong><span>Class of 2015</span></div>
+          <div class="hof26"><strong>David Cady</strong><span>Class of 1994</span></div>
+          <div class="hof26"><strong>David Chase</strong><span>Class of 1985</span></div>
+          <div class="hof26"><strong>Anthony Moccia</strong><span>Honorary &bull; In Memoriam</span></div>
+        </div>
+        <p style="font-size:.76rem;color:var(--g400);margin-top:1rem;font-style:italic">Photos and full bios will be shared as they become available ahead of this fall's induction ceremony.</p>
+        <p style="font-size:.78rem;color:var(--g400);margin-top:.55rem">Recent inductees &mdash; 2024: Mikayla Hodge '18 &bull; Brandon Hunter '19 &bull; Daniel Sleeman '94 &bull; Robert Trucott '13</p>
       </div>
     </div>
 
