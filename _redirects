@@ -1,0 +1,6 @@
+# Internal context/handoff docs are intentionally tracked in git (for portability
+# across machines) but must NOT be served on the public site. Cloudflare Pages
+# follows these redirects even when a matching static asset exists, so the file
+# bytes are never sent — the request 301s to the homepage instead.
+/CLAUDE.md / 301
+/docs/* / 301
