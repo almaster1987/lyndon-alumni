@@ -652,6 +652,31 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
   </div>
 </div>
 
+<!-- MVS / ALDRICH HOUSE announcement popup (shows on a RETURN visit, after the president popup has been dismissed) -->
+<div class="pres-pop" id="mvsPop" role="dialog" aria-modal="true" aria-labelledby="mvsPopTitle" aria-describedby="mvsPopDesc">
+  <div class="pres-card">
+    <button class="pres-x" type="button" data-pop-close aria-label="Dismiss announcement">&times;</button>
+    <div class="pres-media">
+      <img src="https://d8e7jbdw4fu0e.cloudfront.net/11557/ba9384c0-1705-11ef-8c36-a91bbe86b80a-vd3NGvl.lg-nt@2x.jpg" alt="Historic Manor Vail postcard, Lyndon Vermont"
+           onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect width=%22400%22 height=%22500%22 fill=%22%230f3d22%22/%3E%3Ctext x=%22200%22 y=%22250%22 fill=%22%23c49a0f%22 font-family=%22Georgia,serif%22 font-size=%2242%22 font-weight=%22bold%22 text-anchor=%22middle%22%3EMVS%3C/text%3E%3C/svg%3E'">
+    </div>
+    <div class="pres-content">
+      <span class="pres-eyebrow">&#127963; From the Manor Vail Society &ndash; Lyndon</span>
+      <h2 class="pres-title" id="mvsPopTitle">Help Save the Aldrich House</h2>
+      <p class="pres-date">A preservation effort we&rsquo;re proud to support</p>
+      <div class="pres-scroll" id="mvsPopDesc">
+        <p>The <strong>Aldrich House</strong> &mdash; known to generations of Hornets as the <strong>Alumni House</strong> &mdash; is the last original building standing from the estate of Theodore Newton Vail, whose Speedwell Farms became the Lyndon campus in 1951. When the State demolished Vail&rsquo;s mansion in 1974, this pre&ndash;Civil War Greek Revival cottage became the sole survivor of that era.</p>
+        <p>Today it sits empty, its heat and water disconnected, and it is endangered by plans to downsize the campus. The <strong>Manor Vail Society &ndash; Lyndon</strong> has petitioned the Vermont Division for Historic Preservation to recognize the house as historic and prevent its demolition.</p>
+        <p>The Alumni Council is proud to help spread the word &mdash; and we&rsquo;re asking our fellow Hornets to lend their voices too. Preserving the Aldrich House means preserving the last physical link to where Lyndon began.</p>
+      </div>
+      <div class="pres-actions">
+        <a class="btn btn-gold" href="aldrich-preservation-letter.pdf" target="_blank" rel="noopener" data-pop-close>&#128196; Read the preservation letter</a>
+        <button class="btn btn-og" type="button" data-pop-close>Dismiss</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- NAV -->
 <nav class="nav" id="mainNav">
   <div class="c nav-in">
@@ -1441,47 +1466,62 @@ if('IntersectionObserver' in window){
   revealEls.forEach(el=>el.classList.add('visible'));
 }
 
-// President announcement popup — one-time, dismissible (remembers dismissal via localStorage)
+// Sequential announcement popups — dismissible, one per page load, remembered via localStorage.
+// Order matters: on each load we open the FIRST popup that hasn't been dismissed yet.
+// So a first-time visitor sees only the president popup; once that's dismissed, the NEXT
+// visit (page load) shows the Manor Vail / Aldrich popup; once that's dismissed too, none show.
 (function(){
-  const pop=document.getElementById('presPop');
-  if(!pop)return;
-  const KEY='lac_pres_kollmann_2026';
-  let lastFocus=null;
-  function trap(e){
-    if(e.key==='Escape'){close();return;}
-    if(e.key!=='Tab')return;
-    const f=pop.querySelectorAll('button,a[href]');
-    if(!f.length)return;
-    const first=f[0],last=f[f.length-1];
-    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
-    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  const SEQUENCE=[
+    {id:'presPop', key:'lac_pres_kollmann_2026'},
+    {id:'mvsPop',  key:'lac_mvs_aldrich_2026'}
+  ];
+  function isDismissed(key){try{return !!localStorage.getItem(key);}catch(e){return false;}}
+  function wire(cfg){
+    const pop=document.getElementById(cfg.id);
+    if(!pop)return null;
+    let lastFocus=null;
+    function trap(e){
+      if(e.key==='Escape'){close();return;}
+      if(e.key!=='Tab')return;
+      const f=pop.querySelectorAll('button,a[href]');
+      if(!f.length)return;
+      const first=f[0],last=f[f.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+    }
+    function open(){
+      lastFocus=document.activeElement;
+      pop.classList.add('open');
+      requestAnimationFrame(()=>pop.classList.add('show'));
+      document.body.style.overflow='hidden';
+      document.addEventListener('keydown',trap);
+      const x=pop.querySelector('.pres-x');
+      if(x)x.focus();
+    }
+    function close(){
+      if(!pop.classList.contains('open'))return;
+      pop.classList.remove('show');
+      document.body.style.overflow='';
+      document.removeEventListener('keydown',trap);
+      try{localStorage.setItem(cfg.key,'1');}catch(e){}
+      const hide=()=>{pop.classList.remove('open');pop.removeEventListener('transitionend',hide);};
+      pop.addEventListener('transitionend',hide);
+      setTimeout(hide,450);
+      if(lastFocus&&lastFocus.focus)lastFocus.focus();
+    }
+    pop.addEventListener('click',e=>{
+      if(e.target===pop||e.target.closest('[data-pop-close]'))close();
+    });
+    return {open};
   }
-  function open(){
-    lastFocus=document.activeElement;
-    pop.classList.add('open');
-    requestAnimationFrame(()=>pop.classList.add('show'));
-    document.body.style.overflow='hidden';
-    document.addEventListener('keydown',trap);
-    const x=pop.querySelector('.pres-x');
-    if(x)x.focus();
+  // Decide which popup (if any) to show ONCE, at load time — so dismissing the shown
+  // popup never chain-opens the next one in the same visit.
+  for(const cfg of SEQUENCE){
+    if(isDismissed(cfg.key))continue;
+    const c=wire(cfg);
+    if(c)setTimeout(c.open,900);
+    break;
   }
-  function close(){
-    if(!pop.classList.contains('open'))return;
-    pop.classList.remove('show');
-    document.body.style.overflow='';
-    document.removeEventListener('keydown',trap);
-    try{localStorage.setItem(KEY,'1');}catch(e){}
-    const hide=()=>{pop.classList.remove('open');pop.removeEventListener('transitionend',hide);};
-    pop.addEventListener('transitionend',hide);
-    setTimeout(hide,450);
-    if(lastFocus&&lastFocus.focus)lastFocus.focus();
-  }
-  pop.addEventListener('click',e=>{
-    if(e.target===pop||e.target.closest('[data-pop-close]'))close();
-  });
-  let dismissed=false;
-  try{dismissed=!!localStorage.getItem(KEY);}catch(e){}
-  if(!dismissed)setTimeout(open,900);
 })();
 </script>
 </body>
