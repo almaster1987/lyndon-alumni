@@ -53,8 +53,9 @@
     background-size: 22px 22px;
     box-shadow: 0 18px 60px rgba(15, 61, 34, .22);
     display: grid;
-    grid-template-rows: 2.52in 1fr .86in;
+    grid-template-rows: 2.2in minmax(0, 1fr) .94in;
     overflow: hidden;
+    padding-bottom: .2in;
     position: relative;
   }
 
@@ -88,7 +89,7 @@
     position: relative;
     z-index: 1;
     height: 100%;
-    padding: .27in .38in .25in;
+    padding: .22in .38in .2in;
     display: grid;
     grid-template-columns: minmax(0, 1fr) 1.55in;
     gap: .24in;
@@ -98,7 +99,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: .12in;
+    margin-bottom: .08in;
   }
 
   .monogram {
@@ -119,14 +120,14 @@
   }
 
   .brand-copy strong {
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: .16em;
     text-transform: uppercase;
   }
 
   .brand-copy span {
     color: rgba(255, 255, 255, .7);
-    font-size: 7px;
+    font-size: 8px;
     letter-spacing: .08em;
     margin-top: 2px;
     text-transform: uppercase;
@@ -134,7 +135,7 @@
 
   .kicker {
     color: var(--gold-bright);
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 800;
     letter-spacing: .16em;
     margin-bottom: 4px;
@@ -143,7 +144,7 @@
 
   h1 {
     font-family: "Playfair Display", Georgia, serif;
-    font-size: 47px;
+    font-size: 52px;
     font-weight: 900;
     letter-spacing: 0;
     line-height: .92;
@@ -154,7 +155,7 @@
   .subtitle {
     color: var(--gold-bright);
     font-family: "Playfair Display", Georgia, serif;
-    font-size: 20px;
+    font-size: 22px;
     font-style: italic;
     font-weight: 700;
     line-height: 1.05;
@@ -166,13 +167,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 7px;
-    margin-top: 11px;
+    margin-top: 9px;
   }
 
   .date-line strong {
     background: var(--gold-bright);
     color: var(--green-dark);
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 900;
     letter-spacing: .04em;
     padding: 5px 9px;
@@ -181,7 +182,7 @@
 
   .date-line span {
     color: rgba(255, 255, 255, .9);
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 700;
     letter-spacing: .04em;
     text-transform: uppercase;
@@ -196,16 +197,16 @@
     background: var(--green-light);
     border: 4px solid white;
     box-shadow: 0 5px 18px rgba(0, 0, 0, .3);
-    height: 1.1in;
-    margin: 0 auto 8px;
+    height: 1.04in;
+    margin: 0 auto 6px;
     object-fit: cover;
     object-position: 68% 46%;
-    width: 1.1in;
+    width: 1.04in;
   }
 
   .guest-label {
     color: var(--gold-bright);
-    font-size: 7px;
+    font-size: 8px;
     font-weight: 900;
     letter-spacing: .12em;
     text-transform: uppercase;
@@ -214,7 +215,7 @@
   .guest strong {
     display: block;
     font-family: "Playfair Display", Georgia, serif;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.1;
     margin-top: 3px;
   }
@@ -222,26 +223,26 @@
   .guest span {
     color: rgba(255, 255, 255, .72);
     display: block;
-    font-size: 7px;
+    font-size: 8px;
     line-height: 1.3;
     margin-top: 3px;
   }
 
   .program {
     min-height: 0;
-    padding: .25in .35in .16in;
+    padding: .2in .3in .1in;
   }
 
   .program-heading {
     align-items: end;
     display: flex;
     justify-content: space-between;
-    margin-bottom: .14in;
+    margin-bottom: .12in;
   }
 
   .program-heading span {
     color: var(--rust);
-    font-size: 8px;
+    font-size: 9px;
     font-weight: 900;
     letter-spacing: .17em;
     text-transform: uppercase;
@@ -250,23 +251,24 @@
   .program-heading h2 {
     color: var(--green-dark);
     font-family: "Playfair Display", Georgia, serif;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1;
     margin: 2px 0 0;
   }
 
   .program-heading p {
     color: var(--muted);
-    font-size: 8px;
+    font-size: 9.5px;
     font-weight: 600;
     margin: 0 0 2px;
   }
 
   .days {
     display: grid;
-    gap: .14in;
-    grid-template-columns: .9fr 1.55fr .9fr;
-    height: calc(100% - .46in);
+    gap: .12in;
+    grid-template-columns: 1.62fr 1fr;
+    grid-template-rows: 1.04fr .96fr;
+    height: calc(100% - .5in);
   }
 
   .day {
@@ -274,13 +276,51 @@
     border: 1px solid var(--line);
     border-top: 4px solid var(--green);
     min-width: 0;
-    padding: .13in .13in .11in;
+    padding: .13in .14in .12in;
     position: relative;
   }
 
   .day.saturday {
     border-top-color: var(--gold);
     box-shadow: 0 5px 18px rgba(15, 61, 34, .08);
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
+
+  .day:first-child {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .day:last-child {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .day.saturday .event {
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+    flex: 1;
+    margin-top: 0;
+    min-height: 0;
+    padding: 6px 0;
+  }
+
+  .day.saturday .event:last-child { border-bottom: 0; }
+
+  .day.saturday .time { font-size: 12px; }
+  .day.saturday .event-copy strong { font-size: 12.5px; }
+  .day.saturday .event-copy small { font-size: 10.8px; }
+
+  .day:first-child .day-note,
+  .day:last-child .day-note {
+    margin-top: auto;
   }
 
   .day-name {
@@ -288,21 +328,21 @@
     border-bottom: 1px solid var(--line);
     display: flex;
     justify-content: space-between;
-    margin-bottom: 8px;
-    padding-bottom: 7px;
+    margin-bottom: 9px;
+    padding-bottom: 8px;
   }
 
   .day-name h3 {
     color: var(--green-dark);
     font-family: "Playfair Display", Georgia, serif;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1;
     margin: 0;
   }
 
   .day-name span {
     color: var(--rust);
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 900;
     letter-spacing: .08em;
     text-transform: uppercase;
@@ -310,14 +350,14 @@
 
   .event {
     display: grid;
-    gap: 8px;
-    grid-template-columns: 47px 1fr;
-    margin-top: 9px;
+    gap: 10px;
+    grid-template-columns: 54px 1fr;
+    margin-top: 10px;
   }
 
   .time {
     color: var(--green);
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 900;
     line-height: 1.25;
     padding-top: 1px;
@@ -326,21 +366,21 @@
 
   .event-copy {
     color: var(--ink);
-    font-size: 9px;
-    line-height: 1.35;
+    font-size: 11px;
+    line-height: 1.38;
   }
 
   .event-copy strong {
     display: block;
-    font-size: 9.5px;
-    line-height: 1.3;
+    font-size: 11.5px;
+    line-height: 1.32;
   }
 
   .event-copy small {
     color: var(--muted);
     display: block;
-    font-size: 8px;
-    line-height: 1.35;
+    font-size: 10px;
+    line-height: 1.38;
     margin-top: 2px;
   }
 
@@ -348,11 +388,11 @@
     background: var(--gold-light);
     color: #7b5b00;
     display: inline-block;
-    font-size: 6.8px;
+    font-size: 8px;
     font-weight: 900;
     letter-spacing: .07em;
     margin-top: 3px;
-    padding: 2px 4px;
+    padding: 3px 5px;
     text-transform: uppercase;
   }
 
@@ -360,21 +400,18 @@
     background: var(--green-light);
     border-left: 3px solid var(--green);
     color: var(--green-dark);
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 700;
     line-height: 1.35;
-    margin-top: 12px;
-    padding: 7px 8px;
+    margin-top: 11px;
+    padding: 8px 9px;
   }
 
   .presented {
-    bottom: 10px;
     color: var(--muted);
-    font-size: 7.2px;
-    left: .13in;
+    font-size: 8.5px;
     line-height: 1.35;
-    position: absolute;
-    right: .13in;
+    margin: 10px 0 0;
   }
 
   .register {
@@ -384,7 +421,8 @@
     display: grid;
     gap: .2in;
     grid-template-columns: 1fr .82in;
-    padding: .11in .35in;
+    margin: 0 .2in;
+    padding: .1in .18in;
     position: relative;
   }
 
@@ -400,7 +438,7 @@
 
   .register-label {
     color: var(--gold-bright);
-    font-size: 7.5px;
+    font-size: 9px;
     font-weight: 900;
     letter-spacing: .16em;
     text-transform: uppercase;
@@ -409,14 +447,14 @@
   .register strong {
     display: block;
     font-family: "Playfair Display", Georgia, serif;
-    font-size: 21px;
+    font-size: 22px;
     line-height: 1;
     margin: 3px 0 2px;
   }
 
   .register p {
     color: rgba(255, 255, 255, .72);
-    font-size: 8px;
+    font-size: 9.5px;
     line-height: 1.25;
     margin: 0;
   }
@@ -469,7 +507,7 @@
       </div>
       <aside class="guest" aria-label="Special guest President Sherry Kollmann">
         <img class="guest-photo" src="https://lyndonalumni.com/president-kollmann.jpg" alt="Dr. Sherry Kollmann, President of Vermont State University">
-        <div class="guest-label">Special guest all weekend</div>
+        <div class="guest-label">Special guest</div>
         <strong>President Sherry Kollmann</strong>
         <span>Vermont State University</span>
       </aside>
