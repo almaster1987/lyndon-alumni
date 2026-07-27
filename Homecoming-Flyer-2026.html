@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 Lyndon Homecoming Flyer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Playfair+Display:ital,wght@0,800;0,900;1,700&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #1b5e35;
+    --green-dark: #0f3d22;
+    --green-light: #e8f5ee;
+    --gold: #c49a0f;
+    --gold-bright: #e0b424;
+    --gold-light: #fdf8e1;
+    --rust: #9f432b;
+    --ink: #17241a;
+    --muted: #536257;
+    --paper: #fffef9;
+    --line: #dce5de;
+  }
+
+  * { box-sizing: border-box; }
+
+  @page {
+    size: Letter portrait;
+    margin: 0;
+  }
+
+  html,
+  body {
+    margin: 0;
+    min-height: 100%;
+  }
+
+  body {
+    background: #dfe7e1;
+    color: var(--ink);
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .sheet {
+    width: 8.5in;
+    height: 11in;
+    margin: 24px auto;
+    background:
+      linear-gradient(rgba(27, 94, 53, .025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(27, 94, 53, .025) 1px, transparent 1px),
+      var(--paper);
+    background-size: 22px 22px;
+    box-shadow: 0 18px 60px rgba(15, 61, 34, .22);
+    display: grid;
+    grid-template-rows: 2.52in 1fr .86in;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+    color: white;
+    background: var(--green-dark);
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(8, 39, 21, .96) 0%, rgba(15, 61, 34, .84) 49%, rgba(15, 61, 34, .32) 100%),
+      url("https://vermontstate.edu/wp-content/uploads/2023/09/Lyndon_Campus.jpg") center 46% / cover no-repeat;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 7px;
+    background: linear-gradient(90deg, var(--gold) 0 64%, var(--rust) 64% 81%, #fff 81% 100%);
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    padding: .27in .38in .25in;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 1.55in;
+    gap: .24in;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: .12in;
+  }
+
+  .monogram {
+    width: 34px;
+    height: 34px;
+    border: 2px solid var(--gold-bright);
+    display: grid;
+    place-items: center;
+    color: var(--gold-bright);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 21px;
+    font-weight: 900;
+  }
+
+  .brand-copy strong,
+  .brand-copy span {
+    display: block;
+  }
+
+  .brand-copy strong {
+    font-size: 10px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+
+  .brand-copy span {
+    color: rgba(255, 255, 255, .7);
+    font-size: 7px;
+    letter-spacing: .08em;
+    margin-top: 2px;
+    text-transform: uppercase;
+  }
+
+  .kicker {
+    color: var(--gold-bright);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .16em;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 47px;
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: .92;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    color: var(--gold-bright);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.05;
+    margin-top: 5px;
+  }
+
+  .date-line {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 11px;
+  }
+
+  .date-line strong {
+    background: var(--gold-bright);
+    color: var(--green-dark);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: .04em;
+    padding: 5px 9px;
+    text-transform: uppercase;
+  }
+
+  .date-line span {
+    color: rgba(255, 255, 255, .9);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  .guest {
+    align-self: center;
+    text-align: center;
+  }
+
+  .guest-photo {
+    background: var(--green-light);
+    border: 4px solid white;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .3);
+    height: 1.1in;
+    margin: 0 auto 8px;
+    object-fit: cover;
+    object-position: 68% 46%;
+    width: 1.1in;
+  }
+
+  .guest-label {
+    color: var(--gold-bright);
+    font-size: 7px;
+    font-weight: 900;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+
+  .guest strong {
+    display: block;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 12px;
+    line-height: 1.1;
+    margin-top: 3px;
+  }
+
+  .guest span {
+    color: rgba(255, 255, 255, .72);
+    display: block;
+    font-size: 7px;
+    line-height: 1.3;
+    margin-top: 3px;
+  }
+
+  .program {
+    min-height: 0;
+    padding: .25in .35in .16in;
+  }
+
+  .program-heading {
+    align-items: end;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .14in;
+  }
+
+  .program-heading span {
+    color: var(--rust);
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: .17em;
+    text-transform: uppercase;
+  }
+
+  .program-heading h2 {
+    color: var(--green-dark);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 20px;
+    line-height: 1;
+    margin: 2px 0 0;
+  }
+
+  .program-heading p {
+    color: var(--muted);
+    font-size: 8px;
+    font-weight: 600;
+    margin: 0 0 2px;
+  }
+
+  .days {
+    display: grid;
+    gap: .14in;
+    grid-template-columns: .9fr 1.55fr .9fr;
+    height: calc(100% - .46in);
+  }
+
+  .day {
+    background: rgba(255, 255, 255, .82);
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--green);
+    min-width: 0;
+    padding: .13in .13in .11in;
+    position: relative;
+  }
+
+  .day.saturday {
+    border-top-color: var(--gold);
+    box-shadow: 0 5px 18px rgba(15, 61, 34, .08);
+  }
+
+  .day-name {
+    align-items: baseline;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    padding-bottom: 7px;
+  }
+
+  .day-name h3 {
+    color: var(--green-dark);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 18px;
+    line-height: 1;
+    margin: 0;
+  }
+
+  .day-name span {
+    color: var(--rust);
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .event {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 47px 1fr;
+    margin-top: 9px;
+  }
+
+  .time {
+    color: var(--green);
+    font-size: 9px;
+    font-weight: 900;
+    line-height: 1.25;
+    padding-top: 1px;
+    text-transform: uppercase;
+  }
+
+  .event-copy {
+    color: var(--ink);
+    font-size: 9px;
+    line-height: 1.35;
+  }
+
+  .event-copy strong {
+    display: block;
+    font-size: 9.5px;
+    line-height: 1.3;
+  }
+
+  .event-copy small {
+    color: var(--muted);
+    display: block;
+    font-size: 8px;
+    line-height: 1.35;
+    margin-top: 2px;
+  }
+
+  .tag {
+    background: var(--gold-light);
+    color: #7b5b00;
+    display: inline-block;
+    font-size: 6.8px;
+    font-weight: 900;
+    letter-spacing: .07em;
+    margin-top: 3px;
+    padding: 2px 4px;
+    text-transform: uppercase;
+  }
+
+  .day-note {
+    background: var(--green-light);
+    border-left: 3px solid var(--green);
+    color: var(--green-dark);
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-top: 12px;
+    padding: 7px 8px;
+  }
+
+  .presented {
+    bottom: 10px;
+    color: var(--muted);
+    font-size: 7.2px;
+    left: .13in;
+    line-height: 1.35;
+    position: absolute;
+    right: .13in;
+  }
+
+  .register {
+    align-items: center;
+    background: var(--green-dark);
+    color: white;
+    display: grid;
+    gap: .2in;
+    grid-template-columns: 1fr .82in;
+    padding: .11in .35in;
+    position: relative;
+  }
+
+  .register::before {
+    background: var(--gold-bright);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 8px;
+  }
+
+  .register-label {
+    color: var(--gold-bright);
+    font-size: 7.5px;
+    font-weight: 900;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+
+  .register strong {
+    display: block;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 21px;
+    line-height: 1;
+    margin: 3px 0 2px;
+  }
+
+  .register p {
+    color: rgba(255, 255, 255, .72);
+    font-size: 8px;
+    line-height: 1.25;
+    margin: 0;
+  }
+
+  .qr {
+    background: white;
+    height: .78in;
+    padding: 4px;
+    width: .78in;
+  }
+
+  .photo-credit {
+    color: rgba(255, 255, 255, .55);
+    font-size: 5.5px;
+    position: absolute;
+    right: .38in;
+    top: .12in;
+    z-index: 2;
+  }
+
+  @media print {
+    body { background: white; }
+    .sheet {
+      box-shadow: none;
+      margin: 0;
+    }
+  }
+</style>
+</head>
+<body>
+<main class="sheet">
+  <header class="hero">
+    <div class="photo-credit">Campus photo: Vermont State University</div>
+    <div class="hero-inner">
+      <div>
+        <div class="brand">
+          <div class="monogram" aria-hidden="true">L</div>
+          <div class="brand-copy">
+            <strong>Lyndon Alumni Council</strong>
+            <span>Once a Hornet, Always a Hornet</span>
+          </div>
+        </div>
+        <div class="kicker">Come home to Lyndon</div>
+        <h1>Homecoming</h1>
+        <div class="subtitle">for Alumni &amp; Families</div>
+        <div class="date-line">
+          <strong>September 25-27, 2026</strong>
+          <span>Lyndonville, Vermont</span>
+        </div>
+      </div>
+      <aside class="guest" aria-label="Special guest President Sherry Kollmann">
+        <img class="guest-photo" src="https://lyndonalumni.com/president-kollmann.jpg" alt="Dr. Sherry Kollmann, President of Vermont State University">
+        <div class="guest-label">Special guest all weekend</div>
+        <strong>President Sherry Kollmann</strong>
+        <span>Vermont State University</span>
+      </aside>
+    </div>
+  </header>
+
+  <section class="program" aria-labelledby="program-title">
+    <div class="program-heading">
+      <div>
+        <span>Three days. One Hornet family.</span>
+        <h2 id="program-title">The Weekend Lineup</h2>
+      </div>
+      <p>All events are in Lyndonville unless noted.</p>
+    </div>
+
+    <div class="days">
+      <article class="day">
+        <div class="day-name">
+          <h3>Friday</h3>
+          <span>Sept. 25</span>
+        </div>
+
+        <div class="event">
+          <div class="time">11 AM</div>
+          <div class="event-copy">
+            <strong>Golf registration</strong>
+            <small>St. Johnsbury Country Club</small>
+          </div>
+        </div>
+
+        <div class="event">
+          <div class="time">Noon</div>
+          <div class="event-copy">
+            <strong>Skip Pound &amp; Dudley Bell Legacy Golf Classic</strong>
+            <small>Shotgun start; awards and cookout follow the tournament.</small>
+          </div>
+        </div>
+
+        <div class="event">
+          <div class="time">7 PM</div>
+          <div class="event-copy">
+            <strong>Evening social</strong>
+            <small>Details to be announced.</small>
+          </div>
+        </div>
+
+        <div class="day-note">Golf registration is open now at <strong>lyndonalumni.com</strong>.</div>
+
+        <p class="presented">Presented by the Lyndon Alumni Council in association with Lyndon Athletics and Institutional Advancement.</p>
+      </article>
+
+      <article class="day saturday">
+        <div class="day-name">
+          <h3>Saturday</h3>
+          <span>Sept. 26</span>
+        </div>
+
+        <div class="event">
+          <div class="time">9:30-<br>11:30 AM</div>
+          <div class="event-copy">
+            <strong>Reunions, breakfast &amp; presidential Q&amp;A</strong>
+            <small>ASAC 100 • Presidents, faculty and staff • Celebrating the Class of 1976 and its 50-year reunion • Q&amp;A with President Kollmann</small>
+            <span class="tag">Free full continental breakfast • Donations welcome</span>
+          </div>
+        </div>
+
+        <div class="event">
+          <div class="time">10 AM-<br>4 PM</div>
+          <div class="event-copy">
+            <strong>Vail Museum open house</strong>
+            <small>Theodore N. Vail Center • 1976-2026, including the Photo ID Project</small>
+          </div>
+        </div>
+
+        <div class="event">
+          <div class="time">11 AM</div>
+          <div class="event-copy"><strong>Men's basketball alumni game</strong></div>
+        </div>
+
+        <div class="event">
+          <div class="time">12:30 PM</div>
+          <div class="event-copy"><strong>Women's basketball alumni game</strong></div>
+        </div>
+
+        <div class="event">
+          <div class="time">1 PM</div>
+          <div class="event-copy">
+            <strong>Men's varsity soccer &amp; Alumni Rugby</strong>
+            <small>Free cookout at the soccer game; donations welcome.</small>
+          </div>
+        </div>
+
+        <div class="event">
+          <div class="time">2 PM</div>
+          <div class="event-copy">
+            <strong>Baseball &amp; softball alumni games</strong>
+            <small>Free ice cream social at the soccer game; donations welcome.</small>
+          </div>
+        </div>
+
+        <div class="event">
+          <div class="time">3:30 PM</div>
+          <div class="event-copy"><strong>Women's varsity soccer</strong></div>
+        </div>
+
+        <div class="event">
+          <div class="time">6-9 PM</div>
+          <div class="event-copy">
+            <strong>Athletic Hall of Fame &amp; Alumni Awards Banquet</strong>
+            <small>ASAC 100 • Steak, chicken or vegan dinner • $50 per person • Register online</small>
+          </div>
+        </div>
+      </article>
+
+      <article class="day">
+        <div class="day-name">
+          <h3>Sunday</h3>
+          <span>Sept. 27</span>
+        </div>
+
+        <div class="event">
+          <div class="time">9-11 AM</div>
+          <div class="event-copy"><strong>Alumni Council meeting</strong></div>
+        </div>
+
+        <div class="event">
+          <div class="time">1 PM</div>
+          <div class="event-copy"><strong>Women's varsity soccer</strong></div>
+        </div>
+
+        <div class="event">
+          <div class="time">3:30 PM</div>
+          <div class="event-copy"><strong>Men's &amp; women's co-ed alumni game</strong></div>
+        </div>
+
+        <div class="day-note"><strong>Make a weekend of it.</strong><br>Reconnect with classmates, cheer on the Hornets and come home to Lyndon.</div>
+
+        <p class="presented">Free-event donations help support Homecoming Weekend.</p>
+      </article>
+    </div>
+  </section>
+
+  <footer class="register">
+    <div>
+      <div class="register-label">Full details &amp; registration</div>
+      <strong>lyndonalumni.com/homecoming-2026</strong>
+      <p>Golf and banquet registration • Weekend updates • Alumni information</p>
+    </div>
+    <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&amp;data=https%3A%2F%2Flyndonalumni.com%2Fhomecoming-2026&amp;color=0f3d22&amp;bgcolor=ffffff&amp;margin=0" alt="QR code linking to the 2026 Homecoming schedule at lyndonalumni.com/homecoming-2026">
+  </footer>
+</main>
+</body>
+</html>

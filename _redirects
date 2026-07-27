@@ -4,3 +4,7 @@
 # bytes are never sent — the request 301s to the homepage instead.
 /CLAUDE.md / 301
 /docs/* / 301
+
+# Keep the printed QR destination stable even if the hosted schedule format changes.
+/homecoming-2026 /Homecoming-Flyer-2026.pdf 302
+/homecoming-2026/ /Homecoming-Flyer-2026.pdf 302

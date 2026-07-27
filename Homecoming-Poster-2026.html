@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 Lyndon Homecoming Poster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&amp;family=DM+Sans:wght@500;600;700;800&amp;family=Playfair+Display:ital,wght@1,800&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #1b5e35;
+    --green-dark: #0a321b;
+    --green-deep: #062413;
+    --gold: #e0b424;
+    --gold-dark: #c49a0f;
+    --paper: #fffdf6;
+    --white: #fff;
+  }
+
+  * { box-sizing: border-box; }
+
+  @page {
+    size: Letter portrait;
+    margin: 0;
+  }
+
+  html,
+  body {
+    margin: 0;
+    min-height: 100%;
+  }
+
+  body {
+    background: #dce5de;
+    color: var(--white);
+    font-family: "DM Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .poster {
+    background: var(--green-dark);
+    box-shadow: 0 18px 60px rgba(6, 36, 19, .25);
+    height: 11in;
+    margin: 24px auto;
+    overflow: hidden;
+    position: relative;
+    width: 8.5in;
+  }
+
+  .photo-field {
+    inset: 0 0 3.65in;
+    overflow: hidden;
+    position: absolute;
+  }
+
+  .photo-field::before {
+    background:
+      linear-gradient(180deg, rgba(6, 36, 19, .4) 0%, rgba(6, 36, 19, .08) 28%, rgba(6, 36, 19, .48) 72%, var(--green-dark) 100%),
+      linear-gradient(90deg, rgba(6, 36, 19, .62) 0%, rgba(6, 36, 19, .12) 48%, rgba(6, 36, 19, .38) 100%),
+      url("https://vermontstate.edu/wp-content/uploads/2023/09/Lyndon_Campus.jpg") center 44% / cover no-repeat;
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: scale(1.02);
+  }
+
+  .grain {
+    background-image: radial-gradient(rgba(255, 255, 255, .13) .55px, transparent .55px);
+    background-size: 5px 5px;
+    inset: 0;
+    mix-blend-mode: soft-light;
+    opacity: .22;
+    pointer-events: none;
+    position: absolute;
+    z-index: 6;
+  }
+
+  .topline {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    left: .42in;
+    position: absolute;
+    right: .42in;
+    top: .34in;
+    z-index: 3;
+  }
+
+  .brand {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+  }
+
+  .mark {
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    display: grid;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: 900;
+    height: 39px;
+    place-items: center;
+    width: 39px;
+  }
+
+  .brand strong,
+  .brand span {
+    display: block;
+  }
+
+  .brand strong {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+  }
+
+  .brand span {
+    color: rgba(255, 255, 255, .74);
+    font-size: 7px;
+    letter-spacing: .1em;
+    margin-top: 2px;
+    text-transform: uppercase;
+  }
+
+  .family {
+    border: 1px solid rgba(255, 255, 255, .62);
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .13em;
+    padding: 7px 10px;
+    text-transform: uppercase;
+  }
+
+  .headline {
+    left: .42in;
+    position: absolute;
+    top: 1.28in;
+    z-index: 3;
+  }
+
+  .eyebrow {
+    color: var(--gold);
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: .22em;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    color: var(--white);
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 112px;
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: .74;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  h1 span {
+    -webkit-text-stroke: 1.5px var(--white);
+    color: transparent;
+    display: block;
+    font-size: 100px;
+    margin-top: 16px;
+  }
+
+  .tagline {
+    color: var(--gold);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 800;
+    margin-top: 20px;
+  }
+
+  .date-lockup {
+    align-items: end;
+    display: flex;
+    left: .42in;
+    padding-bottom: 2px;
+    position: absolute;
+    top: 4.5in;
+    z-index: 4;
+  }
+
+  .month {
+    background: var(--gold);
+    color: var(--green-deep);
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: .11em;
+    line-height: 1;
+    padding: 10px 9px 9px;
+    text-transform: uppercase;
+  }
+
+  .date {
+    color: var(--white);
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 73px;
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 1.14;
+    margin-left: 10px;
+  }
+
+  .year-place {
+    border-left: 2px solid rgba(255, 255, 255, .45);
+    margin-left: 14px;
+    padding-left: 14px;
+  }
+
+  .year-place strong,
+  .year-place span {
+    display: block;
+    text-transform: uppercase;
+  }
+
+  .year-place strong {
+    color: var(--gold);
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 25px;
+    letter-spacing: .08em;
+    line-height: 1;
+  }
+
+  .year-place span {
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .12em;
+    margin-top: 5px;
+  }
+
+  .president {
+    align-items: center;
+    background: rgba(6, 36, 19, .88);
+    border: 2px solid var(--gold);
+    bottom: 3.93in;
+    display: flex;
+    gap: 9px;
+    padding: 7px 9px 7px 7px;
+    position: absolute;
+    right: .42in;
+    z-index: 4;
+  }
+
+  .president img {
+    height: 48px;
+    object-fit: cover;
+    object-position: 68% 43%;
+    width: 48px;
+  }
+
+  .president small,
+  .president strong {
+    display: block;
+  }
+
+  .president small {
+    color: var(--gold);
+    font-size: 6px;
+    font-weight: 900;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  .president strong {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 13px;
+    letter-spacing: .02em;
+    line-height: 1.05;
+    margin-top: 2px;
+    text-transform: uppercase;
+  }
+
+  .lower {
+    background: var(--green-dark);
+    bottom: 0;
+    height: 3.82in;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+  }
+
+  .lower::before {
+    background: var(--gold);
+    content: "";
+    height: 7px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .highlights {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 1.5in;
+    left: .35in;
+    position: absolute;
+    right: .35in;
+    top: .22in;
+  }
+
+  .highlight {
+    border-right: 1px solid rgba(255, 255, 255, .2);
+    padding: 0 .13in;
+    text-align: center;
+  }
+
+  .highlight:last-child { border-right: 0; }
+
+  .icon {
+    color: var(--gold);
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 27px;
+    font-weight: 900;
+    height: 33px;
+    line-height: 33px;
+  }
+
+  .highlight strong {
+    display: block;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: .04em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .highlight em {
+    color: var(--gold);
+    display: block;
+    font-size: 8.4px;
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: .05em;
+    line-height: 1.2;
+    margin-top: 5px;
+    text-transform: uppercase;
+  }
+
+  .highlight span {
+    color: rgba(255, 255, 255, .72);
+    display: block;
+    font-size: 9.2px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-top: 4px;
+  }
+
+  .action-band {
+    bottom: .82in;
+    display: grid;
+    grid-template-columns: 2.62in 1fr;
+    grid-template-rows: minmax(0, 1fr);
+    height: 1.22in;
+    left: .35in;
+    overflow: hidden;
+    position: absolute;
+    right: .35in;
+  }
+
+  .action-photo {
+    display: block;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    object-position: center 48%;
+    width: 100%;
+  }
+
+  .action-copy {
+    align-items: center;
+    background: var(--paper);
+    color: var(--green-deep);
+    display: grid;
+    gap: .17in;
+    grid-template-columns: 1fr .92in;
+    padding: .15in .17in .15in .21in;
+  }
+
+  .action-copy small {
+    color: var(--gold-dark);
+    display: block;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  .action-copy strong {
+    display: block;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: .01em;
+    line-height: .95;
+    margin: 5px 0 4px;
+    text-transform: uppercase;
+  }
+
+  .action-copy p {
+    color: #4e5d52;
+    font-size: 8.5px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0;
+  }
+
+  .qr {
+    background: white;
+    height: .78in;
+    padding: 4px;
+    width: .78in;
+  }
+
+  .footer {
+    align-items: center;
+    bottom: .22in;
+    display: flex;
+    justify-content: space-between;
+    left: .35in;
+    position: absolute;
+    right: .35in;
+  }
+
+  .footer p {
+    color: rgba(255, 255, 255, .65);
+    font-size: 6.5px;
+    font-weight: 600;
+    margin: 0;
+    max-width: 5.35in;
+  }
+
+  .footer strong {
+    color: var(--gold);
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 15px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  @media print {
+    body { background: white; }
+    .poster {
+      box-shadow: none;
+      margin: 0;
+    }
+  }
+</style>
+</head>
+<body>
+<main class="poster">
+  <div class="photo-field" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topline">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">L</div>
+      <div>
+        <strong>Lyndon Alumni Council</strong>
+        <span>Once a Hornet, Always a Hornet</span>
+      </div>
+    </div>
+    <div class="family">Alumni + Families</div>
+  </header>
+
+  <section class="headline" aria-labelledby="poster-title">
+    <div class="eyebrow">Come home to Lyndon</div>
+    <h1 id="poster-title">Home<span>Coming</span></h1>
+    <div class="tagline">Three days. One Hornet family.</div>
+  </section>
+
+  <section class="date-lockup" aria-label="September 25 through 27, 2026 in Lyndonville, Vermont">
+    <div class="month">Sept</div>
+    <div class="date">25-27</div>
+    <div class="year-place">
+      <strong>2026</strong>
+      <span>Lyndonville, Vermont</span>
+    </div>
+  </section>
+
+  <aside class="president">
+    <img src="president-kollmann.jpg" alt="Dr. Sherry Kollmann, President of Vermont State University">
+    <div>
+      <small>Special guest all weekend</small>
+      <strong>President<br>Sherry Kollmann</strong>
+    </div>
+  </aside>
+
+  <section class="lower" aria-label="Homecoming highlights and registration">
+    <div class="highlights">
+      <div class="highlight">
+        <div class="icon" aria-hidden="true">FRI</div>
+        <strong>Legacy Golf</strong>
+        <em>11 AM check-in</em>
+        <span>Noon shotgun • St. Johnsbury Country Club</span>
+      </div>
+      <div class="highlight">
+        <div class="icon" aria-hidden="true">50th</div>
+        <strong>Class Reunions</strong>
+        <em>Saturday breakfast + Q&amp;A</em>
+        <span>Class of '76 • President Kollmann • Vail Museum</span>
+      </div>
+      <div class="highlight">
+        <div class="icon" aria-hidden="true">⚽</div>
+        <strong>Hornet Sports</strong>
+        <em>Saturday + Sunday</em>
+        <span>Basketball • Soccer • Baseball • Softball • Alumni Rugby</span>
+      </div>
+      <div class="highlight">
+        <div class="icon" aria-hidden="true">HOF</div>
+        <strong>Awards Night</strong>
+        <em>Saturday • 6-9 PM</em>
+        <span>Hall of Fame • Alumni Awards • Dinner</span>
+      </div>
+    </div>
+
+    <div class="action-band">
+      <img class="action-photo" src="https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/lyndonhornets.com/images/2025/9/22/IMG_0965.jpeg" alt="Lyndon Hornets basketball player during Homecoming 2025">
+      <div class="action-copy">
+        <div>
+          <small>Full weekend schedule + registration</small>
+          <strong>Scan. Plan.<br>Come home.</strong>
+          <p>Golf • Reunions • Games • Museum • Banquet</p>
+        </div>
+        <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&amp;data=https%3A%2F%2Flyndonalumni.com%2Fhomecoming-2026&amp;color=0a321b&amp;bgcolor=ffffff&amp;margin=0" alt="QR code linking to the 2026 Homecoming schedule at lyndonalumni.com/homecoming-2026">
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Presented by the Lyndon Alumni Council in association with Lyndon Athletics and Institutional Advancement.</p>
+      <strong>lyndonalumni.com</strong>
+    </footer>
+  </section>
+</main>
+</body>
+</html>
