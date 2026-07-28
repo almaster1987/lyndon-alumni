@@ -322,6 +322,8 @@
   }
 
   .breakfast-feature .tag {
+    background: var(--gold);
+    color: var(--green-dark);
     line-height: 1.25;
     margin-bottom: 3px;
   }
@@ -397,7 +399,8 @@
   }
 
   .golf-feature,
-  .banquet-feature {
+  .banquet-feature,
+  .breakfast-feature {
     background: var(--gold-light);
     border-left: 4px solid var(--gold);
     margin-left: -4px;
@@ -405,12 +408,19 @@
   }
 
   .golf-feature .time,
-  .banquet-feature .time { color: #7b5b00; }
+  .banquet-feature .time,
+  .breakfast-feature .time { color: #7b5b00; }
 
   .golf-feature .event-copy strong,
-  .banquet-feature .event-copy strong {
+  .banquet-feature .event-copy strong,
+  .breakfast-feature .event-copy strong {
     color: var(--green-dark);
     font-size: 12.5px;
+  }
+
+  .day.saturday .event.breakfast-feature,
+  .day.saturday .event.banquet-feature {
+    padding-left: 12px;
   }
 
   .tag {
