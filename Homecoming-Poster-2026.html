@@ -180,11 +180,12 @@
   }
 
   .date-lockup {
-    align-items: center;
+    align-items: start;
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
     left: .42in;
+    padding-bottom: 2px;
     position: absolute;
     top: 4.35in;
     z-index: 4;
@@ -213,16 +214,19 @@
     letter-spacing: 0;
     grid-column: 1;
     grid-row: 2;
-    line-height: .95;
+    line-height: 1;
     margin-top: 7px;
   }
 
   .year-place {
-    border-left: 2px solid rgba(255, 255, 255, .45);
-    grid-column: 2;
-    grid-row: 1 / 3;
-    margin-left: 18px;
-    padding-left: 18px;
+    align-items: baseline;
+    border-top: 2px solid rgba(255, 255, 255, .45);
+    display: flex;
+    gap: 12px;
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: 10px;
+    padding-top: 8px;
   }
 
   .year-place strong,
@@ -243,7 +247,7 @@
     font-size: 10px;
     font-weight: 800;
     letter-spacing: .12em;
-    margin-top: 5px;
+    margin-top: 0;
   }
 
   .president {
@@ -510,27 +514,27 @@
     <div class="highlights">
       <div class="highlight">
         <div class="icon" aria-hidden="true">FRI</div>
-        <strong>Legacy Golf</strong>
-        <em>11 AM check-in</em>
-        <span>Noon shotgun • St. Johnsbury Country Club</span>
+        <strong>Golf + Social</strong>
+        <em>Friday</em>
+        <span>11 AM check-in • Noon shotgun • 7 PM evening social</span>
       </div>
       <div class="highlight">
         <div class="icon" aria-hidden="true">50th</div>
-        <strong>Class Reunions</strong>
+        <strong>Class Reunion</strong>
         <em>Saturday breakfast + Q&amp;A</em>
         <span>Class of '76 • President Kollmann • Vail Museum</span>
       </div>
       <div class="highlight">
         <div class="icon" aria-hidden="true">⚽</div>
-        <strong>Hornet Sports</strong>
-        <em>Saturday + Sunday</em>
+        <strong>Afternoon Games</strong>
+        <em>Saturday afternoon</em>
         <span>Basketball • Soccer • Baseball • Softball • Alumni Rugby</span>
       </div>
       <div class="highlight">
-        <div class="icon" aria-hidden="true">HOF</div>
-        <strong>Awards Night</strong>
-        <em>Saturday • 6-9 PM</em>
-        <span>Hall of Fame • Alumni Awards • Dinner</span>
+        <div class="icon" aria-hidden="true">6-9</div>
+        <strong>Awards Banquet</strong>
+        <em>Saturday evening</em>
+        <span>Athletic Hall of Fame • Alumni Awards • Dinner</span>
       </div>
     </div>
 
