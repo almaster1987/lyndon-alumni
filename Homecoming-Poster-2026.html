@@ -315,11 +315,11 @@
   .highlights {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    height: 1.5in;
+    height: 1.38in;
     left: .35in;
     position: absolute;
     right: .35in;
-    top: .22in;
+    top: .17in;
   }
 
   .highlight {
@@ -333,7 +333,7 @@
   .icon {
     color: var(--gold);
     font-family: "Barlow Condensed", sans-serif;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 900;
     height: 33px;
     line-height: 33px;
@@ -342,7 +342,7 @@
   .highlight strong {
     display: block;
     font-family: "Barlow Condensed", sans-serif;
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 800;
     letter-spacing: .04em;
     line-height: 1;
@@ -352,7 +352,7 @@
   .highlight em {
     color: var(--gold);
     display: block;
-    font-size: 9.5px;
+    font-size: 9.2px;
     font-style: normal;
     font-weight: 900;
     letter-spacing: .05em;
@@ -364,18 +364,30 @@
   .highlight span {
     color: rgba(255, 255, 255, .72);
     display: block;
-    font-size: 10.5px;
+    font-size: 10px;
     font-weight: 700;
     line-height: 1.35;
     margin-top: 4px;
   }
 
+  .highlight .secondary {
+    border-top: 1px solid rgba(255, 255, 255, .25);
+    color: var(--white);
+    font-weight: 900;
+    margin-top: 6px;
+    padding-top: 5px;
+  }
+
+  .icon.time-icon { font-size: 24px; }
+
   .action-band {
-    bottom: .82in;
+    border-bottom: 4px solid var(--gold);
+    border-top: 4px solid var(--gold);
+    bottom: .72in;
     display: grid;
-    grid-template-columns: 2.62in 1fr;
+    grid-template-columns: 2.25in 1fr;
     grid-template-rows: minmax(0, 1fr);
-    height: 1.22in;
+    height: 1.48in;
     left: .35in;
     overflow: hidden;
     position: absolute;
@@ -396,15 +408,15 @@
     background: var(--paper);
     color: var(--green-deep);
     display: grid;
-    gap: .17in;
-    grid-template-columns: 1fr .92in;
-    padding: .15in .17in .15in .21in;
+    gap: .15in;
+    grid-template-columns: minmax(0, 1fr) 1.24in;
+    padding: .12in .13in .12in .2in;
   }
 
   .action-copy small {
     color: var(--gold-dark);
     display: block;
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 900;
     letter-spacing: .14em;
     text-transform: uppercase;
@@ -413,7 +425,7 @@
   .action-copy strong {
     display: block;
     font-family: "Barlow Condensed", sans-serif;
-    font-size: 27px;
+    font-size: 31px;
     font-weight: 900;
     letter-spacing: .01em;
     line-height: .95;
@@ -423,7 +435,7 @@
 
   .action-copy p {
     color: #4e5d52;
-    font-size: 9.5px;
+    font-size: 10px;
     font-weight: 700;
     line-height: 1.25;
     margin: 0;
@@ -431,9 +443,11 @@
 
   .qr {
     background: white;
-    height: .78in;
-    padding: 4px;
-    width: .78in;
+    box-shadow: 0 0 0 4px var(--gold);
+    height: 1.18in;
+    justify-self: end;
+    padding: 6px;
+    width: 1.18in;
   }
 
   .footer {
@@ -514,24 +528,24 @@
     <div class="highlights">
       <div class="highlight">
         <div class="icon" aria-hidden="true">FRI</div>
-        <strong>Golf + Social</strong>
-        <em>Friday</em>
-        <span>11 AM check-in • Noon shotgun • 7 PM evening social</span>
+        <strong>Golf Tournament</strong>
+        <em>11 AM check-in • Noon shotgun</em>
+        <span class="secondary">Evening social • 7 PM</span>
       </div>
       <div class="highlight">
-        <div class="icon" aria-hidden="true">50th</div>
-        <strong>Class Reunion</strong>
-        <em>Saturday breakfast + Q&amp;A</em>
-        <span>Class of '76 • President Kollmann • Vail Museum</span>
+        <div class="icon" aria-hidden="true">SAT</div>
+        <strong>Breakfast + Q&amp;A</strong>
+        <em>9:30-11:30 AM</em>
+        <span>50th Class Reunion • Class of '76</span>
       </div>
       <div class="highlight">
         <div class="icon" aria-hidden="true">⚽</div>
         <strong>Afternoon Games</strong>
-        <em>Saturday afternoon</em>
+        <em>Saturday + Sunday</em>
         <span>Basketball • Soccer • Baseball • Softball • Alumni Rugby</span>
       </div>
       <div class="highlight">
-        <div class="icon" aria-hidden="true">6-9</div>
+        <div class="icon time-icon" aria-hidden="true">6-9 PM</div>
         <strong>Awards Banquet</strong>
         <em>Saturday evening</em>
         <span>Athletic Hall of Fame • Alumni Awards • Dinner</span>
@@ -542,7 +556,7 @@
       <img class="action-photo" src="https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/lyndonhornets.com/images/2025/9/22/IMG_0965.jpeg" alt="Lyndon Hornets basketball player during Homecoming 2025">
       <div class="action-copy">
         <div>
-          <small>Full weekend schedule + registration</small>
+          <small>Scan for the full schedule + registration</small>
           <strong>Scan. Plan.<br>Come home.</strong>
           <p>Golf • Reunions • Games • Museum • Banquet</p>
         </div>

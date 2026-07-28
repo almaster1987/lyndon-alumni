@@ -53,7 +53,7 @@
     background-size: 22px 22px;
     box-shadow: 0 18px 60px rgba(15, 61, 34, .22);
     display: grid;
-    grid-template-rows: 2.2in minmax(0, 1fr) .94in;
+    grid-template-rows: 2.15in minmax(0, 1fr) 1.07in;
     overflow: hidden;
     padding-bottom: .2in;
     position: relative;
@@ -266,8 +266,8 @@
   .days {
     display: grid;
     gap: .12in;
-    grid-template-columns: 1.62fr 1fr;
-    grid-template-rows: 1.04fr .96fr;
+    grid-template-columns: 1fr 1.62fr;
+    grid-template-rows: 1.1fr .9fr;
     height: calc(100% - .5in);
   }
 
@@ -285,21 +285,21 @@
     box-shadow: 0 5px 18px rgba(15, 61, 34, .08);
     display: flex;
     flex-direction: column;
-    grid-column: 1;
+    grid-column: 2;
     grid-row: 1 / 3;
   }
 
   .day:first-child {
     display: flex;
     flex-direction: column;
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 1;
   }
 
   .day:last-child {
     display: flex;
     flex-direction: column;
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 2;
   }
 
@@ -313,6 +313,18 @@
   }
 
   .day.saturday .event:last-child { border-bottom: 0; }
+
+  .day.saturday .event.breakfast-feature {
+    align-items: start;
+    flex: 1.3;
+    padding-bottom: 11px;
+    padding-top: 8px;
+  }
+
+  .breakfast-feature .tag {
+    line-height: 1.25;
+    margin-bottom: 3px;
+  }
 
   .day.saturday .time { font-size: 12px; }
   .day.saturday .event-copy strong { font-size: 12.5px; }
@@ -384,6 +396,20 @@
     margin-top: 2px;
   }
 
+  .golf-feature {
+    background: var(--gold-light);
+    border-left: 4px solid var(--gold);
+    margin-left: -4px;
+    padding: 9px 8px 9px 6px;
+  }
+
+  .golf-feature .time { color: #7b5b00; }
+
+  .golf-feature .event-copy strong {
+    color: var(--green-dark);
+    font-size: 12.5px;
+  }
+
   .tag {
     background: var(--gold-light);
     color: #7b5b00;
@@ -419,10 +445,11 @@
     background: var(--green-dark);
     color: white;
     display: grid;
-    gap: .2in;
-    grid-template-columns: 1fr .82in;
+    border: 2px solid rgba(224, 180, 36, .82);
+    gap: .18in;
+    grid-template-columns: 1fr .98in;
     margin: 0 .2in;
-    padding: .1in .18in;
+    padding: .06in .18in;
     position: relative;
   }
 
@@ -438,7 +465,7 @@
 
   .register-label {
     color: var(--gold-bright);
-    font-size: 9px;
+    font-size: 9.5px;
     font-weight: 900;
     letter-spacing: .16em;
     text-transform: uppercase;
@@ -446,24 +473,28 @@
 
   .register strong {
     display: block;
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 22px;
-    line-height: 1;
-    margin: 3px 0 2px;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -.025em;
+    line-height: 1.05;
+    margin: 4px 0 3px;
   }
 
   .register p {
     color: rgba(255, 255, 255, .72);
-    font-size: 9.5px;
+    font-size: 9px;
     line-height: 1.25;
     margin: 0;
   }
 
   .qr {
     background: white;
-    height: .78in;
-    padding: 4px;
-    width: .78in;
+    box-shadow: 0 0 0 3px var(--gold-bright);
+    height: .92in;
+    justify-self: end;
+    padding: 5px;
+    width: .92in;
   }
 
   .photo-credit {
@@ -538,11 +569,12 @@
           </div>
         </div>
 
-        <div class="event">
+        <div class="event golf-feature">
           <div class="time">Noon</div>
           <div class="event-copy">
             <strong>Skip Pound &amp; Dudley Bell Legacy Golf Classic</strong>
             <small>Shotgun start; awards and cookout follow the tournament.</small>
+            <span class="tag">Homecoming kickoff</span>
           </div>
         </div>
 
@@ -565,7 +597,7 @@
           <span>Sept. 26</span>
         </div>
 
-        <div class="event">
+        <div class="event breakfast-feature">
           <div class="time">9:30-<br>11:30 AM</div>
           <div class="event-copy">
             <strong>Reunions, breakfast &amp; presidential Q&amp;A</strong>
