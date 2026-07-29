@@ -114,6 +114,7 @@ img{display:block;max-width:100%}
 .btn-gold:hover{background:var(--gold-md);transform:translateY(-2px);box-shadow:0 8px 20px rgba(196,154,15,.35)}
 .btn-ghost{background:none;border:2px solid rgba(255,255,255,.5);color:var(--white)}
 .btn-ghost:hover{border-color:white;background:rgba(255,255,255,.12)}
+.btn-disabled,.btn-disabled:hover{background:var(--g100);border:2px solid var(--g200);color:var(--g500);cursor:not-allowed;opacity:.78;transform:none;box-shadow:none}
 
 /* ANNOUNCEMENT */
 .ann{background:var(--gold);color:var(--green-dk);text-align:center;padding:.55rem 1rem;font-size:.84rem;font-weight:600}
@@ -926,8 +927,8 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
             <div class="act">Full Friday-through-Sunday schedule now available</div>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:.6rem">
-            <a href="/homecoming-2026" target="_blank" rel="noopener" class="btn btn-g" style="font-size:.84rem">Full Weekend Schedule &rarr;</a>
-            <a href="/Homecoming-Poster-2026.pdf" target="_blank" rel="noopener" class="btn btn-og" style="font-size:.84rem">Homecoming Poster &rarr;</a>
+            <button type="button" class="btn btn-disabled" style="font-size:.84rem" disabled aria-label="Full Weekend Schedule temporarily unavailable">Full Weekend Schedule &rarr;</button>
+            <button type="button" class="btn btn-disabled" style="font-size:.84rem" disabled aria-label="Homecoming Poster temporarily unavailable">Homecoming Poster &rarr;</button>
           </div>
         </div>
       </div>
