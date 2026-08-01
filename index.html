@@ -114,7 +114,6 @@ img{display:block;max-width:100%}
 .btn-gold:hover{background:var(--gold-md);transform:translateY(-2px);box-shadow:0 8px 20px rgba(196,154,15,.35)}
 .btn-ghost{background:none;border:2px solid rgba(255,255,255,.5);color:var(--white)}
 .btn-ghost:hover{border-color:white;background:rgba(255,255,255,.12)}
-.btn-disabled,.btn-disabled:hover{background:var(--g100);border:2px solid var(--g200);color:var(--g500);cursor:not-allowed;opacity:.78;transform:none;box-shadow:none}
 
 /* ANNOUNCEMENT */
 .ann{background:var(--gold);color:var(--green-dk);text-align:center;padding:.55rem 1rem;font-size:.84rem;font-weight:600}
@@ -575,7 +574,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
   html{scroll-behavior:auto}
 }
 
-/* PRESIDENT ANNOUNCEMENT POPUP */
+/* EVENT ANNOUNCEMENT POPUP */
 .pres-pop{position:fixed;inset:0;z-index:5000;display:none;align-items:center;justify-content:center;padding:1.25rem;background:rgba(15,61,34,.55);backdrop-filter:blur(4px);opacity:0;transition:opacity .35s ease}
 .pres-pop.open{display:flex}
 .pres-pop.show{opacity:1}
@@ -583,7 +582,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
 .pres-pop.show .pres-card{transform:none}
 .pres-media{flex:0 0 40%;background:var(--green-dk);position:relative}
 .pres-media img{width:100%;height:100%;object-fit:cover;object-position:center 15%}
-.pres-content{flex:1;display:flex;flex-direction:column;min-width:0;padding:1.9rem 2rem}
+.pres-content{flex:1;display:flex;flex-direction:column;min-width:0;min-height:0;padding:1.9rem 2rem}
 .pres-eyebrow{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);margin-bottom:.55rem;display:flex;align-items:center;gap:.4rem}
 .pres-title{font-size:clamp(1.35rem,2.4vw,1.72rem);color:var(--green-dk);line-height:1.18;margin-bottom:.45rem}
 .pres-date{font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--g500);margin-bottom:1rem}
@@ -594,12 +593,24 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
 .pres-actions{display:flex;flex-wrap:wrap;gap:.7rem;padding-top:1.1rem;margin-top:1.1rem;border-top:1px solid var(--g100)}
 .pres-x{position:absolute;top:.7rem;right:.7rem;width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,.92);color:var(--green-dk);font-size:1.55rem;line-height:1;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh);transition:transform .2s,background .2s;z-index:2}
 .pres-x:hover{background:var(--white);transform:rotate(90deg)}
+.homecoming-pop .pres-media::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,38,20,.92),rgba(10,38,20,.05) 65%)}
+.homecoming-pop .pres-media img{object-position:center}
+.homecoming-media-label{position:absolute;left:1.35rem;right:1.35rem;bottom:1.4rem;z-index:1;color:var(--white)}
+.homecoming-media-label span{display:block;font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-md);margin-bottom:.35rem}
+.homecoming-media-label strong{display:block;font-family:'Playfair Display',serif;font-size:1.45rem;line-height:1.15}
+.homecoming-golf{background:var(--green-lt);border-left:4px solid var(--gold);padding:1rem 1.1rem;margin:.15rem 0 .9rem}
+.homecoming-golf-label{display:block;color:var(--green);font-size:.67rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;margin-bottom:.25rem}
+.homecoming-golf h3{font-family:'Inter',sans-serif;color:var(--green-dk);font-size:1rem;line-height:1.35;margin-bottom:.45rem}
+.homecoming-golf p{font-size:.82rem;margin-bottom:.65rem}
+.homecoming-golf-meta{display:flex;flex-wrap:wrap;gap:.35rem .8rem;color:var(--green-dk);font-size:.75rem;font-weight:700}
 @media(max-width:680px){
   .pres-card{flex-direction:column;max-height:90vh}
   .pres-media{flex:0 0 175px}
-  .pres-media img{object-position:center 18%}
+  .pres-media img{object-position:center 42%}
   .pres-content{padding:1.4rem 1.4rem 1.5rem}
   .pres-actions .btn{flex:1 1 auto;justify-content:center}
+  .homecoming-media-label{left:1rem;right:3.5rem;bottom:1rem}
+  .homecoming-media-label strong{font-size:1.15rem}
 }
 @media(prefers-reduced-motion:reduce){
   .pres-pop,.pres-card{transition:none}
@@ -623,56 +634,39 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
   <a href="#awards">Nominate an Alum &rarr;</a>
 </div>
 
-<!-- PRESIDENT ANNOUNCEMENT POPUP -->
-<div class="pres-pop" id="presPop" role="dialog" aria-modal="true" aria-labelledby="presPopTitle" aria-describedby="presPopDesc">
+<!-- HOMECOMING ANNOUNCEMENT POPUP -->
+<div class="pres-pop homecoming-pop" id="homecomingPop" role="dialog" aria-modal="true" aria-labelledby="homecomingPopTitle" aria-describedby="homecomingPopDesc">
   <div class="pres-card">
     <button class="pres-x" type="button" data-pop-close aria-label="Dismiss announcement">&times;</button>
     <div class="pres-media">
-      <img src="president-kollmann.jpg" alt="Dr. Sherry Kollmann, President of Vermont State University"
+      <img src="https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/lyndonhornets.com/images/2025/9/22/IMG_0965.jpeg" alt="Lyndon alumni gathered for Homecoming"
            onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect width=%22400%22 height=%22500%22 fill=%22%230f3d22%22/%3E%3Ctext x=%22200%22 y=%22250%22 fill=%22%23c49a0f%22 font-family=%22Georgia,serif%22 font-size=%2248%22 font-weight=%22bold%22 text-anchor=%22middle%22%3EVTSU%3C/text%3E%3C/svg%3E'">
+      <div class="homecoming-media-label">
+        <span>September 25&ndash;27, 2026</span>
+        <strong>Homecoming at Lyndon</strong>
+      </div>
     </div>
     <div class="pres-content">
-      <span class="pres-eyebrow">&#127891; News from Vermont State University</span>
-      <h2 class="pres-title" id="presPopTitle">Dr. Sherry Kollmann Takes the Helm as VTSU President</h2>
-      <p class="pres-date">For Immediate Release &middot; July 1, 2026</p>
-      <div class="pres-scroll" id="presPopDesc">
-        <p>Dr. Sherry Kollmann officially began her tenure as president of Vermont State University on July 1, building on the rich history of the university&rsquo;s legacy campuses &mdash; including Lyndon &mdash; while continuing the university&rsquo;s forward momentum.</p>
-        <p class="pq">&ldquo;What&rsquo;s impressed me most about Vermont and Vermont State University are the people &mdash; from the dedicated faculty and staff who are actively shaping minds and lives, to the incredible students who are laying the groundwork for their careers, job changes, and future aspirations. It&rsquo;s an honor and a privilege to step into this leadership role.&rdquo;</p>
-        <p>As president, Dr. Kollmann is committed to an enrollment-growth strategy that expands access and opportunity for learners across the state &mdash; meeting students where they are through flexible, high-quality pathways, including online, hybrid, and campus-based experiences.</p>
-        <p>She joins Vermont State after serving as Chancellor of New Mexico State University Global Campus, bringing more than 25 years of experience in higher education, business, and public service. A first-generation college student herself, she holds an enduring commitment to supporting students whose paths through higher education may not be traditional.</p>
-        <p class="pq">&ldquo;President Kollmann will lead Vermont State University in a time of tremendous change in higher education,&rdquo; said Lynne Dickinson, Chair of the Vermont State Colleges Board of Trustees. &ldquo;She&rsquo;s already building upon the foundation laid by her predecessors to ensure the university continues meeting the moment.&rdquo;</p>
-        <p>At New Mexico State University Global Campus, she grew online enrollment to more than 3,500 students, developed more than 80 in-demand degree and certificate programs, secured $17 million in state appropriations, and generated more than $30 million in tuition revenue.</p>
-        <p class="pq">&ldquo;Education and training after high school has tremendous power in transforming lives, families, and communities. We see that every day at Vermont State University, and it&rsquo;s a proud legacy I&rsquo;m excited to build and contribute to.&rdquo;</p>
-        <p>Dr. Kollmann holds a PhD in Instructional Psychology and Technology from the University of Oklahoma. She succeeds Dr. David Bergh, who served as president from 2023 until his retirement in 2026.</p>
+      <span class="pres-eyebrow">&#127809; Homecoming Weekend</span>
+      <h2 class="pres-title" id="homecomingPopTitle">Come Home to Lyndon</h2>
+      <p class="pres-date">Friday&ndash;Sunday &middot; Lyndonville, Vermont</p>
+      <div class="pres-scroll" id="homecomingPopDesc">
+        <p>Three days of golf, reunions, alumni games, varsity soccer, the Vail Museum, and the Athletic Hall of Fame &amp; Alumni Awards Banquet begin Friday, September 25.</p>
+        <div class="homecoming-golf">
+          <span class="homecoming-golf-label">Friday kickoff</span>
+          <h3>The Skip Pound and Dudley Bell Legacy Golf Classic</h3>
+          <p>Play as a foursome or join as a single at St. Johnsbury Country Club. Proceeds support the Lyndon Alumni Council and Lyndon Athletics.</p>
+          <div class="homecoming-golf-meta">
+            <span>11 AM registration</span>
+            <span>Noon shotgun start</span>
+            <span>$125 per golfer</span>
+          </div>
+        </div>
+        <p>Golf registration is open now. Review the full weekend schedule and make your plans to return to campus.</p>
       </div>
       <div class="pres-actions">
-        <a class="btn btn-gold" href="https://youtu.be/WorDJXBbwc0" target="_blank" rel="noopener" data-pop-close>&#9654; Watch her welcome message</a>
-        <button class="btn btn-og" type="button" data-pop-close>Dismiss</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- MVS / ALDRICH HOUSE announcement popup (shows on a RETURN visit, after the president popup has been dismissed) -->
-<div class="pres-pop" id="mvsPop" role="dialog" aria-modal="true" aria-labelledby="mvsPopTitle" aria-describedby="mvsPopDesc">
-  <div class="pres-card">
-    <button class="pres-x" type="button" data-pop-close aria-label="Dismiss announcement">&times;</button>
-    <div class="pres-media">
-      <img src="https://d8e7jbdw4fu0e.cloudfront.net/11557/ba9384c0-1705-11ef-8c36-a91bbe86b80a-vd3NGvl.lg-nt@2x.jpg" alt="Historic Manor Vail postcard, Lyndon Vermont"
-           onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect width=%22400%22 height=%22500%22 fill=%22%230f3d22%22/%3E%3Ctext x=%22200%22 y=%22250%22 fill=%22%23c49a0f%22 font-family=%22Georgia,serif%22 font-size=%2242%22 font-weight=%22bold%22 text-anchor=%22middle%22%3EMVS%3C/text%3E%3C/svg%3E'">
-    </div>
-    <div class="pres-content">
-      <span class="pres-eyebrow">&#127963; From the Manor Vail Society &ndash; Lyndon</span>
-      <h2 class="pres-title" id="mvsPopTitle">Help Save the Aldrich House</h2>
-      <p class="pres-date">A preservation effort we&rsquo;re proud to support</p>
-      <div class="pres-scroll" id="mvsPopDesc">
-        <p>The <strong>Aldrich House</strong> &mdash; known to generations of Hornets as the <strong>Alumni House</strong> &mdash; is the last original building standing from the estate of Theodore Newton Vail, whose Speedwell Farms became the Lyndon campus in 1951. When the State demolished Vail&rsquo;s mansion in 1974, this pre&ndash;Civil War Greek Revival cottage became the sole survivor of that era.</p>
-        <p>Today it sits empty, its heat and water disconnected, and it is endangered by plans to downsize the campus. The <strong>Manor Vail Society &ndash; Lyndon</strong> has petitioned the Vermont Division for Historic Preservation to recognize the house as historic and prevent its demolition.</p>
-        <p>The Alumni Council is proud to help spread the word &mdash; and we&rsquo;re asking our fellow Hornets to lend their voices too. Preserving the Aldrich House means preserving the last physical link to where Lyndon began.</p>
-      </div>
-      <div class="pres-actions">
-        <a class="btn btn-gold" href="aldrich-preservation-letter.pdf" target="_blank" rel="noopener" data-pop-close>&#128196; Read the preservation letter</a>
-        <button class="btn btn-og" type="button" data-pop-close>Dismiss</button>
+        <a class="btn btn-gold" href="https://host.nxt.blackbaud.com/registration-form/?formId=5cb5857c-a592-42b9-84e0-f9be07180f4b&amp;envId=p-BzoGXjMynEG3LMXBAdBMug&amp;zone=usa" target="_blank" rel="noopener" data-pop-close>Register for Golf &rarr;</a>
+        <a class="btn btn-og" href="/homecoming-2026" target="_blank" rel="noopener" data-pop-close>Full Weekend Schedule &rarr;</a>
       </div>
     </div>
   </div>
@@ -927,8 +921,8 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
             <div class="act">Full Friday-through-Sunday schedule now available</div>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:.6rem">
-            <button type="button" class="btn btn-disabled" style="font-size:.84rem" disabled aria-label="Full Weekend Schedule temporarily unavailable">Full Weekend Schedule &rarr;</button>
-            <button type="button" class="btn btn-disabled" style="font-size:.84rem" disabled aria-label="Homecoming Poster temporarily unavailable">Homecoming Poster &rarr;</button>
+            <a href="/homecoming-2026" target="_blank" rel="noopener" class="btn btn-g" style="font-size:.84rem">Full Weekend Schedule &rarr;</a>
+            <a href="/Homecoming-Poster-2026.pdf" target="_blank" rel="noopener" class="btn btn-og" style="font-size:.84rem">Homecoming Poster &rarr;</a>
           </div>
         </div>
       </div>
@@ -1473,62 +1467,43 @@ if('IntersectionObserver' in window){
   revealEls.forEach(el=>el.classList.add('visible'));
 }
 
-// Sequential announcement popups — dismissible, one per page load, remembered via localStorage.
-// Order matters: on each load we open the FIRST popup that hasn't been dismissed yet.
-// So a first-time visitor sees only the president popup; once that's dismissed, the NEXT
-// visit (page load) shows the Manor Vail / Aldrich popup; once that's dismissed too, none show.
+// Homecoming announcement — dismissible for the current visit and shown again on every load.
 (function(){
-  const SEQUENCE=[
-    {id:'presPop', key:'lac_pres_kollmann_2026'},
-    {id:'mvsPop',  key:'lac_mvs_aldrich_2026'}
-  ];
-  function isDismissed(key){try{return !!localStorage.getItem(key);}catch(e){return false;}}
-  function wire(cfg){
-    const pop=document.getElementById(cfg.id);
-    if(!pop)return null;
-    let lastFocus=null;
-    function trap(e){
-      if(e.key==='Escape'){close();return;}
-      if(e.key!=='Tab')return;
-      const f=pop.querySelectorAll('button,a[href]');
-      if(!f.length)return;
-      const first=f[0],last=f[f.length-1];
-      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
-      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
-    }
-    function open(){
-      lastFocus=document.activeElement;
-      pop.classList.add('open');
-      requestAnimationFrame(()=>pop.classList.add('show'));
-      document.body.style.overflow='hidden';
-      document.addEventListener('keydown',trap);
-      const x=pop.querySelector('.pres-x');
-      if(x)x.focus();
-    }
-    function close(){
-      if(!pop.classList.contains('open'))return;
-      pop.classList.remove('show');
-      document.body.style.overflow='';
-      document.removeEventListener('keydown',trap);
-      try{localStorage.setItem(cfg.key,'1');}catch(e){}
-      const hide=()=>{pop.classList.remove('open');pop.removeEventListener('transitionend',hide);};
-      pop.addEventListener('transitionend',hide);
-      setTimeout(hide,450);
-      if(lastFocus&&lastFocus.focus)lastFocus.focus();
-    }
-    pop.addEventListener('click',e=>{
-      if(e.target===pop||e.target.closest('[data-pop-close]'))close();
-    });
-    return {open};
+  const pop=document.getElementById('homecomingPop');
+  if(!pop)return;
+  let lastFocus=null;
+  function trap(e){
+    if(e.key==='Escape'){close();return;}
+    if(e.key!=='Tab')return;
+    const focusable=pop.querySelectorAll('button,a[href]');
+    if(!focusable.length)return;
+    const first=focusable[0],last=focusable[focusable.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
   }
-  // Decide which popup (if any) to show ONCE, at load time — so dismissing the shown
-  // popup never chain-opens the next one in the same visit.
-  for(const cfg of SEQUENCE){
-    if(isDismissed(cfg.key))continue;
-    const c=wire(cfg);
-    if(c)setTimeout(c.open,900);
-    break;
+  function open(){
+    lastFocus=document.activeElement;
+    pop.classList.add('open');
+    requestAnimationFrame(()=>pop.classList.add('show'));
+    document.body.style.overflow='hidden';
+    document.addEventListener('keydown',trap);
+    const closeButton=pop.querySelector('.pres-x');
+    if(closeButton)closeButton.focus();
   }
+  function close(){
+    if(!pop.classList.contains('open'))return;
+    pop.classList.remove('show');
+    document.body.style.overflow='';
+    document.removeEventListener('keydown',trap);
+    const hide=()=>{pop.classList.remove('open');pop.removeEventListener('transitionend',hide);};
+    pop.addEventListener('transitionend',hide);
+    setTimeout(hide,450);
+    if(lastFocus&&lastFocus.focus)lastFocus.focus();
+  }
+  pop.addEventListener('click',event=>{
+    if(event.target===pop||event.target.closest('[data-pop-close]'))close();
+  });
+  setTimeout(open,900);
 })();
 </script>
 </body>
