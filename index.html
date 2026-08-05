@@ -110,6 +110,8 @@ img{display:block;max-width:100%}
 .btn-g:hover{background:var(--green-dk);transform:translateY(-1px)}
 .btn-og{background:none;border:2px solid var(--green);color:var(--green)}
 .btn-og:hover{background:var(--green-lt)}
+.btn-soon{background:var(--g100);color:var(--g500);cursor:not-allowed;opacity:1}
+.btn-soon:hover{background:var(--g100);transform:none}
 .btn-gold{background:var(--gold);color:var(--green-dk)}
 .btn-gold:hover{background:var(--gold-md);transform:translateY(-2px);box-shadow:0 8px 20px rgba(196,154,15,.35)}
 .btn-ghost{background:none;border:2px solid rgba(255,255,255,.5);color:var(--white)}
@@ -599,6 +601,10 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
 .homecoming-golf h3{font-family:'Inter',sans-serif;color:var(--green-dk);font-size:1rem;line-height:1.35;margin-bottom:.45rem}
 .homecoming-golf p{font-size:.82rem;margin-bottom:.65rem}
 .homecoming-golf-meta{display:flex;flex-wrap:wrap;gap:.35rem .8rem;color:var(--green-dk);font-size:.75rem;font-weight:700}
+.homecoming-merch{border-left:4px solid var(--green);margin:.2rem 0 .95rem;padding:.15rem 0 .15rem 1rem}
+.homecoming-merch strong{color:var(--green-dk);display:block;font-family:'Inter',sans-serif;font-size:.88rem;line-height:1.35;margin-bottom:.15rem}
+.homecoming-merch p{font-size:.78rem;margin:0}
+.homecoming-merch span{color:var(--green);display:block;font-size:.65rem;font-weight:800;letter-spacing:.09em;margin-bottom:.2rem;text-transform:uppercase}
 @media(max-width:680px){
   .pres-card{flex-direction:column;max-height:90vh}
   .pres-media{flex:0 0 175px}
@@ -642,7 +648,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       <h2 class="pres-title" id="homecomingPopTitle">Come Home to Lyndon</h2>
       <p class="pres-date">Friday&ndash;Sunday &middot; Lyndonville, Vermont</p>
       <div class="pres-scroll" id="homecomingPopDesc">
-        <p>Three days of golf, reunions, alumni games, varsity soccer, the Vail Museum, and the Athletic Hall of Fame &amp; Alumni Awards Banquet begin Friday, September 25.</p>
+        <p>Three days of golf, a Welcome Reception for President Sherry Kollmann, alumni games, varsity soccer, the Vail Museum, and the Athletic Hall of Fame &amp; Alumni Awards Banquet begin Friday, September 25.</p>
         <div class="homecoming-golf">
           <span class="homecoming-golf-label">Friday kickoff</span>
           <h3>The Skip Pound and Dudley Bell Legacy Golf Classic</h3>
@@ -652,6 +658,11 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
             <span>Noon shotgun start</span>
             <span>$125 per golfer</span>
           </div>
+        </div>
+        <div class="homecoming-merch">
+          <span>Saturday on campus</span>
+          <strong>Shop Lyndon gear at the soccer field</strong>
+          <p>Mark Parkinson '98 will sell Lyndon State College and NVU Lyndon merchandise from noon to 5 PM.</p>
         </div>
         <p>Golf registration is open now. Review the full weekend schedule and make your plans to return to campus.</p>
       </div>
@@ -905,13 +916,19 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
           <p>Homecoming returns to Lyndon this fall — and the Alumni Council is hosting. September 25–27 is the traditional Homecoming weekend on the Lyndon campus. No matter when you attended, your campus is still there and ready for your return.</p>
           <div class="acts">
             <div class="act">Athletic Hall of Fame &amp; Alumni Award banquet (Saturday evening)</div>
-            <div class="act">"Celebrate Vail" — Class of 1976 reunion &amp; Q&amp;A with President Kollman</div>
+            <div class="act">Welcome Reception for President Sherry Kollmann — Class of 1976 reunion &amp; Q&amp;A (Saturday, 9:30–11:30 AM)</div>
             <div class="act">Alumni games — baseball, softball, basketball &amp; the return of Alumni Rugby</div>
             <div class="act">Men's &amp; Women's varsity soccer matches</div>
             <div class="act">Vail Museum open house, campus cookout, ice cream social &amp; Octoberfest</div>
             <div class="act">Full Friday-through-Sunday schedule now available</div>
           </div>
+          <div class="homecoming-merch">
+            <span>Saturday on campus</span>
+            <strong>Shop Lyndon gear at the soccer field</strong>
+            <p>Mark Parkinson '98 will sell Lyndon State College and NVU Lyndon merchandise from noon to 5 PM.</p>
+          </div>
           <div style="display:flex;flex-wrap:wrap;gap:.6rem">
+            <button type="button" class="btn btn-soon" style="font-size:.84rem" disabled>Breakfast RSVP Coming Soon</button>
             <a href="/homecoming-2026" target="_blank" rel="noopener" class="btn btn-g" style="font-size:.84rem">Full Weekend Schedule &rarr;</a>
             <a href="/Homecoming-Poster-2026.pdf" target="_blank" rel="noopener" class="btn btn-og" style="font-size:.84rem">Homecoming Poster &rarr;</a>
           </div>
@@ -962,6 +979,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
           <p style="font-size:.86rem;color:var(--g500);max-width:460px">Honoring Lyndon's finest athletes since 1983. New inductees celebrated each fall at the Alumni Weekend banquet.</p>
         </div>
         <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center">
+          <button type="button" class="btn btn-soon" style="font-size:.84rem" disabled>Banquet Registration Coming Soon</button>
           <a href="https://vtsuhornets.com/honors/vermont-state-lyndon-athletic-hall-of-fame" target="_blank" rel="noopener" class="btn btn-og" style="font-size:.84rem">View Hall of Fame &rarr;</a>
           <a href="https://vermontstate.edu/nominate" target="_blank" rel="noopener" class="btn btn-g" style="font-size:.84rem">Submit Nomination</a>
         </div>

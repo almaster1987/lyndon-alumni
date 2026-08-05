@@ -197,11 +197,11 @@
     background: var(--green-light);
     border: 4px solid white;
     box-shadow: 0 5px 18px rgba(0, 0, 0, .3);
-    height: 1.04in;
+    height: 1.02in;
     margin: 0 auto 6px;
     object-fit: cover;
     object-position: 68% 46%;
-    width: 1.04in;
+    width: 1.02in;
   }
 
   .guest-label {
@@ -423,6 +423,35 @@
     padding-left: 12px;
   }
 
+  .day.saturday .event.social-feature {
+    background: var(--green-light);
+    border-left: 4px solid var(--green);
+    margin-left: -4px;
+    padding-left: 12px;
+    padding-right: 8px;
+  }
+
+  .social-feature .event-copy small {
+    color: var(--green-dark);
+    font-weight: 600;
+  }
+
+  .merch-note {
+    margin-top: 4px !important;
+  }
+
+  .social-label {
+    background: var(--green);
+    color: white;
+    display: inline-block;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: .06em;
+    margin-right: 4px;
+    padding: 2px 5px;
+    text-transform: uppercase;
+  }
+
   .tag {
     background: var(--gold-light);
     color: #7b5b00;
@@ -460,7 +489,7 @@
     display: grid;
     border: 2px solid rgba(224, 180, 36, .82);
     gap: .18in;
-    grid-template-columns: 1fr .98in;
+    grid-template-columns: 1fr 1in;
     margin: 0 .2in;
     padding: .06in .18in;
     position: relative;
@@ -504,10 +533,11 @@
   .qr {
     background: white;
     box-shadow: 0 0 0 3px var(--gold-bright);
-    height: .92in;
+    height: 1in;
+    image-rendering: pixelated;
     justify-self: end;
     padding: 5px;
-    width: .92in;
+    width: 1in;
   }
 
   .photo-credit {
@@ -613,9 +643,9 @@
         <div class="event breakfast-feature">
           <div class="time">9:30-<br>11:30 AM</div>
           <div class="event-copy">
-            <strong>Reunions, breakfast &amp; presidential Q&amp;A</strong>
-            <small>ASAC 100 • Presidents, faculty and staff • Celebrating the Class of 1976 and its 50-year reunion • Q&amp;A with President Kollmann</small>
-            <span class="tag">Free full continental breakfast • Donations welcome</span>
+            <strong>Welcome Reception for President Kollmann</strong>
+            <small>ASAC 100 • Alumni, families, faculty, staff and administration — current and former • Celebrating our classes, including the Class of 1976 on its 50-year reunion • Q&amp;A with the President</small>
+            <span class="tag">Free breakfast • RSVP link coming soon</span>
           </div>
         </div>
 
@@ -637,19 +667,20 @@
           <div class="event-copy"><strong>Women's basketball alumni game</strong></div>
         </div>
 
-        <div class="event">
+        <div class="event social-feature">
           <div class="time">1 PM</div>
           <div class="event-copy">
             <strong>Men's varsity soccer &amp; Alumni Rugby</strong>
-            <small>Free cookout at the soccer game; donations welcome.</small>
+            <small><span class="social-label">Free Cookout</span> At the soccer game; donations welcome.</small>
+            <small class="merch-note"><span class="social-label">Lyndon Gear</span> Mark Parkinson '98 • Soccer field • Noon-5 PM</small>
           </div>
         </div>
 
-        <div class="event">
+        <div class="event social-feature">
           <div class="time">2 PM</div>
           <div class="event-copy">
             <strong>Baseball &amp; softball alumni games</strong>
-            <small>Free ice cream social at the soccer game; donations welcome.</small>
+            <small><span class="social-label">Free Ice Cream Social</span> At the soccer game; donations welcome.</small>
           </div>
         </div>
 
@@ -662,7 +693,7 @@
           <div class="time">6-9 PM</div>
           <div class="event-copy">
             <strong>Athletic Hall of Fame &amp; Alumni Awards Banquet</strong>
-            <small>ASAC 100 • Steak, chicken or vegan dinner • $50 per person • Register online</small>
+            <small>ASAC 100 • Steak, chicken or vegan dinner • $50 per person • Registration link coming soon</small>
           </div>
         </div>
       </article>
