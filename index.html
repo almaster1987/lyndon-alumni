@@ -108,6 +108,8 @@ img{display:block;max-width:100%}
 .btn{display:inline-flex;align-items:center;gap:.4rem;padding:.8rem 1.8rem;border-radius:var(--r-sm);font-weight:700;font-size:.92rem;transition:all .2s;border:none}
 .btn-g{background:var(--green);color:var(--white)}
 .btn-g:hover{background:var(--green-dk);transform:translateY(-1px)}
+.btn-reg{background:#9f3728;color:var(--white)}
+.btn-reg:hover{background:#7d281d;transform:translateY(-1px)}
 .btn-og{background:none;border:2px solid var(--green);color:var(--green)}
 .btn-og:hover{background:var(--green-lt)}
 .btn-soon{background:var(--g100);color:var(--g500);cursor:not-allowed;opacity:1}
@@ -595,7 +597,8 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
 .pres-actions{display:flex;flex-wrap:wrap;gap:.7rem;padding-top:1.1rem;margin-top:1.1rem;border-top:1px solid var(--g100)}
 .homecoming-actions{display:grid;gap:.6rem;grid-template-columns:1fr}
 .homecoming-actions .btn{justify-content:center;text-align:center}
-.btn-pending{border:0;font-family:inherit}
+.btn-pending{border:0;cursor:default;font-family:inherit}
+.btn-pending:hover{background:#9f3728;transform:none}
 .pres-x{position:absolute;top:.7rem;right:.7rem;width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,.92);color:var(--green-dk);font-size:1.55rem;line-height:1;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh);transition:transform .2s,background .2s;z-index:2}
 .pres-x:hover{background:var(--white);transform:rotate(90deg)}
 .homecoming-pop .pres-media img{object-fit:contain;object-position:center}
@@ -665,8 +668,8 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
         <p>Golf registration is open now. Register for the full weekend schedule and make your plans to return to campus.</p>
       </div>
       <div class="pres-actions">
-        <a class="btn btn-gold" href="https://host.nxt.blackbaud.com/registration-form/?formId=5cb5857c-a592-42b9-84e0-f9be07180f4b&amp;envId=p-BzoGXjMynEG3LMXBAdBMug&amp;zone=usa" target="_blank" rel="noopener" data-pop-close>Register for Golf &rarr;</a>
-        <a class="btn btn-og" href="/homecoming-2026" target="_blank" rel="noopener" data-pop-close>Register for the Full Weekend &rarr;</a>
+        <a class="btn btn-reg" href="https://host.nxt.blackbaud.com/registration-form/?formId=5cb5857c-a592-42b9-84e0-f9be07180f4b&amp;envId=p-BzoGXjMynEG3LMXBAdBMug&amp;zone=usa" target="_blank" rel="noopener" data-pop-close>Register for Golf &rarr;</a>
+        <a class="btn btn-reg" href="/homecoming-2026" target="_blank" rel="noopener" data-pop-close>Register for the Full Weekend &rarr;</a>
       </div>
     </div>
   </div>
@@ -922,7 +925,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
           </div>
           <p>Use the full weekend schedule to register for golf and RSVP for the welcome reception and banquet.</p>
           <div class="homecoming-actions">
-            <a href="/homecoming-2026" target="_blank" rel="noopener" class="btn btn-g" style="font-size:.84rem">Register for the Full Weekend &rarr;</a>
+            <a href="/homecoming-2026" target="_blank" rel="noopener" class="btn btn-reg" style="font-size:.84rem">Register for the Full Weekend &rarr;</a>
             <a href="/Homecoming-Poster-2026.pdf" target="_blank" rel="noopener" class="btn btn-og" style="font-size:.84rem">Homecoming Poster &rarr;</a>
           </div>
         </div>
@@ -956,7 +959,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
             <div class="act">Proceeds support the Lyndon Alumni Council and Lyndon Athletics</div>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:.6rem">
-            <a href="https://host.nxt.blackbaud.com/registration-form/?formId=5cb5857c-a592-42b9-84e0-f9be07180f4b&envId=p-BzoGXjMynEG3LMXBAdBMug&zone=usa" target="_blank" rel="noopener" class="btn btn-g" style="font-size:.84rem">Register for Golf &rarr;</a>
+            <a href="https://host.nxt.blackbaud.com/registration-form/?formId=5cb5857c-a592-42b9-84e0-f9be07180f4b&envId=p-BzoGXjMynEG3LMXBAdBMug&zone=usa" target="_blank" rel="noopener" class="btn btn-reg" style="font-size:.84rem">Register for Golf &rarr;</a>
             <a href="https://host.nxt.blackbaud.com/registration-form/?formId=94a6db4a-bd0b-46d2-8eb8-330b4a311ee3&envId=p-BzoGXjMynEG3LMXBAdBMug&zone=usa" target="_blank" rel="noopener" class="btn btn-og" style="font-size:.84rem">Become a Sponsor &rarr;</a>
           </div>
         </div>
@@ -972,7 +975,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
           <p style="font-size:.86rem;color:var(--g500);max-width:460px">Honoring Lyndon's finest athletes since 1983. New inductees celebrated each fall at the Alumni Weekend banquet.</p>
         </div>
         <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center">
-          <button type="button" class="btn btn-g btn-pending" style="font-size:.84rem" aria-disabled="true">Banquet RSVP: Let Us Know You're Coming</button>
+          <button type="button" class="btn btn-reg btn-pending" style="font-size:.84rem" aria-disabled="true">Banquet RSVP: Let Us Know You're Coming</button>
           <a href="https://vtsuhornets.com/honors/vermont-state-lyndon-athletic-hall-of-fame" target="_blank" rel="noopener" class="btn btn-og" style="font-size:.84rem">View Hall of Fame &rarr;</a>
           <a href="https://vermontstate.edu/nominate" target="_blank" rel="noopener" class="btn btn-g" style="font-size:.84rem">Submit Nomination</a>
         </div>
