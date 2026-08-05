@@ -263,23 +263,6 @@
     margin: 0 0 2px;
   }
 
-  .program-heading .gear-callout {
-    background: var(--gold-light);
-    border-left: 3px solid var(--gold);
-    color: #7b5b00;
-    font-size: 8.5px;
-    line-height: 1.35;
-    margin: 0;
-    max-width: 3.15in;
-    padding: 6px 8px;
-  }
-
-  .gear-callout strong {
-    font-weight: 900;
-    letter-spacing: .06em;
-    text-transform: uppercase;
-  }
-
   .days {
     display: grid;
     gap: .12in;
@@ -477,6 +460,20 @@
     text-transform: uppercase;
   }
 
+  .registration-pill {
+    background: var(--green-dark);
+    color: white;
+    display: inline-block;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: .04em;
+    line-height: 1.25;
+    margin-top: 4px;
+    padding: 4px 7px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
   .day-note {
     background: var(--green-light);
     border-left: 3px solid var(--green);
@@ -486,12 +483,6 @@
     line-height: 1.35;
     margin-top: 11px;
     padding: 8px 9px;
-  }
-
-  .weekend-note {
-    background: #f7ebe6;
-    border-left-color: var(--rust);
-    color: #6d2f20;
   }
 
   .presented {
@@ -619,7 +610,7 @@
         <span>Three days. One Hornet family.</span>
         <h2 id="program-title">The Weekend Lineup</h2>
       </div>
-      <p class="gear-callout"><strong>Lyndon gear:</strong> Available for purchase Saturday during the games • Online shop link coming soon</p>
+      <p>All events are in Lyndonville unless noted.</p>
     </div>
 
     <div class="days">
@@ -642,7 +633,7 @@
           <div class="event-copy">
             <strong>Skip Pound &amp; Dudley Bell Legacy Golf Classic</strong>
             <small>Shotgun start; awards and cookout follow the tournament.</small>
-            <span class="tag">Homecoming kickoff</span>
+            <a class="registration-pill" href="https://host.nxt.blackbaud.com/registration-form/?formId=5cb5857c-a592-42b9-84e0-f9be07180f4b&amp;envId=p-BzoGXjMynEG3LMXBAdBMug&amp;zone=usa">Register for golf &rarr;</a>
           </div>
         </div>
 
@@ -667,7 +658,8 @@
           <div class="time">9:30-<br>11:30 AM</div>
           <div class="event-copy">
             <strong>Welcome Reception for President Kollmann</strong>
-            <small>ASAC 100 • Alumni, families, faculty, staff and administration — current and former • Celebrating our classes, including the Class of 1976 on its 50-year reunion • Q&amp;A with the President • Free breakfast • RSVP link coming soon</small>
+            <small>ASAC 100 • Alumni, families, faculty, staff and administration — current and former • Celebrating our classes, including the Class of 1976 on its 50-year reunion • Q&amp;A with the President • Free breakfast</small>
+            <span class="registration-pill" role="link" aria-disabled="true">RSVP: Let us know you're coming</span>
           </div>
         </div>
 
@@ -714,7 +706,8 @@
           <div class="time">6-9 PM</div>
           <div class="event-copy">
             <strong>Athletic Hall of Fame &amp; Alumni Awards Banquet</strong>
-            <small>ASAC 100 • Steak, chicken or vegan dinner • $50 per person • Registration link coming soon</small>
+            <small>ASAC 100 • Steak, chicken or vegan dinner • $50 per person</small>
+            <span class="registration-pill" role="link" aria-disabled="true">RSVP: Let us know you're coming</span>
           </div>
         </div>
       </article>
@@ -740,8 +733,6 @@
           <div class="event-copy"><strong>Men's &amp; women's co-ed alumni game</strong></div>
         </div>
 
-        <div class="day-note weekend-note"><strong>Make a weekend of it.</strong><br>Reconnect with classmates, cheer on the Hornets and come home to Lyndon.</div>
-
         <p class="presented">Free-event donations help support Homecoming Weekend.</p>
       </article>
     </div>
@@ -750,10 +741,10 @@
   <footer class="register">
     <div>
       <div class="register-label">Full details &amp; registration</div>
-      <strong><a href="https://lyndonalumni.com/#events">lyndonalumni.com</a></strong>
-      <p>Golf and banquet registration • Weekend updates • Alumni information</p>
+      <strong><a href="https://lyndonalumni.com/homecoming-2026">lyndonalumni.com</a></strong>
+      <p>Golf registration • Welcome reception RSVP • Banquet RSVP</p>
     </div>
-    <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&amp;data=https%3A%2F%2Flyndonalumni.com%2F%23events&amp;color=0f3d22&amp;bgcolor=ffffff&amp;margin=0" alt="QR code linking to Homecoming events at lyndonalumni.com/#events">
+    <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&amp;data=https%3A%2F%2Flyndonalumni.com%2Fhomecoming-2026&amp;color=0f3d22&amp;bgcolor=ffffff&amp;margin=0" alt="QR code linking to the full Homecoming schedule at lyndonalumni.com/homecoming-2026">
   </footer>
 </main>
 </body>
