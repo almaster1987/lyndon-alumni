@@ -111,6 +111,12 @@ img{display:block;max-width:100%}
 .btn-reg{background:#9f3728;color:var(--white)}
 .btn-reg:hover{background:#7d281d;transform:translateY(-1px)}
 .btn-og{background:none;border:2px solid var(--green);color:var(--green)}
+/* Free events use green RSVP styling; paid registration stays rust (.btn-reg). */
+.btn-rsvp{background:var(--green-md);color:var(--white)}
+.btn-rsvp:hover{background:var(--green);transform:translateY(-1px)}
+/* Dominant "everything" action that sits beneath the per-event controls. */
+.btn-wide{background:var(--green-dk);color:var(--white);font-size:1rem;padding:.95rem 1.8rem}
+.btn-wide:hover{background:var(--green);transform:translateY(-1px)}
 .btn-og:hover{background:var(--green-lt)}
 .btn-soon{background:var(--g100);color:var(--g500);cursor:not-allowed;opacity:1}
 .btn-soon:hover{background:var(--g100);transform:none}
@@ -595,6 +601,8 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
 .pres-scroll p:last-child{margin-bottom:0}
 .pres-scroll .pq{border-left:3px solid var(--gold);padding-left:.9rem;font-style:italic;color:var(--text)}
 .pres-actions{display:flex;flex-wrap:wrap;gap:.7rem;padding-top:1.1rem;margin-top:1.1rem;border-top:1px solid var(--g100)}
+/* a.btn-wide (not .btn-wide) so the mobile .pres-actions .btn rule can't reset the basis */
+.pres-actions a.btn-wide{flex:1 0 100%;justify-content:center}
 .homecoming-actions{display:grid;gap:.6rem;grid-template-columns:1fr}
 .homecoming-actions .btn{justify-content:center;text-align:center}
 .btn-pending{border:0;cursor:default;font-family:inherit}
@@ -615,9 +623,14 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
   .pres-card{flex-direction:column;max-height:90vh}
   .pres-media{flex:0 0 175px}
   .pres-media img{object-position:center 42%}
-  .homecoming-pop .pres-media{flex-basis:230px}
+  .homecoming-pop .pres-media{flex-basis:150px}
   .pres-content{padding:1.4rem 1.4rem 1.5rem}
   .pres-actions .btn{flex:1 1 auto;justify-content:center}
+  /* Scroll the whole content column on short viewports. The nested .pres-scroll
+     region collapses to 0 height once the action stack is this tall, which
+     clipped the bottom buttons inside the overflow:hidden card. */
+  .pres-content{overflow-y:auto}
+  .pres-scroll{flex:0 0 auto;min-height:auto;overflow-y:visible;padding-right:0;margin-right:0}
 }
 @media(prefers-reduced-motion:reduce){
   .pres-pop,.pres-card{transition:none}
@@ -669,7 +682,9 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       </div>
       <div class="pres-actions">
         <a class="btn btn-reg" href="https://host.nxt.blackbaud.com/registration-form/?formId=5cb5857c-a592-42b9-84e0-f9be07180f4b&amp;envId=p-BzoGXjMynEG3LMXBAdBMug&amp;zone=usa" target="_blank" rel="noopener" data-pop-close>Register for Golf &rarr;</a>
-        <a class="btn btn-reg" href="/homecoming-2026" target="_blank" rel="noopener" data-pop-close>Register for the Full Weekend &rarr;</a>
+        <a class="btn btn-reg" href="https://host.nxt.blackbaud.com/registration-form/?formId=26a9f053-4072-4241-9aac-d218a10d999b&amp;envId=p-BzoGXjMynEG3LMXBAdBMug&amp;zone=usa" target="_blank" rel="noopener" data-pop-close>Register for the HOF Banquet &rarr;</a>
+        <a class="btn btn-rsvp" href="https://host.nxt.blackbaud.com/registration-form/?formId=86c3c1e3-b17b-4ad2-b893-745eb5531d56&amp;envId=p-BzoGXjMynEG3LMXBAdBMug&amp;zone=usa" target="_blank" rel="noopener" data-pop-close>RSVP for the Welcome Reception &rarr;</a>
+        <a class="btn btn-wide" href="/homecoming-2026" target="_blank" rel="noopener" data-pop-close>See the Whole Weekend Schedule &rarr;</a>
       </div>
     </div>
   </div>
@@ -786,10 +801,13 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
             <div class="act">Vail Museum open house, campus cookout &amp; ice cream social</div>
             <div class="act">Full Friday-through-Sunday schedule now available</div>
           </div>
-          <p>Use the full weekend schedule to register for golf and the banquet, and to RSVP for the welcome reception.</p>
+          <p>Register for golf and the banquet, RSVP for the welcome reception, or open the full Friday-through-Sunday schedule.</p>
           <div class="homecoming-actions">
-            <a href="/homecoming-2026" target="_blank" rel="noopener" class="btn btn-reg" style="font-size:.84rem">Register for the Full Weekend &rarr;</a>
-            <a href="/Homecoming-Poster-2026.pdf" target="_blank" rel="noopener" class="btn btn-og" style="font-size:.84rem">Homecoming Poster &rarr;</a>
+            <a href="https://host.nxt.blackbaud.com/registration-form/?formId=5cb5857c-a592-42b9-84e0-f9be07180f4b&amp;envId=p-BzoGXjMynEG3LMXBAdBMug&amp;zone=usa" target="_blank" rel="noopener" class="btn btn-reg" style="font-size:.84rem">Register for Golf &rarr;</a>
+            <a href="https://host.nxt.blackbaud.com/registration-form/?formId=26a9f053-4072-4241-9aac-d218a10d999b&amp;envId=p-BzoGXjMynEG3LMXBAdBMug&amp;zone=usa" target="_blank" rel="noopener" class="btn btn-reg" style="font-size:.84rem">Register for the HOF Banquet &rarr;</a>
+            <a href="https://host.nxt.blackbaud.com/registration-form/?formId=86c3c1e3-b17b-4ad2-b893-745eb5531d56&amp;envId=p-BzoGXjMynEG3LMXBAdBMug&amp;zone=usa" target="_blank" rel="noopener" class="btn btn-rsvp" style="font-size:.84rem">RSVP for the Welcome Reception &rarr;</a>
+            <a href="/homecoming-2026" target="_blank" rel="noopener" class="btn btn-wide">See the Whole Weekend Schedule &rarr;</a>
+            <a href="/Homecoming-Poster-2026-Landscape.pdf" target="_blank" rel="noopener" class="btn btn-og" style="font-size:.84rem">Homecoming Poster &rarr;</a>
           </div>
         </div>
       </div>
