@@ -284,14 +284,15 @@
   }
 
   .store-pill {
-    background: var(--green-dark);
-    color: white;
+    background: var(--gold);
+    color: var(--green-dark);
     display: inline-block;
     flex: 0 0 auto;
     font-size: 7.5px;
     font-weight: 900;
     letter-spacing: .04em;
     padding: 4px 6px;
+    text-decoration: none;
     text-transform: uppercase;
   }
 
@@ -455,6 +456,7 @@
     padding-left: 12px;
   }
 
+
   .day.saturday .event.social-feature {
     background: var(--green-light);
     border-left: 4px solid var(--green);
@@ -489,6 +491,12 @@
     letter-spacing: .07em;
     margin-top: 3px;
     padding: 3px 5px;
+    text-transform: uppercase;
+  }
+
+  .req {
+    color: var(--rust);
+    font-weight: 900;
     text-transform: uppercase;
   }
 
@@ -642,7 +650,7 @@
         <span>Three days. One Hornet family.</span>
         <h2 id="program-title">The Weekend Lineup</h2>
       </div>
-      <p class="gear-callout"><span><strong>Lyndon gear:</strong> Available Saturday during the games.</span><span class="store-pill" role="link" aria-disabled="true">Lyndon Store</span></p>
+      <p class="gear-callout"><span><strong>Lyndon gear:</strong> Available Saturday during the games.</span><a class="store-pill" href="https://docs.google.com/forms/d/e/1FAIpQLSdlFQtAVRFIfM1RbFt1K16PYmzT0sYAyOW8zcEcgIBrtvBcdg/viewform">Lyndon Store &rarr;</a></p>
     </div>
 
     <div class="days">
@@ -673,9 +681,11 @@
           <div class="time">7 PM</div>
           <div class="event-copy">
             <strong>Oktoberfest</strong>
-            <small>Veterans Park • Hosted by MEISA • Live music, beer garden and bratwurst</small>
+            <small>Veterans Park • Live music, beer garden and bratwurst • Hosted by the Music Entertainment Industry Student Association</small>
           </div>
         </div>
+
+        <div class="day-note"><strong>Check-in &mdash; Theater Lobby</strong><br>Friday 6&ndash;7:30 PM • Saturday from 8:30 AM</div>
 
         <p class="presented">Presented by the Lyndon Alumni Council in association with Lyndon Athletics and Institutional Advancement.</p>
       </article>
@@ -739,7 +749,7 @@
           <div class="event-copy">
             <strong>Athletic Hall of Fame &amp; Alumni Awards Banquet</strong>
             <small>ASAC 100 • Steak, chicken or vegan dinner • $50 per person</small>
-            <a class="registration-pill" href="https://host.nxt.blackbaud.com/registration-form/?formId=26a9f053-4072-4241-9aac-d218a10d999b&amp;envId=p-BzoGXjMynEG3LMXBAdBMug&amp;zone=usa">RSVP: Let us know you're coming &rarr;</a>
+            <a class="registration-pill" href="https://host.nxt.blackbaud.com/registration-form/?formId=26a9f053-4072-4241-9aac-d218a10d999b&amp;envId=p-BzoGXjMynEG3LMXBAdBMug&amp;zone=usa">Register for the banquet &rarr;</a>
           </div>
         </div>
       </article>
@@ -774,7 +784,7 @@
     <div>
       <div class="register-label">Full details &amp; registration</div>
       <strong><a href="https://lyndonalumni.com/homecoming-2026">lyndonalumni.com</a></strong>
-      <p>Golf registration • Welcome reception RSVP • Banquet RSVP</p>
+      <p>Golf registration • Welcome reception RSVP • Banquet registration</p>
     </div>
     <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&amp;data=https%3A%2F%2Flyndonalumni.com%2Fhomecoming-2026&amp;color=0f3d22&amp;bgcolor=ffffff&amp;margin=0" alt="QR code linking to the full Homecoming schedule at lyndonalumni.com/homecoming-2026">
   </footer>
