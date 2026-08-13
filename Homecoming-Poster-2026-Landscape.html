@@ -144,7 +144,9 @@
     left: .5in;
     position: absolute;
     top: 1.05in;
-    width: 5.35in;
+    /* The enlarged 2026 fills the date lockup almost exactly; the extra .2in
+       (gutter is free until the rail at 6.15in) keeps it off the edge. */
+    width: 5.55in;
     z-index: 3;
   }
 
@@ -204,13 +206,17 @@
     text-transform: uppercase;
   }
 
+  /* 25-27 and 2026 are deliberately the same size. 98px made the pair too wide
+     for the column and silently wrapped "25-27" onto two lines, so both sit at
+     88px with nowrap to keep the wrap from creeping back. */
   .date {
     color: var(--white);
     font-family: "Barlow Condensed", sans-serif;
-    font-size: 98px;
+    font-size: 88px;
     font-weight: 900;
     letter-spacing: 0;
     line-height: .9;
+    white-space: nowrap;
   }
 
   .year-place {
@@ -224,19 +230,23 @@
     text-transform: uppercase;
   }
 
+  /* 2026 matches the 25-27 size; the place line can't (it would be ~900px wide),
+     so it scales up proportionally instead. */
   .year-place strong {
     color: var(--gold);
     font-family: "Barlow Condensed", sans-serif;
-    font-size: 34px;
-    letter-spacing: .08em;
-    line-height: 1;
+    font-size: 88px;
+    font-weight: 900;
+    letter-spacing: .02em;
+    line-height: .9;
+    white-space: nowrap;
   }
 
   .year-place span {
-    font-size: 10px;
+    font-size: 12.5px;
     font-weight: 800;
-    letter-spacing: .12em;
-    margin-top: 4px;
+    letter-spacing: .1em;
+    margin-top: 2px;
   }
 
   /* ---- right column: president + highlights ---- */
@@ -349,6 +359,21 @@
     font-weight: 700;
     line-height: 1.32;
     margin-top: 3px;
+  }
+
+  /* Compact per-event marker. The poster carries no clickable control, so the
+     registration/RSVP status has to be stated on the card itself. */
+  .req-tag {
+    align-self: flex-start;
+    border: 1px solid rgba(224, 180, 36, .7);
+    color: var(--gold);
+    font-size: 7.6px;
+    font-weight: 900;
+    letter-spacing: .09em;
+    line-height: 1.1;
+    margin-top: 5px;
+    padding: 2.5px 5px;
+    text-transform: uppercase;
   }
 
   .highlight .secondary {
@@ -507,12 +532,14 @@
         <div class="icon" aria-hidden="true">⛳</div>
         <strong>Golf Tournament</strong>
         <em>11 AM check-in • Noon shotgun</em>
+        <span class="req-tag">Registration required</span>
         <span class="secondary">Oktoberfest • 7 PM • Veterans Park</span>
       </div>
       <div class="highlight">
         <div class="icon" aria-hidden="true">☕</div>
         <strong>Welcome Reception</strong>
         <em>For President Kollmann • 9:30-11:30 AM</em>
+        <span class="req-tag">RSVP encouraged</span>
         <span class="secondary">Class of 1976 • 50th Reunion</span>
       </div>
       <div class="highlight">
@@ -525,6 +552,7 @@
         <div class="icon" aria-hidden="true">🏆</div>
         <strong>Awards Banquet</strong>
         <em>Saturday • 6-9 PM</em>
+        <span class="req-tag">Registration required</span>
         <span>Athletic Hall of Fame • Alumni Awards • Dinner</span>
       </div>
     </div>
