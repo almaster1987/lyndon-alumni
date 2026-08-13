@@ -241,8 +241,10 @@
 
   /* ---- right column: president + highlights ---- */
 
+  /* Height follows content: the cards used to stretch to fill the full column,
+     which left ~1in of dead space inside each highlight box. */
   .rail {
-    bottom: 1.74in;
+    bottom: auto;
     display: flex;
     flex-direction: column;
     left: 6.15in;
@@ -293,10 +295,10 @@
 
   .highlights {
     display: grid;
-    flex: 1;
+    flex: 0 0 auto;
     gap: .13in;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: auto auto;
     min-height: 0;
   }
 
@@ -535,7 +537,7 @@
       <p>Golf • Reception • Games • Museum • Banquet</p>
       <p class="req">Registration required for golf &amp; the banquet</p>
     </div>
-    <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&amp;data=https%3A%2F%2Flyndonalumni.com%2Fhomecoming-2026&amp;color=0a321b&amp;bgcolor=ffffff&amp;margin=0" alt="QR code linking to the 2026 Homecoming schedule at lyndonalumni.com/homecoming-2026">
+    <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&amp;data=https%3A%2F%2Flyndonalumni.com%2F%23homecoming&amp;color=0a321b&amp;bgcolor=ffffff&amp;margin=0" alt="QR code opening the Homecoming registration panel at lyndonalumni.com">
   </div>
 
   <footer class="footer">

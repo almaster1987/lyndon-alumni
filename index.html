@@ -1527,7 +1527,10 @@ if('IntersectionObserver' in window){
   pop.addEventListener('click',event=>{
     if(event.target===pop||event.target.closest('[data-pop-close]'))close();
   });
-  setTimeout(open,900);
+  // Printed collateral (flyer + posters) points its QR at /#homecoming, so a scan
+  // opens this popup straight away rather than waiting out the first-load delay.
+  if(location.hash.toLowerCase()==='#homecoming'){open();}
+  else{setTimeout(open,900);}
 })();
 </script>
 </body>
