@@ -376,6 +376,13 @@
     text-transform: uppercase;
   }
 
+  /* Closed after the deadline (Steve, 2026-09-14) - muted, not gold, so it
+     does not read as a call to action. */
+  .req-tag.closed {
+    border-color: rgba(255, 255, 255, .34);
+    color: rgba(255, 255, 255, .62);
+  }
+
   .highlight .secondary {
     border-top: 1px solid rgba(255, 255, 255, .25);
     color: var(--white);
@@ -539,7 +546,7 @@
         <div class="icon" aria-hidden="true">☕</div>
         <strong>Welcome Reception</strong>
         <em>For President Kollmann • 9:30-11:30 AM</em>
-        <span class="req-tag">RSVP encouraged</span>
+        <span class="req-tag closed">RSVP closed</span>
         <span class="secondary">Class of 1976 • 50th Reunion</span>
       </div>
       <div class="highlight">
@@ -552,7 +559,7 @@
         <div class="icon" aria-hidden="true">🏆</div>
         <strong>Awards Banquet</strong>
         <em>Saturday • 6-9 PM</em>
-        <span class="req-tag">Registration required</span>
+        <span class="req-tag closed">Registration closed</span>
         <span>Athletic Hall of Fame • Alumni Awards • Dinner</span>
       </div>
     </div>
@@ -560,10 +567,10 @@
 
   <div class="action-band">
     <div class="action-copy">
-      <small>Scan for the full schedule &bull; Weekend registration</small>
+      <small>Scan for the full schedule &bull; Golf registration</small>
       <strong>Scan. Plan. Come home.</strong>
       <p>Golf • Reception • Games • Museum • Banquet</p>
-      <p class="req">Registration required for golf &amp; the banquet</p>
+      <p class="req">Registration required for golf &bull; Reception &amp; banquet registration have closed</p>
     </div>
     <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&amp;data=https%3A%2F%2Flyndonalumni.com%2F%23homecoming&amp;color=0a321b&amp;bgcolor=ffffff&amp;margin=0" alt="QR code opening the Homecoming registration panel at lyndonalumni.com">
   </div>
