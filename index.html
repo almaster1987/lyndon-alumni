@@ -120,6 +120,10 @@ img{display:block;max-width:100%}
 .btn-og:hover{background:var(--green-lt)}
 .btn-soon{background:var(--g100);color:var(--g500);cursor:not-allowed;opacity:1}
 .btn-soon:hover{background:var(--g100);transform:none}
+/* Registration closed after the deadline (Steve, 2026-09-14). Shown as a visible
+   disabled state rather than removed, so the closure reads as intentional. */
+.btn-closed{background:var(--g100);color:var(--g500);cursor:not-allowed;border:0;font-family:inherit}
+.btn-closed:hover{background:var(--g100);transform:none}
 .btn-gold{background:var(--gold);color:var(--green-dk)}
 .btn-gold:hover{background:var(--gold-md);transform:translateY(-2px);box-shadow:0 8px 20px rgba(196,154,15,.35)}
 .btn-ghost{background:none;border:2px solid rgba(255,255,255,.5);color:var(--white)}
@@ -682,8 +686,8 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       </div>
       <div class="pres-actions">
         <a class="btn btn-reg" href="https://host.nxt.blackbaud.com/registration-form/?formId=5cb5857c-a592-42b9-84e0-f9be07180f4b&amp;envId=p-BzoGXjMynEG3LMXBAdBMug&amp;zone=usa" target="_blank" rel="noopener" data-pop-close>Register for Golf &rarr;</a>
-        <a class="btn btn-reg" href="https://host.nxt.blackbaud.com/registration-form/?formId=26a9f053-4072-4241-9aac-d218a10d999b&amp;envId=p-BzoGXjMynEG3LMXBAdBMug&amp;zone=usa" target="_blank" rel="noopener" data-pop-close>Register for the HOF Banquet &rarr;</a>
-        <a class="btn btn-rsvp" href="https://host.nxt.blackbaud.com/registration-form/?formId=86c3c1e3-b17b-4ad2-b893-745eb5531d56&amp;envId=p-BzoGXjMynEG3LMXBAdBMug&amp;zone=usa" target="_blank" rel="noopener" data-pop-close>RSVP for the Welcome Reception &rarr;</a>
+        <button class="btn btn-closed" type="button" disabled>Banquet registration closed</button>
+        <button class="btn btn-closed" type="button" disabled>Reception RSVP closed</button>
         <a class="btn btn-wide" href="/homecoming-2026" target="_blank" rel="noopener" data-pop-close>See the Whole Weekend Schedule &rarr;</a>
       </div>
     </div>
@@ -801,11 +805,11 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
             <div class="act">Vail Museum open house, campus cookout &amp; ice cream social</div>
             <div class="act">Full Friday-through-Sunday schedule now available</div>
           </div>
-          <p>Register for golf and the banquet, RSVP for the welcome reception, or open the full Friday-through-Sunday schedule.</p>
+          <p>Registration for the welcome reception and the banquet has closed. Golf registration is still open, and the full Friday-through-Sunday schedule is below.</p>
           <div class="homecoming-actions">
             <a href="https://host.nxt.blackbaud.com/registration-form/?formId=5cb5857c-a592-42b9-84e0-f9be07180f4b&amp;envId=p-BzoGXjMynEG3LMXBAdBMug&amp;zone=usa" target="_blank" rel="noopener" class="btn btn-reg" style="font-size:.84rem">Register for Golf &rarr;</a>
-            <a href="https://host.nxt.blackbaud.com/registration-form/?formId=26a9f053-4072-4241-9aac-d218a10d999b&amp;envId=p-BzoGXjMynEG3LMXBAdBMug&amp;zone=usa" target="_blank" rel="noopener" class="btn btn-reg" style="font-size:.84rem">Register for the HOF Banquet &rarr;</a>
-            <a href="https://host.nxt.blackbaud.com/registration-form/?formId=86c3c1e3-b17b-4ad2-b893-745eb5531d56&amp;envId=p-BzoGXjMynEG3LMXBAdBMug&amp;zone=usa" target="_blank" rel="noopener" class="btn btn-rsvp" style="font-size:.84rem">RSVP for the Welcome Reception &rarr;</a>
+            <button class="btn btn-closed" type="button" disabled>Banquet registration closed</button>
+            <button class="btn btn-closed" type="button" disabled>Reception RSVP closed</button>
             <a href="/homecoming-2026" target="_blank" rel="noopener" class="btn btn-wide">See the Whole Weekend Schedule &rarr;</a>
             <a href="/Homecoming-Poster-2026-Landscape.pdf" target="_blank" rel="noopener" class="btn btn-og" style="font-size:.84rem">Homecoming Poster &rarr;</a>
           </div>
@@ -856,7 +860,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
           <p style="font-size:.86rem;color:var(--g500);max-width:460px">Honoring Lyndon's finest athletes since 1983. New inductees celebrated each fall at the Alumni Weekend banquet.</p>
         </div>
         <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center">
-          <a href="https://host.nxt.blackbaud.com/registration-form/?formId=26a9f053-4072-4241-9aac-d218a10d999b&envId=p-BzoGXjMynEG3LMXBAdBMug&zone=usa" target="_blank" rel="noopener" class="btn btn-reg" style="font-size:.84rem">Register for the Banquet &rarr;</a>
+          <button class="btn btn-closed" type="button" disabled>Banquet registration closed</button>
           <a href="https://vtsuhornets.com/honors/vermont-state-lyndon-athletic-hall-of-fame" target="_blank" rel="noopener" class="btn btn-og" style="font-size:.84rem">View Hall of Fame &rarr;</a>
           <a href="https://vermontstate.edu/nominate" target="_blank" rel="noopener" class="btn btn-g" style="font-size:.84rem">Submit Nomination</a>
         </div>
