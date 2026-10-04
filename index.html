@@ -383,6 +383,22 @@ img{display:block;max-width:100%}
 @media(max-width:760px){.ev-grid{grid-template-columns:1fr}}
 .ev-card{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh);transition:transform .2s,box-shadow .2s;background:white}
 .ev-card:hover{transform:translateY(-4px);box-shadow:var(--sh-lg)}
+/* Homecoming 2026 recap - replaced the Fall Homecoming + Golf Classic cards after the weekend */
+.hc-recap{background:white;border-radius:var(--r-lg);padding:2rem 2.5rem;box-shadow:0 1px 3px rgba(0,0,0,.07);border:1px solid var(--g100);border-top:4px solid var(--gold);scroll-margin-top:90px}
+.hc-top{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:.6rem 1.5rem;margin-bottom:1rem}
+.hc-ttl{font-size:clamp(1.55rem,3vw,2rem);color:var(--green-dk);margin-bottom:.3rem}
+.hc-tag{font-style:italic;color:var(--green);font-weight:600;font-size:.95rem;margin:0}
+.hc-date{color:var(--g500);font-size:.84rem;font-weight:600;white-space:nowrap}
+.hc-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.4rem 0}
+.hc-stat{background:var(--green-lt);border-radius:var(--r-sm);padding:1rem 1.15rem}
+.hc-stat strong{display:block;font-family:'Playfair Display',Georgia,serif;font-size:2.1rem;line-height:1;color:var(--green-dk);margin-bottom:.35rem;font-variant-numeric:lining-nums}
+.hc-stat span{font-size:.82rem;color:var(--g700);line-height:1.45;display:block}
+.hc-thanks{font-size:.86rem;color:var(--green-dk);background:var(--gold-lt);border-left:4px solid var(--gold-md);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:.85rem 1.1rem;margin:0}
+.hc-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:.6rem;margin:1.4rem 0 1.1rem}
+.hc-gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-sm);display:block}
+.hc-gallery-empty{grid-column:1/-1;border:2px dashed var(--g100);border-radius:var(--r-sm);text-align:center;padding:2.2rem 1rem;color:var(--g500);font-size:.9rem}
+.hc-next{font-size:.86rem;color:var(--g500);margin:0}
+@media(max-width:700px){.hc-recap{padding:1.5rem 1.25rem}.hc-stats{grid-template-columns:1fr}.hc-date{white-space:normal}}
 
 /* Fall Homecoming card */
 .ev-photo-hdr{position:relative;height:220px;overflow:hidden}
@@ -649,46 +665,31 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
 <a href="#main" class="skip">Skip to main content</a>
 
 <!-- ANNOUNCEMENT -->
-<div class="ann">
-  🍂 Homecoming returns to Lyndon &mdash; September 25–27, 2026.
-  <a href="#events">Learn More</a>
-</div>
 <div class="ann ann-award">
   🏆 Alumni Award nominations are open &mdash; honor a Hornet who's made their mark.
   <a href="#awards">Nominate an Alum &rarr;</a>
 </div>
 
-<!-- HOMECOMING ANNOUNCEMENT POPUP -->
-<div class="pres-pop homecoming-pop" id="homecomingPop" role="dialog" aria-modal="true" aria-labelledby="homecomingPopTitle" aria-describedby="homecomingPopDesc">
+<!-- ALDRICH HOUSE / MVS POPUP (restored 2026-10 after Homecoming; first shipped 84b4b2b) -->
+<div class="pres-pop" id="mvsPop" role="dialog" aria-modal="true" aria-labelledby="mvsPopTitle" aria-describedby="mvsPopDesc">
   <div class="pres-card">
     <button class="pres-x" type="button" data-pop-close aria-label="Dismiss announcement">&times;</button>
     <div class="pres-media">
-      <img src="homecoming-popup-2026.png" alt="Come Home to Lyndon, September 25 through 27, 2026"
-           onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect width=%22400%22 height=%22500%22 fill=%22%230f3d22%22/%3E%3Ctext x=%22200%22 y=%22250%22 fill=%22%23c49a0f%22 font-family=%22Georgia,serif%22 font-size=%2248%22 font-weight=%22bold%22 text-anchor=%22middle%22%3EVTSU%3C/text%3E%3C/svg%3E'">
+      <img src="https://d8e7jbdw4fu0e.cloudfront.net/11557/ba9384c0-1705-11ef-8c36-a91bbe86b80a-vd3NGvl.lg-nt@2x.jpg" alt="Historic Manor Vail postcard, Lyndon Vermont"
+           onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect width=%22400%22 height=%22500%22 fill=%22%230f3d22%22/%3E%3Ctext x=%22200%22 y=%22250%22 fill=%22%23c49a0f%22 font-family=%22Georgia,serif%22 font-size=%2242%22 font-weight=%22bold%22 text-anchor=%22middle%22%3EMVS%3C/text%3E%3C/svg%3E'">
     </div>
     <div class="pres-content">
-      <span class="pres-eyebrow">&#127809; Homecoming Weekend</span>
-      <h2 class="pres-title" id="homecomingPopTitle">Come Home to Lyndon</h2>
-      <p class="pres-date">Friday&ndash;Sunday &middot; Lyndonville, Vermont</p>
-      <div class="pres-scroll" id="homecomingPopDesc">
-        <p><strong>Homecoming begins on the fairway with the Skip Pound and Dudley Bell Legacy Golf Classic</strong>, followed Friday night by Oktoberfest at Veterans Park. The weekend continues with a Welcome Reception for President Sherry Kollmann, the Athletic Hall of Fame &amp; Alumni Awards Banquet, a Vail Museum open house, alumni games and varsity soccer, plus a cookout and ice cream social.</p>
-        <div class="homecoming-golf">
-          <span class="homecoming-golf-label">Friday kickoff</span>
-          <h3>The Skip Pound and Dudley Bell Legacy Golf Classic</h3>
-          <p>Play as a foursome or join as a single at St. Johnsbury Country Club. Proceeds support the Lyndon Alumni Council and Lyndon Athletics.</p>
-          <div class="homecoming-golf-meta">
-            <span>11 AM registration</span>
-            <span>Noon shotgun start</span>
-            <span>$125 per golfer</span>
-          </div>
-        </div>
-        <p>Golf registration is open now. Register for the full weekend schedule and make your plans to return to campus.</p>
+      <span class="pres-eyebrow">&#127963; From the Manor Vail Society &ndash; Lyndon</span>
+      <h2 class="pres-title" id="mvsPopTitle">Help Save the Aldrich House</h2>
+      <p class="pres-date">A preservation effort we&rsquo;re proud to support</p>
+      <div class="pres-scroll" id="mvsPopDesc">
+        <p>The <strong>Aldrich House</strong> &mdash; known to generations of Hornets as the <strong>Alumni House</strong> &mdash; is the last original building standing from the estate of Theodore Newton Vail, whose Speedwell Farms became the Lyndon campus in 1951. When the State demolished Vail&rsquo;s mansion in 1974, this pre&ndash;Civil War Greek Revival cottage became the sole survivor of that era.</p>
+        <p>Today it sits empty, its heat and water disconnected, and it is endangered by plans to downsize the campus. The <strong>Manor Vail Society &ndash; Lyndon</strong> has petitioned the Vermont Division for Historic Preservation to recognize the house as historic and prevent its demolition.</p>
+        <p>The Alumni Council is proud to help spread the word &mdash; and we&rsquo;re asking our fellow Hornets to lend their voices too. Preserving the Aldrich House means preserving the last physical link to where Lyndon began.</p>
       </div>
       <div class="pres-actions">
-        <a class="btn btn-reg" href="https://host.nxt.blackbaud.com/registration-form/?formId=5cb5857c-a592-42b9-84e0-f9be07180f4b&amp;envId=p-BzoGXjMynEG3LMXBAdBMug&amp;zone=usa" target="_blank" rel="noopener" data-pop-close>Register for Golf &rarr;</a>
-        <button class="btn btn-closed" type="button" disabled>Banquet registration closed</button>
-        <button class="btn btn-closed" type="button" disabled>Reception RSVP closed</button>
-        <a class="btn btn-wide" href="/homecoming-2026" target="_blank" rel="noopener" data-pop-close>See the Whole Weekend Schedule &rarr;</a>
+        <a class="btn btn-gold" href="aldrich-preservation-letter.pdf" target="_blank" rel="noopener" data-pop-close>&#128196; Read the preservation letter</a>
+        <button class="btn btn-og" type="button" data-pop-close>Dismiss</button>
       </div>
     </div>
   </div>
@@ -742,7 +743,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       <h1>Once a Hornet,<br><em>Always a Hornet.</em></h1>
       <p class="hero-sub">Connecting alumni of Lyndon Teachers College, Lyndon State College, Northern Vermont University, and Vermont State University Lyndon — from 1911 to today and beyond.</p>
       <div class="hero-btns">
-        <a href="#events" class="btn btn-gold">Upcoming Events &rarr;</a>
+        <a href="#events" class="btn btn-gold">Events &amp; Traditions &rarr;</a>
         <a href="#give" class="btn btn-ghost">♥ Donate to the Association</a>
       </div>
       <div class="hero-stats">
@@ -761,7 +762,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
   <div class="c">
     <div class="ql-grid">
       <a href="#give" class="ql-card ql-donate"><div class="ql-ico go">♥</div><h3>Donate to the Association</h3><p>Direct support for Alumni Council programs &amp; traditions</p></a>
-      <a href="#events" class="ql-card"><div class="ql-ico gr">🍂</div><h3>Fall Homecoming</h3><p>Sept 25–27 on campus — golf, alumni games &amp; Hall of Fame</p></a>
+      <a href="#homecoming" class="ql-card"><div class="ql-ico gr">🍂</div><h3>Homecoming 2026</h3><p>Thank you for coming home — highlights &amp; photos from the weekend</p></a>
       <a href="#awards" class="ql-card ql-award"><svg class="ql-award-line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M6 1 H94 A5 5 0 0 1 99 6 V94 A5 5 0 0 1 94 99 H6 A5 5 0 0 1 1 94 V6 A5 5 0 0 1 6 1 Z" pathLength="100"/></svg><div class="ql-ico go">🏆</div><h3>Alumni Award Nominations</h3><p>Nominate a Hornet — Distinguished Alumni, Young Alumni &amp; more</p></a>
       <a href="#spotlight" class="ql-card"><div class="ql-ico go">⭐</div><h3>Alumni Spotlight</h3><p>Meet Hornets making an impact across the country</p></a>
     </div>
@@ -772,83 +773,31 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
 <section class="sec sec-alt reveal" id="events">
   <div class="c">
     <div class="tc mb3">
-      <span class="lbl">Mark Your Calendar</span>
+      <span class="lbl">Alumni Traditions</span>
       <h2 class="ttl">Events &amp; Traditions</h2>
       <p class="sub" style="max-width:540px;margin:0 auto">Cherished traditions, reimagined for today's Hornet community.</p>
     </div>
-    <div class="ev-grid">
-
-      <!-- Fall Homecoming -->
-      <div class="ev-card">
-        <div class="ev-photo-hdr">
-          <img
-            src="https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/lyndonhornets.com/images/2025/9/22/IMG_0965.jpeg"
-            alt="Lyndon Alumni Council Fall Homecoming 2025"
-            loading="lazy"
-            onerror="this.parentElement.style.background='linear-gradient(135deg,#1b5e35,#2d7a4a)';this.style.display='none'"
-          >
-          <div class="ev-photo-overlay"></div>
-          <span class="ev-badge-abs">Annual Tradition</span>
-          <div class="ev-photo-content">
-            <h3>Lyndon Fall Homecoming for Alumni &amp; Families</h3>
-            <div class="ev-date">📅 September 25–27, 2026 &bull; Lyndonville, VT</div>
-          </div>
+    <!-- Homecoming 2026 recap. Figures are from the Council's 9/27/26 annual-meeting minutes. -->
+    <div class="hc-recap" id="homecoming">
+      <div class="hc-top">
+        <div>
+          <span class="lbl">Thank You for Coming Home</span>
+          <h3 class="hc-ttl">Homecoming 2026</h3>
+          <p class="hc-tag">The first Homecoming put together by alumni, for alumni.</p>
         </div>
-        <div class="ev-body">
-          <p>Homecoming returns to Lyndon this fall — and the Alumni Council is hosting. September 25–27 is the traditional Homecoming weekend on the Lyndon campus. No matter when you attended, your campus is still there and ready for your return.</p>
-          <div class="acts">
-            <div class="act">Athletic Hall of Fame &amp; Alumni Award banquet (Saturday evening)</div>
-            <div class="act">Welcome Reception for President Sherry Kollmann — Class of 1976 reunion &amp; Q&amp;A (Saturday, 9:30–11:30 AM)</div>
-            <div class="act">Oktoberfest at Veterans Park — live music, beer garden &amp; bratwurst, hosted by the Music Entertainment Industry Student Association (Friday, 7 PM)</div>
-            <div class="act">Alumni games — baseball, softball, basketball &amp; the return of Alumni Rugby</div>
-            <div class="act">Men's &amp; Women's varsity soccer matches</div>
-            <div class="act">Vail Museum open house, campus cookout &amp; ice cream social</div>
-            <div class="act">Full Friday-through-Sunday schedule now available</div>
-          </div>
-          <p>Registration for the welcome reception and the banquet has closed. Golf registration is still open, and the full Friday-through-Sunday schedule is below.</p>
-          <div class="homecoming-actions">
-            <a href="https://host.nxt.blackbaud.com/registration-form/?formId=5cb5857c-a592-42b9-84e0-f9be07180f4b&amp;envId=p-BzoGXjMynEG3LMXBAdBMug&amp;zone=usa" target="_blank" rel="noopener" class="btn btn-reg" style="font-size:.84rem">Register for Golf &rarr;</a>
-            <button class="btn btn-closed" type="button" disabled>Banquet registration closed</button>
-            <button class="btn btn-closed" type="button" disabled>Reception RSVP closed</button>
-            <a href="/homecoming-2026" target="_blank" rel="noopener" class="btn btn-wide">See the Whole Weekend Schedule &rarr;</a>
-            <a href="/Homecoming-Poster-2026-Landscape.pdf" target="_blank" rel="noopener" class="btn btn-og" style="font-size:.84rem">Homecoming Poster &rarr;</a>
-          </div>
-        </div>
+        <div class="hc-date">📅 September 25–27, 2026 &bull; Lyndonville, VT</div>
       </div>
-
-      <!-- Skip Pound & Dudley Bell Legacy Golf Classic -->
-      <div class="ev-card">
-        <div class="ev-photo-hdr">
-          <img
-            src="https://commons.wikimedia.org/wiki/Special:FilePath/Golf_course.jpg"
-            alt="Golf course fairway and green"
-            loading="lazy"
-            onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#1b5e35,#0f3d22)'"
-          >
-          <div class="ev-photo-overlay"></div>
-          <span class="ev-badge-abs">Part of Homecoming</span>
-          <div class="ev-photo-content">
-            <h3>The Skip Pound and Dudley Bell Legacy Golf Classic</h3>
-            <div class="ev-date">📅 Friday, September 25, 2026 &bull; St. Johnsbury Country Club</div>
-          </div>
-        </div>
-        <div class="ev-body">
-          <p>The Skip Pound and Dudley Bell Legacy Golf Classic kicks off Homecoming Weekend at St. Johnsbury Country Club — <strong>$125 per golfer</strong>, with 11am registration and a noon shotgun start. Bring a foursome or join as a single; proceeds support the Lyndon Alumni Council and Lyndon Athletics.</p>
-          <p style="font-size:.85rem;color:var(--green-dk);font-weight:700;margin-bottom:.75rem">🏆 <strong>Anton LeMieux Financial Group</strong> &mdash; our Hornet Overall Champion Sponsor</p>
-          <div class="acts">
-            <div class="act">11am registration &bull; noon shotgun start</div>
-            <div class="act">$125 per golfer — register &amp; pay online</div>
-            <div class="act">Longest drive, closest-to-the-pin, putting contest &amp; 50/50 raffle</div>
-            <div class="act">Foursomes, singles &amp; hole sponsorships welcome</div>
-            <div class="act">Sponsorships: $2,500 Hornet Overall Champion &bull; $1,500 Hornet Green &bull; $1,000 Hornet Hole-in-One &bull; $500 Hornet Spirit &bull; $150 Hornet Hole</div>
-            <div class="act">Proceeds support the Lyndon Alumni Council and Lyndon Athletics</div>
-          </div>
-          <div style="display:flex;flex-wrap:wrap;gap:.6rem">
-            <a href="https://host.nxt.blackbaud.com/registration-form/?formId=5cb5857c-a592-42b9-84e0-f9be07180f4b&envId=p-BzoGXjMynEG3LMXBAdBMug&zone=usa" target="_blank" rel="noopener" class="btn btn-reg" style="font-size:.84rem">Register for Golf &rarr;</a>
-            <a href="https://host.nxt.blackbaud.com/registration-form/?formId=94a6db4a-bd0b-46d2-8eb8-330b4a311ee3&envId=p-BzoGXjMynEG3LMXBAdBMug&zone=usa" target="_blank" rel="noopener" class="btn btn-og" style="font-size:.84rem">Become a Sponsor &rarr;</a>
-          </div>
-        </div>
+      <p>Thank you to everyone who came home to Lyndon. From the Skip Pound and Dudley Bell Legacy Golf Classic on Friday to the Welcome Reception for President Sherry Kollmann and the Athletic Hall of Fame &amp; Alumni Awards Banquet on Saturday, the weekend brought generations of Hornets back to campus.</p>
+      <div class="hc-stats">
+        <div class="hc-stat"><strong>72</strong><span>golfers &mdash; our largest field in years</span></div>
+        <div class="hc-stat"><strong>70+</strong><span>at Saturday&rsquo;s reunion, including three alumni from the Class of 1956</span></div>
+        <div class="hc-stat"><strong>115</strong><span>at a full-house Hall of Fame &amp; Alumni Awards Banquet</span></div>
       </div>
+      <p class="hc-thanks">🏆 Thank you to <strong>Anton LeMieux Financial Group</strong>, our Hornet Overall Champion Sponsor, and to every golfer, sponsor and volunteer who supported the Lyndon Alumni Council and Lyndon Athletics.</p>
+      <div class="hc-gallery" aria-label="Photos from Homecoming 2026">
+        <div class="hc-gallery-empty">📸 Photos from the weekend are on their way &mdash; check back soon.</div>
+      </div>
+      <p class="hc-next"><strong>Looking ahead:</strong> planning for Homecoming 2027 is already underway. Watch for a save-the-date.</p>
     </div>
 
     <!-- Hall of Fame -->
@@ -860,7 +809,6 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
           <p style="font-size:.86rem;color:var(--g500);max-width:460px">Honoring Lyndon's finest athletes since 1983. New inductees celebrated each fall at the Alumni Weekend banquet.</p>
         </div>
         <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center">
-          <button class="btn btn-closed" type="button" disabled>Banquet registration closed</button>
           <a href="https://vtsuhornets.com/honors/vermont-state-lyndon-athletic-hall-of-fame" target="_blank" rel="noopener" class="btn btn-og" style="font-size:.84rem">View Hall of Fame &rarr;</a>
           <a href="https://vermontstate.edu/nominate" target="_blank" rel="noopener" class="btn btn-g" style="font-size:.84rem">Submit Nomination</a>
         </div>
@@ -868,14 +816,14 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       <!-- 2026 induction class -->
       <div style="margin-top:1.6rem;background:var(--gold-lt);border-left:4px solid var(--gold-md);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:1.25rem 1.5rem">
         <h3 style="font-size:1.05rem;color:var(--green-dk);margin-bottom:.2rem">🏆 Meet the Class of 2026</h3>
-        <p style="font-size:.82rem;color:var(--g500);margin-bottom:1rem">Congratulations to this year's inductees, to be honored at the Hall of Fame banquet during Homecoming Weekend.</p>
+        <p style="font-size:.82rem;color:var(--g500);margin-bottom:1rem">Congratulations to this year's inductees, honored at the Hall of Fame banquet during Homecoming Weekend.</p>
         <div class="hof26-grid">
           <div class="hof26"><strong>Wildens Fils</strong><span>Class of 2015</span></div>
           <div class="hof26"><strong>David Cady</strong><span>Class of 1994</span></div>
           <div class="hof26"><strong>David Chase</strong><span>Class of 1985</span></div>
           <div class="hof26"><strong>Anthony Moccia</strong><span>Honorary &bull; In Memoriam</span></div>
         </div>
-        <p style="font-size:.76rem;color:var(--g400);margin-top:1rem;font-style:italic">Photos and full bios will be shared as they become available ahead of this fall's induction ceremony.</p>
+        <p style="font-size:.76rem;color:var(--g400);margin-top:1rem;font-style:italic">Photos and full bios will be shared as they become available.</p>
         <p style="font-size:.78rem;color:var(--g400);margin-top:.55rem">Recent inductees &mdash; 2024: Mikayla Hodge '18 &bull; Brandon Hunter '19 &bull; Daniel Sleeman '94 &bull; Robert Trucott '13</p>
       </div>
     </div>
@@ -1305,7 +1253,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
         <div class="cmt"><div class="cmt-lbl">Executive Committee</div><div class="cmt-mems">Steve Cormier &bull; Alex Huff &bull; Beth Fraser Kirker &bull; John Kleinhans</div></div>
         <div class="cmt"><div class="cmt-lbl">Membership / Scholarship / Recognition</div><div class="cmt-mems">Steve Cormier (Chair) &bull; Meaghan Meachem &bull; Beth Fraser Kirker &bull; Nick Russo &bull; Ethan Coppenrath &bull; John Kascenska</div></div>
         <div class="cmt"><div class="cmt-lbl">Fundraising Committee</div><div class="cmt-mems">John Kleinhans (Chair) &bull; Alexander Lataille &bull; Jeff Senterman &bull; Erica Brisson &bull; Carolyn Haggett</div></div>
-        <div class="cmt"><div class="cmt-lbl">Alumni / Student Committee</div><div class="cmt-mems">Alex Huff (Chair) &bull; Jeff Senterman &bull; Dan Grube &bull; Dan Daley</div></div>
+        <div class="cmt"><div class="cmt-lbl">Alumni / Student Committee</div><div class="cmt-mems">Alex Huff (Chair) &bull; Jeff Senterman &bull; Dan Grube &bull; Dan Daley &bull; Alyssa Gerrish</div></div>
         <div class="cmt"><div class="cmt-lbl">Communications Committee</div><div class="cmt-mems">Meaghan Meachem (Chair) &bull; Alex Huff &bull; Nick Russo &bull; Erica Brisson &bull; Dan Grube &bull; Tyler Dumont</div></div>
         <div class="cmt"><div class="cmt-lbl">Event Committee</div><div class="cmt-mems">Steve Cormier (Chair) &bull; Lisa Hayward &bull; John Kleinhans &bull; Dan Daley &bull; Adam Gordon &bull; Nick Russo</div></div>
       </div>
@@ -1381,7 +1329,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       <div class="ft-col">
         <h3>Events</h3>
         <ul>
-          <li><a href="#events">Fall Homecoming</a></li>
+          <li><a href="#homecoming">Homecoming 2026</a></li>
           <li><a href="#events">Golf Classic</a></li>
           <li><a href="#events">Hall of Fame Banquet</a></li>
           <li><a href="#awards">Alumni Awards</a></li>
@@ -1495,10 +1443,16 @@ if('IntersectionObserver' in window){
   revealEls.forEach(el=>el.classList.add('visible'));
 }
 
-// Homecoming announcement — dismissible for the current visit and shown again on every load.
+// Aldrich House / Manor Vail Society popup - shown once per device, remembered via localStorage.
+// Restored after Homecoming 2026. The key was bumped from lac_mvs_aldrich_2026 so visitors who
+// dismissed it in July see it again; bump it again to re-show after a content change.
+// Skipped on /#homecoming: old printed QR codes land there, and those visitors came for the recap.
 (function(){
-  const pop=document.getElementById('homecomingPop');
+  const pop=document.getElementById('mvsPop');
   if(!pop)return;
+  const KEY='lac_mvs_aldrich_2026_fall';
+  try{if(localStorage.getItem(KEY))return;}catch(e){}
+  if(location.hash.toLowerCase()==='#homecoming')return;
   let lastFocus=null;
   function trap(e){
     if(e.key==='Escape'){close();return;}
@@ -1523,6 +1477,7 @@ if('IntersectionObserver' in window){
     pop.classList.remove('show');
     document.body.style.overflow='';
     document.removeEventListener('keydown',trap);
+    try{localStorage.setItem(KEY,'1');}catch(e){}
     const hide=()=>{pop.classList.remove('open');pop.removeEventListener('transitionend',hide);};
     pop.addEventListener('transitionend',hide);
     setTimeout(hide,450);
@@ -1531,10 +1486,7 @@ if('IntersectionObserver' in window){
   pop.addEventListener('click',event=>{
     if(event.target===pop||event.target.closest('[data-pop-close]'))close();
   });
-  // Printed collateral (flyer + posters) points its QR at /#homecoming, so a scan
-  // opens this popup straight away rather than waiting out the first-load delay.
-  if(location.hash.toLowerCase()==='#homecoming'){open();}
-  else{setTimeout(open,900);}
+  setTimeout(open,900);
 })();
 </script>
 </body>
