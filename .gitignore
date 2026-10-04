@@ -25,3 +25,6 @@ Lyndon State Alumni Sponsorship Emails/
 
 # Original unredacted MVS letter (has home address) — never publish; redacted copy is aldrich-preservation-letter.pdf
 MVS-Lyndon Aldrich Preservation Letter.pdf
+
+# Photo/zip drops (originals carry GPS metadata; 130 MB zip landed here 10-04)
+*.zip
