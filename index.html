@@ -632,6 +632,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
 .pres-pop.show .pres-card{transform:none}
 .pres-media{flex:0 0 40%;background:var(--green-dk);position:relative}
 .pres-media img{width:100%;height:100%;object-fit:cover;object-position:center 15%}
+#thanksPop .pres-media img{object-position:55% 60%}
 .pres-content{flex:1;display:flex;flex-direction:column;min-width:0;min-height:0;padding:1.9rem 2rem}
 .pres-eyebrow{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);margin-bottom:.55rem;display:flex;align-items:center;gap:.4rem}
 .pres-title{font-size:clamp(1.35rem,2.4vw,1.72rem);color:var(--green-dk);line-height:1.18;margin-bottom:.45rem}
@@ -688,6 +689,30 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
 <div class="ann ann-award">
   🏆 Alumni Award nominations are open &mdash; honor a Hornet who's made their mark.
   <a href="#awards">Nominate an Alum &rarr;</a>
+</div>
+
+<!-- THANK-YOU-FOR-COMING-HOME POPUP (Homecoming 2026 recap). Shown before the Aldrich popup - see the sequence controller. -->
+<div class="pres-pop" id="thanksPop" role="dialog" aria-modal="true" aria-labelledby="thanksPopTitle" aria-describedby="thanksPopDesc">
+  <div class="pres-card">
+    <button class="pres-x" type="button" data-pop-close aria-label="Dismiss announcement">&times;</button>
+    <div class="pres-media">
+      <img src="photos/homecoming-2026/hc26-05-reception-crowd.jpg" alt="A full room of alumni at the Homecoming 2026 Welcome Reception"
+           onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect width=%22400%22 height=%22500%22 fill=%22%230f3d22%22/%3E%3Ctext x=%22200%22 y=%22250%22 fill=%22%23c49a0f%22 font-family=%22Georgia,serif%22 font-size=%2242%22 font-weight=%22bold%22 text-anchor=%22middle%22%3EHornets%3C/text%3E%3C/svg%3E'">
+    </div>
+    <div class="pres-content">
+      <span class="pres-eyebrow">&#127810; Homecoming 2026</span>
+      <h2 class="pres-title" id="thanksPopTitle">Thank You for Coming Home</h2>
+      <p class="pres-date">September 25&ndash;27, 2026 &bull; Lyndonville, Vermont</p>
+      <div class="pres-scroll" id="thanksPopDesc">
+        <p>The first Homecoming put together by alumni, for alumni, brought generations of Hornets back to campus &mdash; <strong>72 golfers</strong>, our largest field in years; <strong>70+ at Saturday&rsquo;s reunion</strong>, including three alumni from the Class of 1956; and a full house of <strong>115</strong> at the Hall of Fame &amp; Alumni Awards Banquet.</p>
+        <p>Thank you to everyone who came home. Relive the weekend in photos.</p>
+      </div>
+      <div class="pres-actions">
+        <a class="btn btn-gold" href="#homecoming" data-pop-close>&#128248; See the photos &amp; highlights</a>
+        <button class="btn btn-og" type="button" data-pop-close>Dismiss</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- ALDRICH HOUSE / MVS POPUP (restored 2026-10 after Homecoming; first shipped 84b4b2b) -->
@@ -1538,16 +1563,21 @@ if('IntersectionObserver' in window){
   });
 })();
 
-// Aldrich House / Manor Vail Society popup - shown once per device, remembered via localStorage.
-// Restored after Homecoming 2026. The key was bumped from lac_mvs_aldrich_2026 so visitors who
-// dismissed it in July see it again; bump it again to re-show after a content change.
-// Skipped on /#homecoming: old printed QR codes land there, and those visitors came for the recap.
+// Sequential announcement popups - one per page load, each remembered via localStorage once dismissed.
+// On each load we open the FIRST popup in SEQUENCE whose key is unset, so: first visit -> thank-you;
+// after that's dismissed, the NEXT visit -> Aldrich; once both are dismissed, nothing. Dismissing one
+// never chain-opens the next in the same visit (selection happens once, at load). Bump a key to re-show.
+// Skipped entirely on /#homecoming: old printed QR codes land there, and those visitors came for the recap.
 (function(){
-  const pop=document.getElementById('mvsPop');
-  if(!pop)return;
-  const KEY='lac_mvs_aldrich_2026_fall';
-  try{if(localStorage.getItem(KEY))return;}catch(e){}
+  const SEQUENCE=[
+    {id:'thanksPop', key:'lac_hc26_thanks'},
+    {id:'mvsPop',    key:'lac_mvs_aldrich_2026_fall'}
+  ];
   if(location.hash.toLowerCase()==='#homecoming')return;
+  function dismissed(key){try{return !!localStorage.getItem(key);}catch(e){return false;}}
+  const cfg=SEQUENCE.find(c=>document.getElementById(c.id)&&!dismissed(c.key));
+  if(!cfg)return;
+  const pop=document.getElementById(cfg.id);
   let lastFocus=null;
   function trap(e){
     if(e.key==='Escape'){close();return;}
@@ -1572,7 +1602,7 @@ if('IntersectionObserver' in window){
     pop.classList.remove('show');
     document.body.style.overflow='';
     document.removeEventListener('keydown',trap);
-    try{localStorage.setItem(KEY,'1');}catch(e){}
+    try{localStorage.setItem(cfg.key,'1');}catch(e){}
     const hide=()=>{pop.classList.remove('open');pop.removeEventListener('transitionend',hide);};
     pop.addEventListener('transitionend',hide);
     setTimeout(hide,450);
