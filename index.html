@@ -383,6 +383,15 @@ img{display:block;max-width:100%}
 @media(max-width:760px){.ev-grid{grid-template-columns:1fr}}
 .ev-card{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh);transition:transform .2s,box-shadow .2s;background:white}
 .ev-card:hover{transform:translateY(-4px);box-shadow:var(--sh-lg)}
+/* Homecoming 2027 save-the-date - above the 2026 recap */
+.hc-std{background:linear-gradient(135deg,#c49a0f,#e0b424);color:var(--green-dk);border-radius:var(--r-lg);padding:1.9rem 2.5rem;box-shadow:var(--sh);margin-bottom:2rem;scroll-margin-top:90px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem 2rem}
+.hc-std-badge{display:inline-block;padding:.22rem .7rem;border-radius:999px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:rgba(27,94,53,.15);margin-bottom:.6rem}
+.hc-std h3{font-size:clamp(1.55rem,3vw,2rem);color:var(--green-dk);margin-bottom:.35rem}
+.hc-std p{font-size:.9rem;margin:0;max-width:560px;color:var(--green-dk)}
+.hc-std-when{background:rgba(255,255,255,.9);border-radius:var(--r-sm);padding:.9rem 1.3rem;text-align:center;min-width:190px}
+.hc-std-when strong{display:block;font-family:'Playfair Display',Georgia,serif;font-size:1.7rem;line-height:1.1;color:var(--green-dk);font-variant-numeric:lining-nums;white-space:nowrap}
+.hc-std-when span{display:block;font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green);margin-top:.3rem}
+@media(max-width:700px){.hc-std{padding:1.5rem 1.25rem}.hc-std-when{width:100%}}
 /* Homecoming 2026 recap - replaced the Fall Homecoming + Golf Classic cards after the weekend */
 .hc-recap{background:white;border-radius:var(--r-lg);padding:2rem 2.5rem;box-shadow:0 1px 3px rgba(0,0,0,.07);border:1px solid var(--g100);border-top:4px solid var(--gold);scroll-margin-top:90px}
 .hc-top{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:.6rem 1.5rem;margin-bottom:1rem}
@@ -633,6 +642,12 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
 .pres-media{flex:0 0 40%;background:var(--green-dk);position:relative}
 .pres-media img{width:100%;height:100%;object-fit:cover;object-position:center 15%}
 #thanksPop .pres-media img{object-position:55% 60%}
+#givingPop .pres-media img{object-position:50% 55%}
+.give-steps{margin:0 0 .85rem 1.15rem;padding:0;font-size:.9rem;color:var(--g700)}
+.give-steps li{margin-bottom:.3rem}
+.give-steps li:last-child{margin-bottom:0}
+.pres-scroll a.pres-link{color:var(--green);font-weight:700}
+#givingPop .pres-actions a.btn-wide{text-align:center}
 .pres-content{flex:1;display:flex;flex-direction:column;min-width:0;min-height:0;padding:1.9rem 2rem}
 .pres-eyebrow{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);margin-bottom:.55rem;display:flex;align-items:center;gap:.4rem}
 .pres-title{font-size:clamp(1.35rem,2.4vw,1.72rem);color:var(--green-dk);line-height:1.18;margin-bottom:.45rem}
@@ -672,6 +687,9 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
      clipped the bottom buttons inside the overflow:hidden card. */
   .pres-content{overflow-y:auto}
   .pres-scroll{flex:0 0 auto;min-height:auto;overflow-y:visible;padding-right:0;margin-right:0}
+  #givingPop .pres-media{flex-basis:130px}
+  #givingPop .pres-content{padding-bottom:0}
+  #givingPop .pres-actions{position:sticky;bottom:0;background:var(--white);margin-top:.9rem;padding:.9rem 0 1.1rem;box-shadow:0 -10px 14px -6px rgba(255,255,255,.95)}
 }
 @media(prefers-reduced-motion:reduce){
   .pres-pop,.pres-card{transition:none}
@@ -692,6 +710,37 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
 </div>
 
 <!-- THANK-YOU-FOR-COMING-HOME POPUP (Homecoming 2026 recap). Shown before the Aldrich popup - see the sequence controller. -->
+<!-- GIVING TUESDAY POPUP (Dec 1, 2026). Shows on EVERY page load until the deadline in the
+     controller's SEQUENCE entry; dismissing it does not remember anything. -->
+<div class="pres-pop" id="givingPop" role="dialog" aria-modal="true" aria-labelledby="givingPopTitle" aria-describedby="givingPopDesc">
+  <div class="pres-card">
+    <button class="pres-x" type="button" data-pop-close aria-label="Dismiss announcement">&times;</button>
+    <div class="pres-media">
+      <img src="photos/homecoming-2026/hc26-19-banquet-room.jpg" alt="A full house at the Homecoming 2026 Hall of Fame and Alumni Awards Banquet"
+           onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect width=%22400%22 height=%22500%22 fill=%22%230f3d22%22/%3E%3Ctext x=%22200%22 y=%22250%22 fill=%22%23c49a0f%22 font-family=%22Georgia,serif%22 font-size=%2242%22 font-weight=%22bold%22 text-anchor=%22middle%22%3EHornets%3C/text%3E%3C/svg%3E'">
+    </div>
+    <div class="pres-content">
+      <span class="pres-eyebrow">&hearts; Giving Tuesday</span>
+      <h2 class="pres-title" id="givingPopTitle">Donate to the Lyndon Alumni Association</h2>
+      <p class="pres-date">Tuesday, December 1, 2026</p>
+      <div class="pres-scroll" id="givingPopDesc">
+        <p>This Giving Tuesday, help keep the Hornet community connected. Every gift goes directly to the <strong>Lyndon Alumni Council Fund</strong> &mdash; the one fund the Council controls &mdash; supporting Homecoming, alumni programs, and the traditions that bring Hornets back together.</p>
+        <p><strong>How to give:</strong></p>
+        <ol class="give-steps">
+          <li>Tap <strong>Donate to the Alumni Association</strong> below to open our secure donation form.</li>
+          <li>Choose your gift amount and enter your details.</li>
+          <li>Submit &mdash; your gift goes straight to the Alumni Council Fund.</li>
+        </ol>
+        <p>The form is open now, so you can give anytime. Gifts are tax-deductible (consult your tax advisor). <a class="pres-link" href="#give" data-pop-close>See where your gift goes</a>.</p>
+      </div>
+      <div class="pres-actions">
+        <a class="btn btn-gold btn-wide" href="https://host.nxt.blackbaud.com/donor-form/?svcid=renxt&formId=fed909dd-635d-47ad-9868-24becf560417&envid=p-BzoGXjMynEG3LMXBAdBMug&zone=usa" target="_blank" rel="noopener" data-pop-close>&hearts; Donate to the Alumni Association &rarr;</a>
+        <button class="btn btn-og" type="button" data-pop-close>Maybe later</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="pres-pop" id="thanksPop" role="dialog" aria-modal="true" aria-labelledby="thanksPopTitle" aria-describedby="thanksPopDesc">
   <div class="pres-card">
     <button class="pres-x" type="button" data-pop-close aria-label="Dismiss announcement">&times;</button>
@@ -830,6 +879,15 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
       <h2 class="ttl">Events &amp; Traditions</h2>
       <p class="sub" style="max-width:540px;margin:0 auto">Cherished traditions, reimagined for today's Hornet community.</p>
     </div>
+    <!-- Homecoming 2027 save-the-date (date per the Council, 2026-11). Details to follow. -->
+    <div class="hc-std" id="homecoming-2027">
+      <div>
+        <span class="hc-std-badge">&#128197; Save the Date</span>
+        <h3>Homecoming 2027</h3>
+        <p>Mark your calendar and plan to come home to Lyndon. The schedule, registration, and event details will be posted here as they&rsquo;re confirmed.</p>
+      </div>
+      <div class="hc-std-when"><strong>Sept. 17&ndash;19</strong><span>Fri&ndash;Sun &bull; 2027 &bull; Lyndonville, VT</span></div>
+    </div>
     <!-- Homecoming 2026 recap. Figures are from the Council's 9/27/26 annual-meeting minutes. -->
     <div class="hc-recap" id="homecoming">
       <div class="hc-top">
@@ -870,7 +928,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
         <a class="hc-ph" href="photos/homecoming-2026/hc26-20-banquet-tables.jpg" data-cap="Saturday • Hall of Fame &amp; Alumni Awards Banquet"><img src="photos/homecoming-2026/hc26-20-banquet-tables-t.jpg" alt="Banquet guests at their tables before the program" width="640" height="296" loading="lazy"></a>
       </div>
       <p class="hc-photo-note">20 photos from the weekend &mdash; select any photo to enlarge.</p>
-      <p class="hc-next"><strong>Looking ahead:</strong> planning for Homecoming 2027 is already underway. Watch for a save-the-date.</p>
+      <p class="hc-next"><strong>Looking ahead:</strong> Homecoming 2027 is set for <a href="#homecoming-2027">September 17&ndash;19, 2027</a>. Save the date!</p>
     </div>
 
     <!-- Hall of Fame -->
@@ -1300,7 +1358,7 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
           <button class="give-cta">♥ Donate to the Alumni Association &rarr;</button>
         </a>
         <p class="tax">Secure form &bull; Tax-deductible &bull; Consult your tax advisor</p>
-        <div class="giving-tip">💡 <strong>Giving Tuesday:</strong> Remember the Lyndon Alumni Council each November.</div>
+        <div class="giving-tip">💡 <strong>Giving Tuesday:</strong> Remember the Lyndon Alumni Council on the Tuesday after Thanksgiving.</div>
       </div>
     </div>
   </div>
@@ -1563,19 +1621,29 @@ if('IntersectionObserver' in window){
   });
 })();
 
-// Sequential announcement popups - one per page load, each remembered via localStorage once dismissed.
-// On each load we open the FIRST popup in SEQUENCE whose key is unset, so: first visit -> thank-you;
-// after that's dismissed, the NEXT visit -> Aldrich; once both are dismissed, nothing. Dismissing one
-// never chain-opens the next in the same visit (selection happens once, at load). Bump a key to re-show.
-// Skipped entirely on /#homecoming: old printed QR codes land there, and those visitors came for the recap.
+// Announcement popups - at most one per page load, chosen once at load (dismissing never chain-opens another).
+// An `always` entry opens on EVERY load until its `until` time and remembers nothing when dismissed
+// (Giving Tuesday: shows on every visit through the end of Dec 1, 2026 Eastern, then retires itself).
+// Otherwise we open the FIRST entry whose localStorage key is unset: thank-you, then Aldrich on the next
+// visit, then nothing. Bump a key to re-show. Each entry skips the hashes in `skip`: old printed QR codes
+// land on /#homecoming (those visitors came for the recap), and /#give visitors are already at the form.
 (function(){
   const SEQUENCE=[
-    {id:'thanksPop', key:'lac_hc26_thanks'},
-    {id:'mvsPop',    key:'lac_mvs_aldrich_2026_fall'}
+    {id:'givingPop', always:true, until:'2026-12-02T05:00:00Z', skip:['#give']},
+    {id:'thanksPop', key:'lac_hc26_thanks',           skip:['#homecoming']},
+    {id:'mvsPop',    key:'lac_mvs_aldrich_2026_fall', skip:['#homecoming']}
   ];
-  if(location.hash.toLowerCase()==='#homecoming')return;
+  const hash=location.hash.toLowerCase();
   function dismissed(key){try{return !!localStorage.getItem(key);}catch(e){return false;}}
-  const cfg=SEQUENCE.find(c=>document.getElementById(c.id)&&!dismissed(c.key));
+  function eligible(c){
+    if(!document.getElementById(c.id))return false;
+    if(c.skip&&c.skip.includes(hash))return false;
+    if(c.always)return !c.until||Date.now()<Date.parse(c.until);
+    return !dismissed(c.key);
+  }
+  // An active `always` popup owns every load, even one where it's skipped, so the others stay queued.
+  const owner=SEQUENCE.find(c=>c.always&&document.getElementById(c.id)&&(!c.until||Date.now()<Date.parse(c.until)));
+  const cfg=owner?(eligible(owner)?owner:null):SEQUENCE.find(eligible);
   if(!cfg)return;
   const pop=document.getElementById(cfg.id);
   let lastFocus=null;
@@ -1602,7 +1670,7 @@ if('IntersectionObserver' in window){
     pop.classList.remove('show');
     document.body.style.overflow='';
     document.removeEventListener('keydown',trap);
-    try{localStorage.setItem(cfg.key,'1');}catch(e){}
+    if(cfg.key){try{localStorage.setItem(cfg.key,'1');}catch(e){}}
     const hide=()=>{pop.classList.remove('open');pop.removeEventListener('transitionend',hide);};
     pop.addEventListener('transitionend',hide);
     setTimeout(hide,450);
