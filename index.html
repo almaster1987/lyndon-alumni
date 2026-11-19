@@ -687,9 +687,10 @@ footer{background:var(--green-dk);color:rgba(255,255,255,.72);padding:4rem 0 2re
      clipped the bottom buttons inside the overflow:hidden card. */
   .pres-content{overflow-y:auto}
   .pres-scroll{flex:0 0 auto;min-height:auto;overflow-y:visible;padding-right:0;margin-right:0}
-  #givingPop .pres-media{flex-basis:130px}
-  #givingPop .pres-content{padding-bottom:0}
-  #givingPop .pres-actions{position:sticky;bottom:0;background:var(--white);margin-top:.9rem;padding:.9rem 0 1.1rem;box-shadow:0 -10px 14px -6px rgba(255,255,255,.95)}
+  /* min-height:0 so the basis wins - a column flex item's auto min-height is the photo's own height */
+  #givingPop .pres-media,#thanksPop .pres-media,#mvsPop .pres-media{flex-basis:150px;min-height:0}
+  #givingPop .pres-content,#thanksPop .pres-content,#mvsPop .pres-content{padding-bottom:0}
+  #givingPop .pres-actions,#thanksPop .pres-actions,#mvsPop .pres-actions{position:sticky;bottom:0;background:var(--white);margin-top:.9rem;padding:.9rem 0 1.1rem;box-shadow:0 -10px 14px -6px rgba(255,255,255,.95)}
 }
 @media(prefers-reduced-motion:reduce){
   .pres-pop,.pres-card{transition:none}
