@@ -5,10 +5,19 @@ How the donate CTA works on this site, and what's off-limits.
 ## Active form URL
 
 ```
+https://www.givecampus.com/campaigns/89174/donations/new?landing_page_tiered_campaign_id=Lyndon&designation_id=gf300246rc140
+```
+
+**Changed 2026-11-24 (Alex):** every donate link now uses the college's GiveCampus page above, at VTSU's request
+(Kate Workman → Steve, 11-23). Its "Area of Impact" is pre-set to **Lyndon Alumni Council Fund** (confirmed from
+Alex's screenshot). The page is Vermont State-branded, so the site copy says it opens Vermont State's page with our
+fund selected. The previous Blackbaud form, kept for reference / rollback:
+
+```
 https://host.nxt.blackbaud.com/donor-form/?svcid=renxt&formId=fed909dd-635d-47ad-9868-24becf560417&envid=p-BzoGXjMynEG3LMXBAdBMug&zone=usa
 ```
 
-This is a Blackbaud Renxt-hosted form. Gifts are earmarked for the **Lyndon Alumni Council Fund** — the one fund the Council controls.
+That retired form was Blackbaud Renxt-hosted. Both earmark gifts for the **Lyndon Alumni Council Fund** — the one fund the Council controls.
 
 ## What changed (April 2026)
 
